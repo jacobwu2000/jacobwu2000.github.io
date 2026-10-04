@@ -68,19 +68,34 @@ epigraphic record of dream healing.
   Claude from this file and has not yet been reviewed by the author. The
   itinerary excerpts are pulled automatically from the journal entries.
 - **Findings** (`src/pages/findings.mdx`, formerly "The Argument" at
-  `/the-argument`, which now redirects) is scaffolded around the
-  chosen direction: title, working-question box, table of contents, and one
-  section per part of "What the finished project looks like" below, plus
-  "The case histories" and "*Prognostic*". On 2026-10-04 Claude filled in
-  the parts that need no analysis, at the author's request: Background (the
-  texts, quoting only the site's own extracted passages; the problem; a
-  Scholarship list), Sources and method (text, a table of what was read,
-  the reading procedure, draft evidence/illustration criteria for the
-  author to confirm, exclusions), Limitations, and Where the fieldwork
-  fits. Facts from general knowledge carry `[PLACEHOLDER: verify …]`. The
-  Summary, each constitution's findings, case histories, *Prognostic*, the
-  overall judgment and every summary of a scholar's argument are still
-  placeholders for the author's own analysis and reading.
+  `/the-argument`, which now redirects). Structure follows the author's
+  outline ("Argument.pdf", 2026-10-04): Summary; 1. Background; 2. Sources
+  and Method; 3. Discussion and Analysis; 4. Conclusion.
+  - **Author's own text** (word for word from the PDF, typos included;
+    edit only on request): in Sources and Method, "Comparability of AWP
+    and Epidemics" and "Claims List from AWP", including the claims
+    table. The table is HTML with rowspans (`.claims-table` in
+    `styles.css`), one `<tbody>` per condition, sub-conditions (Ba, Bb,
+    Ca, Cb) shaded. Its labels A–F match the Seasons page's cases. If the
+    author changes the table, transcribe it exactly; don't correct it
+    against AWP on your own (tell the author about differences instead).
+  - **Discussion and Analysis** subsections are the author's: Constitutions
+    (one h4 per constitution), Time and Causality, Normal and Abnormal
+    Seasons, Patient Types, Disease Surplus, Crisis (which also takes
+    *Prognostic*), Case Histories [WIP], Dating and Authorship. Claude
+    wrote a short factual lead-in for each (the question it asks, plus
+    passages quoted from the site's extracted text with chapter
+    references) followed by a `[PLACEHOLDER: analysis…]`. The lead-ins
+    make no analytic claims.
+  - **Conclusion** holds "Evidence or illustration?" (placeholder),
+    Limitations and Where the fieldwork fits.
+  - Claude also wrote, on 2026-10-04, the non-analytic parts: Background
+    (the texts, the problem, a Scholarship list) and the rest of Sources
+    and Method (text, what was read, reading procedure, draft
+    evidence/illustration criteria for the author to confirm, exclusions).
+    Facts from general knowledge carry `[PLACEHOLDER: verify …]`. The
+    Summary, all analysis, the judgment and every summary of a scholar's
+    argument are placeholders for the author's own reading.
 - Almost everything else is `[PLACEHOLDER: ...]`: inscriptions,
   bibliography, About, the Sources framing paragraph, section intros on the
   Epigraphy index page, the site sections on each Field Journal entry
