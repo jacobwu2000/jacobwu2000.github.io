@@ -25,7 +25,7 @@ epigraphic record of dream healing.
   The site has to show (1) real proof of fieldwork and (2) research that is
   small but real and defensible.
 
-## Current state (as of 2026-09-30)
+## Current state (as of 2026-10-04)
 
 - The scaffold, routing, schema and map all work.
 - **Field Journal** (fieldwork strand): 8 entries, one per site, laid out
@@ -47,7 +47,8 @@ epigraphic record of dream healing.
   `seasons.md`, filled in the same way. **Airs
   and Seasons are annotated** (see "Author's annotations" below): the
   author's highlighting and key, the author's synopsis, no title, and only a
-  Candidate claims placeholder in the body. Introduction (added 2026-10-04) and
+  Candidate claims section in the body (a placeholder on Airs; on Seasons,
+  a copy of the Findings claims table). Introduction (added 2026-10-04) and
   Waters are not annotated yet and still have the older placeholder
   sections, but no `title` placeholder.
 - **Sources page** (`src/pages/sources/index.astro`): lists all the corpus
@@ -61,8 +62,11 @@ epigraphic record of dream healing.
   link**. Its page still builds at its URL, and the link appears by itself
   once the page is annotated. The text pages keep their URLs under
   `/sources/hippocratic-corpus/{airs-waters-places,epidemics}/`.
-- The author plans to annotate Introduction and Waters the same way. The claim list and the
-  comparison itself haven't been started.
+- The author plans to annotate Introduction and Waters the same way. The
+  claim list is done (the AWP 10 claims table in Findings, also on the
+  Seasons page). The comparison is done for Constitution 1 by the author,
+  and drafted by Claude for Constitutions 2–4 (see "Constitution vs. AWP
+  comparison").
 - Home page: framing text (hero, the two "strands" cards for texts and
   places, the "fieldwork is context, not evidence" note) was drafted by
   Claude from this file and has not yet been reviewed by the author. The
@@ -84,7 +88,11 @@ epigraphic record of dream healing.
     and Epidemics" and "Claims List from AWP", including the claims
     table. The table is HTML with rowspans (`.claims-table` in
     `styles.css`), one `<tbody>` per condition, sub-conditions (Ba, Bb,
-    Ca, Cb) shaded. Its labels A–F match the Seasons page's cases. If the
+    Ca, Cb) shaded. Its labels A–F match the Seasons page's key
+    ("Condition A"–"Condition F"). The same table is copied word for word
+    into the Seasons page's "Candidate claims" section (`seasons.md` body,
+    with a link back to `/findings#claims-list-from-awp`); keep the two
+    copies identical. If the
     author changes the table, transcribe it exactly; don't correct it
     against AWP on your own (tell the author about differences instead).
     On 2026-10-04, at the author's request, Claude fixed typos in this
@@ -234,7 +242,7 @@ epigraphic record of dream healing.
   *Epidemics* constitutions". Annotated pages (Airs, Seasons) use the layout in
   "Author's annotations". The body keeps only **Candidate claims**
   (condition → predicted tendency, firm or loose), which feeds the claim
-  list.
+  list. On Seasons it holds the copy of the Findings claims table.
 
 ## Author's annotations
 
@@ -516,8 +524,8 @@ component change, so discuss it before doing it.
 - **Hippocratic Corpus → AWP:** pages for the chapters the claim list draws
   on (so far Introduction 1–2, Airs 3–6, Waters 7–9, Seasons 10–11), each annotated by the
   author (see "Author's annotations"). Each page's "Candidate claims"
-  section collects claims for the list. The claim list itself could
-  be a single page or table.
+  section collects claims for the list. The claim list itself is the AWP
+  10 claims table in Findings (Sources and Method), copied onto Seasons.
 - **Field Journal:** one page per site, combining the scholarly site
   sections with real photos and personal observations that keep the
   fieldwork visible. **Epigraphy** sits beside it in the fieldwork strand.

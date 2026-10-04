@@ -82,4 +82,70 @@ sourceUrl: "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.
 
 ## Candidate claims
 
-[PLACEHOLDER: claims for the AWP claim list, each written as condition → predicted tendency and marked as a firm causal claim or a looser correlation.]
+The claims from AWP 10, as listed in [Findings](/findings#claims-list-from-awp).
+
+<div class="table-scroll">
+<table class="claims-table">
+  <caption>Claims from <a href="/sources/hippocratic-corpus/airs-waters-places/seasons#ch-10">AWP 10</a>, by seasonal condition (cases A–F, as on the Seasons page)</caption>
+  <thead>
+    <tr><th scope="col">Label</th><th scope="col">Claim</th><th scope="col">Condition</th><th scope="col">Effect</th><th scope="col">Confidence</th></tr>
+  </thead>
+  <tbody class="claims-table__group">
+    <tr><th scope="row">A</th><td>1</td><td>Rainy autumn; moderate winter; seasonable spring and summer (i.e. a normal year)</td><td>Very healthy year</td><td>“likely”</td></tr>
+  </tbody>
+  <tbody class="claims-table__group">
+    <tr><th scope="row" rowspan="5">B</th><td>1</td><td rowspan="5">Dry, northerly winter; rainy, southerly spring</td><td>Feverladen summer</td><td rowspan="3">“cannot fail”</td></tr>
+    <tr><td>2</td><td>causing ophthalmia</td></tr>
+    <tr><td>3</td><td>causing dysenteries</td></tr>
+    <tr><td>4</td><td>Fevers of the acutest type, especially among the phlegmatic</td><td>“in all cases”</td></tr>
+    <tr><td>5</td><td>Women and the most humid constitutions: dysenteries</td><td>“likely”</td></tr>
+  </tbody>
+  <tbody class="claims-table__group claims-table__sub">
+    <tr><th scope="row">Ba</th><td>1</td><td>Rainy, northerly mid-summer</td><td>Healthy autumn</td><td>“there is hope”</td></tr>
+  </tbody>
+  <tbody class="claims-table__group claims-table__sub">
+    <tr><th scope="row" rowspan="5">Bb</th><td>1</td><td rowspan="5">Otherwise (not rainy, northerly mid-summer)</td><td>Deaths occur among women</td><td rowspan="5">“there is danger”</td></tr>
+    <tr><td>2</td><td>Deaths occur among children</td></tr>
+    <tr><td>3</td><td>Old men: fewest deaths (“least of all”)</td></tr>
+    <tr><td>4</td><td>Those who recover: quartans</td></tr>
+    <tr><td>5</td><td>Those who recover: dropsies (after quartans)</td></tr>
+  </tbody>
+  <tbody class="claims-table__group">
+    <tr><th scope="row" rowspan="7">C</th><td>1</td><td rowspan="7">Rainy, mild, southerly winter; dry, wintry, northerly spring</td><td>Pregnant women due by spring: abortions or weak sickly children</td><td>stated as fact</td></tr>
+    <tr><td>2</td><td>Everyone else: dysenteries</td><td rowspan="2">stated as fact</td></tr>
+    <tr><td>3</td><td>Everyone else: dry ophthalmia</td></tr>
+    <tr><td>4</td><td>Everyone else: catarrhs from head to lungs</td><td>“in some cases”</td></tr>
+    <tr><td>5</td><td>Phlegmatics and women: dysenteries</td><td>“liable to”</td></tr>
+    <tr><td>6</td><td>Bilious: dry ophthalmia</td><td>stated as fact</td></tr>
+    <tr><td>7</td><td>Old men: catarrhs causing death or hemiplegia</td><td>“some” and “others”</td></tr>
+  </tbody>
+  <tbody class="claims-table__group claims-table__sub">
+    <tr><th scope="row">Ca</th><td>1</td><td>Well-situated with regard to sun and winds, good waters</td><td>“Less affected by such changes”</td><td rowspan="2">stated as a fact</td></tr>
+    <tr><th scope="row">Cb</th><td>1</td><td>Dry summer</td><td>“the diseases cease more quickly”</td></tr>
+    <tr><th scope="row" rowspan="3">Cc</th><td>1</td><td rowspan="3">Rainy summer</td><td>Diseases “protracted”</td><td>stated as a fact</td></tr>
+    <tr><td>2</td><td>Sores fester from the slightest cause</td><td>“apt to”</td></tr>
+    <tr><td>3</td><td>Lienteries and dropsies at the end of the diseases</td><td>stated as a fact</td></tr>
+  </tbody>
+  <tbody class="claims-table__group">
+    <tr><th scope="row" rowspan="5">D</th><td>1</td><td rowspan="5">Rainy, southerly summer and autumn</td><td>Unhealthy winter</td><td>“must”</td></tr>
+    <tr><td>2</td><td>Phlegmatics: ardent fevers</td><td rowspan="4">“likely”</td></tr>
+    <tr><td>3</td><td>Men over forty: ardent fevers</td></tr>
+    <tr><td>4</td><td>Bilious: pleurisy</td></tr>
+    <tr><td>5</td><td>Bilious: pneumonia</td></tr>
+  </tbody>
+  <tbody class="claims-table__group">
+    <tr><th scope="row" rowspan="5">E</th><td>1</td><td rowspan="5">Dry, northerly summer; rainy, southerly autumn</td><td>Winter: headaches and mortifications of the brain</td><td rowspan="4">“likely”</td></tr>
+    <tr><td>2</td><td>Winter: hoarseness</td></tr>
+    <tr><td>3</td><td>Winter: colds in the head</td></tr>
+    <tr><td>4</td><td>Winter: coughs</td></tr>
+    <tr><td>5</td><td>Winter: consumptions</td><td>“likely” and “in some cases”</td></tr>
+  </tbody>
+  <tbody class="claims-table__group">
+    <tr><th scope="row" rowspan="5">F</th><td>1</td><td rowspan="5">Dry, northerly overall; no rain mid-summer</td><td>Phlegmatic or humid: beneficial</td><td>stated as a fact</td></tr>
+    <tr><td>2</td><td>Women: beneficial</td><td>stated as a fact</td></tr>
+    <tr><td>3</td><td>Bilious: dry ophthalmia</td><td>stated as a fact</td></tr>
+    <tr><td>4</td><td>Bilious: acute, protracted fevers</td><td>stated as a fact</td></tr>
+    <tr><td>5</td><td>Bilious: melancholies</td><td>“in some cases”</td></tr>
+  </tbody>
+</table>
+</div>
