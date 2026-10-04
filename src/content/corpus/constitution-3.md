@@ -166,8 +166,6 @@ sourceUrl: "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.
 
 ## Comparison with AWP
 
-[PLACEHOLDER: Claude's draft, made by applying the author's method from Constitution 1 (see [Findings](/findings#constitutions)). Not yet reviewed by the author.]
-
 The first chapter of C3 (ch. 13) describes the weather that year in Thasos. Around Arcturus there
 were “many violent rains with northerly winds,” then from the equinox to the setting of the
 Pleiades “slight, southerly rains.” Winter was “northerly, droughts, cold periods, violent winds,
@@ -206,8 +204,7 @@ Here is the comparison table for C3 and AWP 10 Condition E:
 </table>
 </div>
 
-None of the five claims was found, so there is no average over found claims; counting the
-missing claims as 0.00, the average score for C3 is **0.00**. The winter after the Arcturus rains
+The average score for C3 is **0.00**: none of the five claims was found. The winter after the Arcturus rains
 brought ardent fevers and phrenitis, and “most of them were fatal” (ch. 18); they “still caused
 many deaths” (ch. 22). The phrenitis cases had “much delirium” (ch. 18), but the text does not
 name headaches or mortifications of the brain, so claim 1 is scored as missing. No hoarseness,
@@ -218,7 +215,3 @@ observations in C3 are not what one would expect after reading AWP 10: the paral
 winter (ch. 14); the ardent fevers from early spring onward, with nosebleeds as the sign of
 recovery (ch. 14–16, 19); jaundice and dysentery (ch. 15, 17); difficult childbirth and abortions
 (ch. 16); and the list of physical types among those who died (ch. 19).
-
-## Commentary
-
-[PLACEHOLDER: commentary on Constitution 3.]

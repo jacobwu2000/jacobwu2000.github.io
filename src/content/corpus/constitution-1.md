@@ -88,11 +88,11 @@ sourceUrl: "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.
 
 ## Comparison with AWP
 
-The first paragraph in C1 explains the specific weather pattern during that year in Thasos.
+The first paragraph in C1 (ch. 1) explains the specific weather pattern during that year in Thasos.
 Autumn is described as having “many rains, gently continuous, with southerly winds.” Winter is
 “southerly, north winds light, droughts.” Spring is “southerly and chilly” with “slight showers.”
 Summer has “no rain” and Etesian winds (dry, northerly winds) that are “few, light and irregular.”
-C1 also adds that it was preceded by a year that “had proved the opposite and northerly.”
+C1 also adds that it was preceded by a year that “had proved the opposite and northerly” (ch. 1).
 
 Thus I surmised that the weather pattern in C1 is that of rainy, southerly autumn; dry, southerly
 winter; rainy, southerly spring; and dry, northerly summer. Overall, this best corresponds to
@@ -109,15 +109,15 @@ Here is the comparison table for C1 and AWP 10 Condition E:
   </thead>
   <tbody>
     <tr><th scope="row">1</th><td>Winter: headaches and mortifications of the brain</td><td rowspan="4">“likely”</td><td>Missing</td><td class="match match--no">No</td><td class="match">N/A</td><td class="match">N/A</td><td class="match">N/A</td><td class="score">0.00</td></tr>
-    <tr><th scope="row">2</th><td>Winter: hoarseness</td><td>Few women's voices were hoarse in early spring</td><td class="match match--yes">Yes</td><td class="match">N/A</td><td class="match match--no">No</td><td class="match match--no">No</td><td class="score">0.33</td></tr>
+    <tr><th scope="row">2</th><td>Winter: hoarseness</td><td>Few women's voices were hoarse in early spring (ch. 1)</td><td class="match match--yes">Yes</td><td class="match">N/A</td><td class="match match--no">No</td><td class="match match--no">No</td><td class="score">0.33</td></tr>
     <tr><th scope="row">3</th><td>Winter: colds in the head</td><td>Missing</td><td class="match match--no">No</td><td class="match">N/A</td><td class="match">N/A</td><td class="match">N/A</td><td class="score">0.00</td></tr>
-    <tr><th scope="row">4</th><td>Winter: coughs</td><td>Dry coughs in early spring; slight coughs in summer and autumn</td><td class="match match--yes">Yes</td><td class="match">N/A</td><td class="match match--no">No</td><td class="match">N/A</td><td class="score">0.50</td></tr>
-    <tr><th scope="row">5</th><td>Winter: consumptions</td><td>“likely” and “in some cases”</td><td>Many showed consumption throughout winter and summer</td><td class="match match--yes">Yes</td><td class="match">N/A</td><td class="match match--yes">Yes</td><td class="match match--no">No</td><td class="score">0.67</td></tr>
+    <tr><th scope="row">4</th><td>Winter: coughs</td><td>Dry coughs in early spring; slight coughs in summer and autumn (ch. 1, 3)</td><td class="match match--yes">Yes</td><td class="match">N/A</td><td class="match match--no">No</td><td class="match">N/A</td><td class="score">0.50</td></tr>
+    <tr><th scope="row">5</th><td>Winter: consumptions</td><td>“likely” and “in some cases”</td><td>Many showed consumption throughout winter and summer (ch. 2)</td><td class="match match--yes">Yes</td><td class="match">N/A</td><td class="match match--yes">Yes</td><td class="match match--no">No</td><td class="score">0.67</td></tr>
   </tbody>
 </table>
 </div>
 
-The average score for C1 is **0.50**. Overall, the types of diseases line up relatively well with the
+The average score for C1 is **0.30**. Overall, the types of diseases line up relatively well with the
 closest AWP seasonal case Condition E. However, the timing and severity do not. Particularly,
 most diseases which AWP predicts should occur in the winter are observed in Constitutions as
 occurring during other seasons like early spring.
@@ -125,8 +125,4 @@ occurring during other seasons like early spring.
 It should also be mentioned that there are many more diseases or health observations in C1
 that are not predicted in AWP 10. In fact, *most* of the observations in C1 are not what one would
 expect after reading AWP 10. These include various degrees of fevers, swellings, and coughing
-up mucus which occur variously throughout the year.
-
-## Commentary
-
-[PLACEHOLDER: commentary on Constitution 1.]
+up mucus which occur variously throughout the year (ch. 1–3).

@@ -207,8 +207,6 @@ sourceUrl: "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.
 
 ## Comparison with AWP
 
-[PLACEHOLDER: Claude's draft, made by applying the author's method from Constitution 1 (see [Findings](/findings#constitutions)). Not yet reviewed by the author.]
-
 The first chapter of C4 (ch. 2) describes the weather that year. It names no place. “The year was
 southerly and rainy, with no winds throughout.” About the rising of Arcturus, after a period of
 droughts, “there were now heavy rains, with southerly winds.” Autumn was “dark and cloudy, with
@@ -249,8 +247,7 @@ Here is the comparison table for C4 and AWP 10 Condition E:
 </table>
 </div>
 
-The average score for C4, over the four claims that were found, is **0.75**. Counting the missing
-claim as 0.00, it is 0.60. This is the highest of the four constitutions. The claims that match are
+The average score for C4 is **0.60**. This is the highest of the four constitutions. The claims that match are
 the ones tied to consumption: many cases began in winter, as AWP predicts, and they brought coughs,
 impaired voices and fluxes from the head. As with C1, the severity does not match: AWP expects
 consumption only “in some cases,” but in C4 it was “the most fatal” disease (ch. 13). Headaches and
@@ -263,6 +260,49 @@ carbuncles (ch. 7); and the bowel complaints from which “all patients ... died
 C4 also states a rule about seasonal change that AWP 10 does not: “the coming on of winter resolves
 the diseases of summer, and the coming on of summer removes those of winter” (ch. 15).
 
-## Commentary
+## Alternative comparison: Condition B
 
-[PLACEHOLDER: commentary on Constitution 4.]
+Condition B is a “Dry, northerly winter; rainy, southerly spring.” C4's spring matches it exactly
+(“southerly again, with no winds; many rains throughout until the Dog Star”, ch. 2), and C4
+describes the summer that followed as “suddenly hot, southerly, and calm” (ch. 15). AWP's
+explanation of Condition B rests on that sequence: “whenever the great heat comes on suddenly
+while the earth is soaked by reason of the spring rains and the south wind.” But C4's winter was
+“southerly, humid, and mild” (ch. 2), the opposite of B's dry, northerly winter.
+
+Condition B's sub-conditions depend on the weather at the rising of the Dog Star. Ba (“If at the
+rising of the Dog Star stormy rain occurs and the Etesian winds blow”) does not fit C4: the rains
+lasted only “until the Dog Star,” and the Etesian winds were “faint and intermittent” (ch. 2). So
+the table scores Bb (“Otherwise”) rather than Ba.
+
+Here is the comparison table for C4 and AWP 10 Condition B:
+
+<div class="table-scroll">
+<table class="claims-table comparison-table">
+  <caption>Constitution 4 compared with <a href="/sources/hippocratic-corpus/airs-waters-places/seasons#ch-10">AWP 10</a>, Condition B</caption>
+  <thead>
+    <tr><th scope="col">Claim</th><th scope="col">AWP Prediction</th><th scope="col">Confidence</th><th scope="col">Constitution</th><th scope="col">Disease Match</th><th scope="col">Patient Match</th><th scope="col">Season Match</th><th scope="col">Severity Match</th><th scope="col">Score</th></tr>
+  </thead>
+  <tbody>
+    <tr><th scope="row">1</th><td>Feverladen summer</td><td rowspan="3">“cannot fail”</td><td>Missing: summer was “the most favourable season, in which fewest died”, though “not healthful” (ch. 15)</td><td class="match match--no">No</td><td class="match">N/A</td><td class="match">N/A</td><td class="match">N/A</td><td class="score">0.00</td></tr>
+    <tr><th scope="row">2</th><td>Summer: ophthalmia</td><td>“inflammations of the eyes” in early spring (ch. 3); “Watery inflammations of the eyes, chronic and painful” (ch. 7); no number given</td><td class="match match--yes">Yes</td><td class="match">N/A</td><td class="match match--no">No</td><td class="match match--no">No</td><td class="score">0.33</td></tr>
+    <tr><th scope="row">3</th><td>Summer: dysenteries</td><td>“Cases of dysentery, but they too were not very painful” (ch. 8); no season given</td><td class="match match--yes">Yes</td><td class="match">N/A</td><td class="match match--no">No</td><td class="match match--no">No</td><td class="score">0.33</td></tr>
+    <tr><th scope="row">4</th><td>Fevers of the acutest type, especially among the phlegmatic</td><td>“in all cases”</td><td>Ardent fevers and phrenitis from early spring, with “acute and fatal symptoms” (ch. 6); ardent fevers attacked “those with a melancholic or a rather sanguine complexion” (ch. 14)</td><td class="match match--yes">Yes</td><td class="match match--no">No</td><td class="match">N/A</td><td class="match match--yes">Yes</td><td class="score">0.67</td></tr>
+    <tr><th scope="row">5</th><td>Women and the most humid constitutions: dysenteries</td><td>“likely”</td><td>“dysenteric troubles” attacked the melancholic or sanguine; “Tenesmus affected young, phlegmatic people” (ch. 14); no number given</td><td class="match match--yes">Yes</td><td class="match match--no">No</td><td class="match">N/A</td><td class="match match--no">No</td><td class="score">0.33</td></tr>
+    <tr><th scope="row">Bb1</th><td>Deaths among women</td><td rowspan="5">“there is danger”</td><td>Missing</td><td class="match match--no">No</td><td class="match">N/A</td><td class="match">N/A</td><td class="match">N/A</td><td class="score">0.00</td></tr>
+    <tr><th scope="row">Bb2</th><td>Deaths among children</td><td>Painful tenesmus, “mostly children ... and most of these died” (ch. 8)</td><td class="match match--yes">Yes</td><td class="match match--yes">Yes</td><td class="match">N/A</td><td class="match match--yes">Yes</td><td class="score">1.00</td></tr>
+    <tr><th scope="row">Bb3</th><td>Old men: fewest deaths (“least of all”)</td><td>Missing</td><td class="match match--no">No</td><td class="match">N/A</td><td class="match">N/A</td><td class="match">N/A</td><td class="score">0.00</td></tr>
+    <tr><th scope="row">Bb4</th><td>Those who recover: quartans</td><td>Quartans among the fevers listed in ch. 12 (“Many other forms also of fever were epidemic”); not tied to those who recovered</td><td class="match match--yes">Yes</td><td class="match match--no">No</td><td class="match">N/A</td><td class="match match--no">No</td><td class="score">0.33</td></tr>
+    <tr><th scope="row">Bb5</th><td>Those who recover: dropsies (after quartans)</td><td>“A few of them died of dropsy” (ch. 12); consumptives' swelling “developed into dropsy” (ch. 13); not tied to recovery from quartans</td><td class="match match--yes">Yes</td><td class="match match--no">No</td><td class="match">N/A</td><td class="match match--no">No</td><td class="score">0.33</td></tr>
+  </tbody>
+</table>
+</div>
+
+The average score for C4 against Condition B is **0.33**, against 0.60 for Condition E. The main
+prediction, a feverladen summer, is contradicted: C4 calls summer “the most favourable season, in
+which fewest died” (ch. 15). Ophthalmia, dysenteries and acute fevers are all present, but not in
+summer and not in the patients AWP names: C4 assigns ardent fevers and dysenteric troubles to
+“those with a melancholic or a rather sanguine complexion” (ch. 14), not to the phlegmatic, to
+women or to the humid. The best match is the deaths of children (Bb2), from the tenesmus that
+killed most of the children it attacked (ch. 8). C4 says nothing about deaths among women or about
+old men dying least, though it notes that erysipelas spread especially “when the patients were
+about sixty years old” (ch. 4).

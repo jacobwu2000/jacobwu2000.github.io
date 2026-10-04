@@ -63,18 +63,18 @@ synopsis: |
   (E) Dry, northerly summer; rainy, southerly autumn
   (F) Dry, northerly overall; no rain mid-summer
 highlightKey:
-  - { id: case-a-cond, group: "Case A", label: "conditionals" }
-  - { id: case-a-prog, group: "Case A", label: "prognoses" }
-  - { id: case-b-cond, group: "Case B", label: "conditionals" }
-  - { id: case-b-prog, group: "Case B", label: "prognoses" }
-  - { id: case-c-cond, group: "Case C", label: "conditionals" }
-  - { id: case-c-prog, group: "Case C", label: "prognoses" }
-  - { id: case-d-cond, group: "Case D", label: "conditionals" }
-  - { id: case-d-prog, group: "Case D", label: "prognoses" }
-  - { id: case-e-cond, group: "Case E", label: "conditionals" }
-  - { id: case-e-prog, group: "Case E", label: "prognoses" }
-  - { id: case-f-cond, group: "Case F", label: "conditionals" }
-  - { id: case-f-prog, group: "Case F", label: "prognoses" }
+  - { id: case-a-cond, group: "Condition A", label: "conditionals" }
+  - { id: case-a-prog, group: "Condition A", label: "prognoses" }
+  - { id: case-b-cond, group: "Condition B", label: "conditionals" }
+  - { id: case-b-prog, group: "Condition B", label: "prognoses" }
+  - { id: case-c-cond, group: "Condition C", label: "conditionals" }
+  - { id: case-c-prog, group: "Condition C", label: "prognoses" }
+  - { id: case-d-cond, group: "Condition D", label: "conditionals" }
+  - { id: case-d-prog, group: "Condition D", label: "prognoses" }
+  - { id: case-e-cond, group: "Condition E", label: "conditionals" }
+  - { id: case-e-prog, group: "Condition E", label: "prognoses" }
+  - { id: case-f-cond, group: "Condition F", label: "conditionals" }
+  - { id: case-f-prog, group: "Condition F", label: "prognoses" }
   - { id: crisis, label: "Dangerous Crisis Points" }
 citation: "Hippocrates, Airs, Waters, Places 10–11, trans. W. H. S. Jones, in Hippocrates, Vol. I, Loeb Classical Library (London: Heinemann; Cambridge, MA: Harvard University Press, 1923), pp. 99–105 [PLACEHOLDER: verify page range against the printed Loeb]. English text from the Perseus Digital Library TEI edition (urn:cts:greekLit:tlg0627.tlg002.perseus-eng4), CC BY-SA 4.0."
 sourceUrl: "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0251%3Atext%3DAer.%3Asection%3D10"

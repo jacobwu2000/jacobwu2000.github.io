@@ -131,8 +131,6 @@ sourceUrl: "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.
 
 ## Comparison with AWP
 
-[PLACEHOLDER: Claude's draft, made by applying the author's method from Constitution 1 (see [Findings](/findings#constitutions)). Not yet reviewed by the author.]
-
 The first chapter of C2 (ch. 4) describes the weather that year in Thasos. Autumn brought
 “unseasonable wintry storms, suddenly with many north and south winds bursting out into rains.”
 Winter was “northerly; many violent and abundant rains; snows,” and after the solstice there was
@@ -174,8 +172,7 @@ Here is the comparison table for C2 and AWP 10 Condition E:
 </table>
 </div>
 
-The average score for C2, over the three claims that were found, is **0.67**. Counting the two
-missing claims as 0.00, it is 0.40. Hoarseness and colds in the head are not mentioned at all, and
+The average score for C2 is **0.40**. Hoarseness and colds in the head are not mentioned at all, and
 the head pains of ch. 12 are given no season or number. Only the coughs fall where AWP puts them,
 in winter, as part of the fevers that ran on from autumn. Consumption appears, but as the
 condition of those who had the illnesses of early spring to autumn, not as a disease of winter.
@@ -187,6 +184,45 @@ diarrhoea of summer and autumn; the many kinds of fever (ch. 5–8); and the str
 very many patients, mostly children (ch. 10). Eye inflammations and dysenteries are predicted by
 other Seasons conditions (B and C), whose weather C2 only partly shares.
 
-## Commentary
+## Alternative comparison: Condition C
 
-[PLACEHOLDER: commentary on Constitution 2.]
+Condition C is a “Rainy, mild, southerly winter; dry, wintry, northerly spring.” C2 matches it on
+the rainy winter (“many violent and abundant rains; snows”) and on the cold, northerly spring
+(“cold, northerly, wet, cloudy”), after severe wintry weather that “did not remit before the
+equinox” (ch. 4). It does not match on the rest: the winter was northerly and cold rather than
+southerly and mild, and the spring was wet rather than dry. AWP's explanation of Condition C
+depends on the mild winter (“owing to the winter being southerly and the body warm”), which C2
+did not have.
+
+Condition C's claims give no season, except that the pregnant women are those “whose delivery is
+due by spring.” Its sub-conditions are not scored. Ca depends on the city's situation and waters,
+which C2 does not describe, and Cb and Cc depend on whether the summer was dry or rainy, which C2
+does not say. Some of Cc's predictions do appear, though: the fevers were protracted (ch. 6, 8),
+and lienteries and dropsies are reported (ch. 5, 9).
+
+Here is the comparison table for C2 and AWP 10 Condition C:
+
+<div class="table-scroll">
+<table class="claims-table comparison-table">
+  <caption>Constitution 2 compared with <a href="/sources/hippocratic-corpus/airs-waters-places/seasons#ch-10">AWP 10</a>, Condition C</caption>
+  <thead>
+    <tr><th scope="col">Claim</th><th scope="col">AWP Prediction</th><th scope="col">Confidence</th><th scope="col">Constitution</th><th scope="col">Disease Match</th><th scope="col">Patient Match</th><th scope="col">Season Match</th><th scope="col">Severity Match</th><th scope="col">Score</th></tr>
+  </thead>
+  <tbody>
+    <tr><th scope="row">1</th><td>Pregnant women due by spring: abortions or weak sickly children</td><td>stated as fact</td><td>Missing</td><td class="match match--no">No</td><td class="match">N/A</td><td class="match">N/A</td><td class="match">N/A</td><td class="score">0.00</td></tr>
+    <tr><th scope="row">2</th><td>Everyone else: dysenteries</td><td rowspan="2">stated as fact</td><td>“In summer and autumn dysenteric diseases” (ch. 5); dysenteries among the symptoms of the fevers that “found many victims” (ch. 5, 9)</td><td class="match match--yes">Yes</td><td class="match">N/A</td><td class="match">N/A</td><td class="match match--yes">Yes</td><td class="score">1.00</td></tr>
+    <tr><th scope="row">3</th><td>Everyone else: dry ophthalmia</td><td>Missing: the eye inflammations of early spring were “marked by rheum, pain, and unconcocted discharges” (ch. 5), not dry</td><td class="match match--no">No</td><td class="match">N/A</td><td class="match">N/A</td><td class="match">N/A</td><td class="score">0.00</td></tr>
+    <tr><th scope="row">4</th><td>Everyone else: catarrhs from head to lungs</td><td>“in some cases”</td><td>Missing</td><td class="match match--no">No</td><td class="match">N/A</td><td class="match">N/A</td><td class="match">N/A</td><td class="score">0.00</td></tr>
+    <tr><th scope="row">5</th><td>Phlegmatics and women: dysenteries</td><td>“liable to”</td><td>Dysenteries present (ch. 5, 9), but no phlegmatics or women named; those who died of these fevers were mostly children (ch. 10)</td><td class="match match--yes">Yes</td><td class="match match--no">No</td><td class="match">N/A</td><td class="match match--yes">Yes</td><td class="score">0.67</td></tr>
+    <tr><th scope="row">6</th><td>Bilious: dry ophthalmia</td><td>stated as fact</td><td>Missing: no bilious patients named, and the eye inflammations were not dry (ch. 5)</td><td class="match match--no">No</td><td class="match">N/A</td><td class="match">N/A</td><td class="match">N/A</td><td class="score">0.00</td></tr>
+    <tr><th scope="row">7</th><td>Old men: catarrhs causing death or hemiplegia</td><td>“some” and “others”</td><td>“Older people, and those whose natural heat is failing, have paralysis or raving or blindness” (ch. 12); no catarrh, deaths or number given</td><td class="match match--yes">Yes</td><td class="match match--yes">Yes</td><td class="match">N/A</td><td class="match match--no">No</td><td class="score">0.67</td></tr>
+  </tbody>
+</table>
+</div>
+
+The average score for C2 against Condition C is **0.33**, against 0.40 for Condition E. The
+dysenteries match best: C2 reports them through summer and autumn, as AWP predicts for everyone
+but the pregnant women, though not among the phlegmatics and women it singles out. The paralysis
+of older people in ch. 12 is close to the old men's hemiplegia, but without the catarrhs that AWP
+gives as its cause. The eye inflammations are the clearest mismatch: AWP predicts dry ophthalmia,
+and C2's were “marked by rheum” (ch. 5).

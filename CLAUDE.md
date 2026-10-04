@@ -36,8 +36,8 @@ epigraphic record of dream healing.
   … `constitution-4.md`). Jones's translation is filled in (extracted by
   script, not yet checked against the printed Loeb). **All four
   constitutions are annotated** (see "Author's annotations"): highlighting,
-  key, synopsis, no title, then a "Comparison with AWP" section and a
-  Commentary placeholder. Constitution 1 was annotated by the author.
+  key, synopsis, no title, then a "Comparison with AWP" section (and, on
+  C2 and C4, an alternative comparison). Constitution 1 was annotated by the author.
   Constitutions 2–4 were annotated by Claude at the author's request
   (2026-09-30), following Constitution 1 and Airs; their marks and
   synopses are **not yet reviewed by the author**.
@@ -196,9 +196,10 @@ epigraphic record of dream healing.
 - **Page structure:** chapters go in the `passages` field and render with
   `#ch-N` anchors. All four constitutions use the annotated layout (see
   "Author's annotations"). The body, below the annotated text, is
-  "## Comparison with AWP" (see "Constitution vs. AWP comparison") and then
-  "## Commentary" (a placeholder). The comparison replaced the old "Bearing
-  on *Airs, Waters, Places*" placeholder. (The old fixed Synopsis headings were Place;
+  "## Comparison with AWP" (see "Constitution vs. AWP comparison"), and on
+  C2 and C4 an "## Alternative comparison: Condition X". The author had the
+  Commentary placeholder and the old "Bearing on *Airs, Waters, Places*"
+  placeholder removed (2026-10-04); don't add them back. (The old fixed Synopsis headings were Place;
   Seasons and weather; Diseases that followed; Who was affected; Causal and
   generalizing language; Surprises and exceptions. They are worth covering
   in the commentary.)
@@ -266,7 +267,8 @@ Constitution 1 are by body system, Seasons by weather "case".
 - **Key.** The page's `highlightKey` lists the categories in the PDF's order:
   `id`, the PDF's label, and `style` (`bold` or `highlight`). Where the
   PDF puts several swatches on one line (Seasons: "Case A: conditionals and
-  prognoses"), give each entry the same `group` ("Case A") and the swatch's
+  prognoses"), give each entry the same `group` (on the site, "Condition A",
+  see below) and the swatch's
   own word as `label`; the key then renders them on one line. Highlight
   colours are the `.hl--<id>` classes in `styles.css`, matched to the PDF.
   Airs's key: Conditions of the Air (bold); General Health Characteristics;
@@ -274,7 +276,10 @@ Constitution 1 are by body system, Seasons by weather "case".
   Conditions; Skin, Discharges & Other Bodily Afflictions; Reproductive
   Health. Constitution 1's key is the same except that its bold category is
   Season (`season`: the season names and phrases like "early in the
-  spring"). Both use the same body-system `id`s and colours. Seasons's key: Cases A–F, each with conditionals (light shade,
+  spring"). Both use the same body-system `id`s and colours. Seasons's key: Cases A–F, shown as
+  "Condition A"–"Condition F" at the author's request (2026-10-04) to match
+  the Findings claims table and comparisons (the `case-x-*` ids and the
+  author's synopsis wording stay as they are), each with conditionals (light shade,
   `case-x-cond`) and prognoses (darker shade, `case-x-prog`), in red,
   orange, yellow, green, blue, purple; then Dangerous Crisis Points
   (`crisis`). All colours in `styles.css` are the exact Google Docs hex
@@ -308,7 +313,7 @@ Constitution 1 are by body system, Seasons by weather "case".
   schema.
 - **Body.** Delete the other placeholder sections and keep only the one
   that feeds the comparison: "Candidate claims" on AWP pages; on
-  constitution pages, "Comparison with AWP" then "Commentary".
+  constitution pages, "Comparison with AWP".
 - **Perseus links.** The layout adds a "Read on Perseus" link above each
   translation and, on AWP pages, a per-chapter Perseus link. All Perseus
   links open in a new tab. `sourceUrl` uses the URL-encoded form
@@ -361,22 +366,29 @@ frontmatter rather than editing it by hand.
 
 ## Constitution vs. AWP comparison
 
-Each constitution page ends (before Commentary) with "## Comparison with
-AWP": the weather quoted from the first chapter, the closest Seasons
+Each constitution page ends with "## Comparison with AWP": the weather quoted from the first chapter, the closest Seasons
 condition, a table, the average, and what the constitution reports that
 AWP 10 doesn't predict. The method is the author's (Findings →
 Constitutions).
 
 - **Constitution 1 is the author's** ("Argument (2).pdf", 2026-10-04):
   prose and table word for word, typos kept ("as the referring to",
-  "observed in Constitutions as"). Edit only on request.
+  "observed in Constitutions as"). Edit only on request. Two requested
+  changes (2026-10-04): the average is 0.30 (the author's 0.50 left out
+  the Missing rows), and chapter citations "(ch. N)" were added in the
+  drafts' format (prose and table cells).
 - **Constitutions 2–4 are Claude's drafts** (2026-10-04), at the author's
-  request, applying the same method. Each starts with a
-  `[PLACEHOLDER: Claude's draft …]` line and is written impersonally (no
-  "I"). Not yet reviewed by the author. All three chose Condition E
+  request, applying the same method, written impersonally (no "I"). Not
+  yet reviewed by the author; at their request they carry no placeholder
+  marker on the page. All three chose Condition E
   (C2 loosely, runner-up C; C3 closely; C4 on its opening drought and
   southerly rains, runner-up B). The C2 and C4 synopses were updated to
-  name E.
+  name E. At the author's request C2 also has an alternative comparison
+  against Condition C (0.33 vs E's 0.40) and C4 against Condition B, Bb
+  branch (0.33 vs E's 0.60), so the author can choose. Averages: C1 0.30,
+  C2 0.40, C3 0.00, C4 0.60. C and B rows follow the Findings claims
+  table, including its Confidence groupings; "stated as fact" is treated
+  as an unhedged (strong) confidence for Severity.
 - **Table markup:** HTML in the `.md` body, classes `claims-table
   comparison-table`; Yes/No cells are `td.match.match--yes/--no` (#b6d7a8 /
   #ea9999, the PDF's fills). Columns as in the author's PDF: Claim, AWP
@@ -384,10 +396,8 @@ Constitutions).
   Match columns, Score. No average row (the PDF has none); the average is
   in the prose. The tables were generated by a scratch script; edit the
   HTML directly or regenerate, but recompute scores if a cell changes.
-- **Averaging:** the author's C1 figure (0.50) is the mean over the claims
-  that were found (0.33, 0.50, 0.67); counting the two "Missing" rows as
-  0.00 it would be 0.30. Kept as written; the author was told. C2–C4 give
-  the found-claims average in bold and the all-claims figure after it.
+- **Averaging:** the average is over **all** claims of the condition,
+  Missing ones (0.00) included (author's decision, 2026-10-04).
 - **Rules applied in the drafts** (from C1 where it shows them): "Missing"
   → Disease No, the rest N/A, score 0.00. Patient is N/A throughout (E names
   no demographic). Season/Severity: No when the constitution places the
