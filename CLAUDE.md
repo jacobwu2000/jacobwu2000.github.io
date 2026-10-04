@@ -42,24 +42,26 @@ epigraphic record of dream healing.
   (2026-09-30), following Constitution 1 and Airs; their marks and
   synopses are **not yet reviewed by the author**.
   See "Epidemics constitution pages" below.
-- AWP pages exist for Airs (ch. 3–6), Waters (7–9) and Seasons (10–11), in
-  `airs.md`, `waters.md` and `seasons.md`, filled in the same way. **Airs
+- AWP pages exist for Introduction (ch. 1–2), Airs (3–6), Waters (7–9) and
+  Seasons (10–11), in `introduction.md`, `airs.md`, `waters.md` and
+  `seasons.md`, filled in the same way. **Airs
   and Seasons are annotated** (see "Author's annotations" below): the
   author's highlighting and key, the author's synopsis, no title, and only a
-  Candidate claims placeholder in the body. Waters is not annotated yet and
-  still has the older placeholder sections, but no `title` placeholder.
+  Candidate claims placeholder in the body. Introduction (added 2026-10-04) and
+  Waters are not annotated yet and still have the older placeholder
+  sections, but no `title` placeholder.
 - **Sources page** (`src/pages/sources/index.astro`): lists all the corpus
-  pages directly (AWP: Airs, Waters, Seasons; Epidemics: Constitutions
+  pages directly (AWP: Introduction, Airs, Waters, Seasons; Epidemics: Constitutions
   1–4, then any `kind: case` pages), followed by the "How passages are
   labeled" note. Epigraphy is no longer under Sources. There are no
   separate Hippocratic Corpus, AWP or Epidemics index pages any more. Their
   old URLs redirect to `/sources#awp` / `/sources#epidemics` (`redirects` in
   `astro.config.mjs`), and other links point at those anchors. A page
-  without a `highlightKey` (now just Waters) is listed as "[WIP]" with **no
+  without a `highlightKey` (now Introduction and Waters) is listed as "[WIP]" with **no
   link**. Its page still builds at its URL, and the link appears by itself
   once the page is annotated. The text pages keep their URLs under
   `/sources/hippocratic-corpus/{airs-waters-places,epidemics}/`.
-- The author plans to annotate Waters the same way. The claim list and the
+- The author plans to annotate Introduction and Waters the same way. The claim list and the
   comparison itself haven't been started.
 - Home page: framing text (hero, the two "strands" cards for texts and
   places, the "fieldwork is context, not evidence" note) was drafted by
@@ -68,9 +70,17 @@ epigraphic record of dream healing.
 - **Findings** (`src/pages/findings.mdx`, formerly "The Argument" at
   `/the-argument`, which now redirects) is scaffolded around the
   chosen direction: title, working-question box, table of contents, and one
-  section per part of "What the finished project looks like" below. Every
-  section body, including the Summary (which replaces the old home-page
-  abstract), is still a placeholder.
+  section per part of "What the finished project looks like" below, plus
+  "The case histories" and "*Prognostic*". On 2026-10-04 Claude filled in
+  the parts that need no analysis, at the author's request: Background (the
+  texts, quoting only the site's own extracted passages; the problem; a
+  Scholarship list), Sources and method (text, a table of what was read,
+  the reading procedure, draft evidence/illustration criteria for the
+  author to confirm, exclusions), Limitations, and Where the fieldwork
+  fits. Facts from general knowledge carry `[PLACEHOLDER: verify …]`. The
+  Summary, each constitution's findings, case histories, *Prognostic*, the
+  overall judgment and every summary of a scholar's argument are still
+  placeholders for the author's own analysis and reading.
 - Almost everything else is `[PLACEHOLDER: ...]`: inscriptions,
   bibliography, About, the Sources framing paragraph, section intros on the
   Epigraphy index page, the site sections on each Field Journal entry
@@ -79,8 +89,9 @@ epigraphic record of dream healing.
 - **Bibliography:** the Primary Editions list has the editions actually
   used: Jones's Loeb volume (LCL 147, 1923; imprint from the TEI's
   `sourceDesc`), the Perseus reader text (`1999.01.0251`), and the
-  GitHub TEI files (CC BY-SA 4.0). The iamata edition and all secondary
-  literature are still placeholders. Citations in `bibliography.json` are
+  GitHub TEI files (CC BY-SA 4.0). Secondary Literature has Nutton (2020)
+  and Wee (2016), not yet read (see "Key sources"). The iamata edition and
+  the rest of the secondary literature are still placeholders. Citations in `bibliography.json` are
   plain text, and `*italics*` and bare URLs render as italics and links.
 - **Field Journal and Epigraphy** (2026-09-30). The author first dropped
   the Site Archaeology dossiers, then had them merged into the Field
@@ -166,6 +177,7 @@ epigraphic record of dream healing.
 
   | Page | Chapters | Loeb pp. (from TEI, unverified) |
   |---|---|---|
+  | Introduction (`introduction.md`) | 1–2 | 71–73 |
   | Airs (`airs.md`) | 3–6 | 73–83 |
   | Waters (`waters.md`) | 7–9 | 83–99 |
   | Seasons (`seasons.md`) | 10–11 | 99–105 |
@@ -173,11 +185,12 @@ epigraphic record of dream healing.
   Ch. 10–11 are called Seasons, not Places. In Jones they are about the
   seasons, and ch. 12 opens "So much for the changes of the seasons" before
   turning to Asia and Europe, the treatise's actual "places" material. These
-  chapters are the main point of comparison with the constitutions. Ch. 1–2
-  (introduction) and 12–24 are not covered yet.
+  chapters are the main point of comparison with the constitutions. Ch. 12–24
+  are not covered yet. The Perseus reader has no dashes in ch. 1–2, so
+  the Introduction needed no `DASH_FIXES`.
 - **Fetching the text:** `python scripts/extract-jones.py awp FIRST-LAST`
   (e.g. `3-6`).
-- **Page structure:** unannotated pages (Waters) still carry the
+- **Page structure:** unannotated pages (Introduction, Waters) still carry the
   original placeholder body: a Synopsis with fixed headings (Conditions
   described; Predicted effects; Who is affected; Causal and generalizing
   language; Candidate claims) and a Commentary ending "Bearing on the
@@ -416,7 +429,7 @@ component change, so discuss it before doing it.
   for the 3–4 illustrative cases. Each has its translation (with source
   cited), commentary, and links to the AWP claims it bears on.
 - **Hippocratic Corpus → AWP:** pages for the chapters the claim list draws
-  on (so far Airs 3–6, Waters 7–9, Seasons 10–11), each annotated by the
+  on (so far Introduction 1–2, Airs 3–6, Waters 7–9, Seasons 10–11), each annotated by the
   author (see "Author's annotations"). Each page's "Candidate claims"
   section collects claims for the list. The claim list itself could
   be a single page or table.
@@ -428,13 +441,20 @@ component change, so discuss it before doing it.
   addition.
 
 ### Key sources
-- Loeb *Hippocrates* Vol. I (W. H. S. Jones): Epid. I & III, AWP, Prognostic,
-  plus the introduction (cite its Prognostic comment directly).
-- V. Nutton, "The Epidemics: organising information on communal diseases," in
-  Nutton & Totelin (2020). The most load-bearing source for the
+- Loeb *Hippocrates* Vol. I (W. H. S. Jones): Epid. I & III, AWP, plus the
+  introduction (cite its Prognostic comment directly). *Prognostic* itself
+  is in Vol. II (LCL 148), not Vol. I; Vol. I's contents (see
+  `bibliography.json`) don't include it. Verify against the Loeb.
+- V. Nutton, "The Epidemics: organising information on communal diseases,"
+  *Technai* 11 (2020): 113–127 (not "Nutton & Totelin", as an earlier
+  version of this file had it). The most load-bearing source for the
   constitutions.
 - J. Z. Wee, "Case History as Minority Report in the Hippocratic
-  *Epidemics* 1" (2016): on how the cases relate to the constitutions.
+  *Epidemics* 1," in Petridou & Thumiger (eds.), *Homo Patiens* (Brill,
+  2016), 138–165: on how the cases relate to the constitutions.
+- Both are in `bibliography.json` (2026-10-04). Neither is open access, and
+  Claude couldn't read either. Any summary or quotation of them must come
+  from the author's own reading.
 - J. Jouanna, *Hippocrates* (1999): AWP dating and context.
 - R. Thomas, *Herodotus in Context* (2000), ch. 3: AWP as tendency-based, not
   strictly deterministic.
