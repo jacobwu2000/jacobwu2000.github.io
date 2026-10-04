@@ -115,7 +115,7 @@ passages:
       - { category: head, text: "paralysis or raving" }
       - { category: eyes, text: "blindness" }
 synopsis: |
-  Epidemics I 4-12 describes the second Constitution. The specific weather pattern is that of stormy, rainy autumn, with north and south winds; northerly winter with heavy rains and snow, turning severely wintry again after the solstice; cold, northerly, wet spring; and summer not excessively hot, with continuous Etesian winds, followed by heavy rain with northerly winds near the rising of Arcturus. The text sums it up as a year "wet, cold and northerly". This does not correspond closely to any of the cases from Seasons (AWP 10-11): it is northerly throughout, like Case F, but wet rather than dry. I have highlighted the specific health observations during each season of the year with this weather pattern, and divided them into various categories based on the specific affected region or aspect of the body.
+  Epidemics I 4-12 describes the second Constitution. The specific weather pattern is that of stormy, rainy autumn, with north and south winds; northerly winter with heavy rains and snow, turning severely wintry again after the solstice; cold, northerly, wet spring; and summer not excessively hot, with continuous Etesian winds, followed by heavy rain with northerly winds near the rising of Arcturus. The text sums it up as a year "wet, cold and northerly". This does not correspond closely to any of the cases from Seasons (AWP 10-11). It comes closest to Case E (a northerly summer between rainy autumns), but the summer is not said to be dry, and the autumn rains near Arcturus came with northerly rather than southerly winds. I have highlighted the specific health observations during each season of the year with this weather pattern, and divided them into various categories based on the specific affected region or aspect of the body.
 highlightKey:
   - { id: season, label: "Season", style: bold }
   - { id: general, label: "General Health Characteristics" }
@@ -129,10 +129,64 @@ citation: "Hippocrates, Epidemics I 4–12, trans. W. H. S. Jones, in Hippocrate
 sourceUrl: "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0251%3Atext%3DEpid.%3Abook%3D1%3Achapter%3D2"
 ---
 
+## Comparison with AWP
+
+[PLACEHOLDER: Claude's draft, made by applying the author's method from Constitution 1 (see [Findings](/findings#constitutions)). Not yet reviewed by the author.]
+
+The first chapter of C2 (ch. 4) describes the weather that year in Thasos. Autumn brought
+“unseasonable wintry storms, suddenly with many north and south winds bursting out into rains.”
+Winter was “northerly; many violent and abundant rains; snows,” and after the solstice there was
+“a return of severe wintry weather” that “did not remit before the equinox.” Spring was “cold,
+northerly, wet, cloudy.” Summer “did not turn out excessively hot, the Etesian winds blowing
+continuously,” and “near the rising of Arcturus, there was much rain again, with northerly winds.”
+Ch. 5 sums the year up as “wet, cold and northerly.”
+
+The weather pattern in C2 is therefore that of stormy, rainy autumn with mixed winds; rainy,
+cold, northerly winter; wet, cold, northerly spring; and northerly summer, followed by rain with
+northerly winds. No condition in Seasons (AWP 10-11) fits well, because AWP 10 has no condition
+for a year that is both wet and northerly. The closest is **Condition E**: the summer was
+northerly, and the autumns on either side of it were rainy. But the text does not say the summer
+was dry, and the autumn rains near Arcturus came with northerly rather than southerly winds.
+Condition C is the next closest: it matches the rainy winter and the cold, northerly spring, but
+C2's winter was northerly and cold rather than southerly and mild, and its spring was wet rather
+than dry.
+
+E predicts the diseases of the winter that follows the autumn rains. C2 describes two winters: the
+one at the start of the year, when “the public health in most respects was good” (ch. 5), and the
+one after the Arcturus rains, into which the autumn fevers ran (“When autumn came, and during
+winter, continuous fevers”, ch. 5; “most of them were still ill in the winter”, ch. 8).
+
+Here is the comparison table for C2 and AWP 10 Condition E:
+
+<div class="table-scroll">
+<table class="claims-table comparison-table">
+  <caption>Constitution 2 compared with <a href="/sources/hippocratic-corpus/airs-waters-places/seasons#ch-10">AWP 10</a>, Condition E</caption>
+  <thead>
+    <tr><th scope="col">Claim</th><th scope="col">AWP Prediction</th><th scope="col">Confidence</th><th scope="col">Constitution</th><th scope="col">Disease Match</th><th scope="col">Patient Match</th><th scope="col">Season Match</th><th scope="col">Severity Match</th><th scope="col">Score</th></tr>
+  </thead>
+  <tbody>
+    <tr><th scope="row">1</th><td>Winter: headaches and mortifications of the brain</td><td rowspan="4">“likely”</td><td>“Pains about the head and neck, and heaviness combined with pain” (ch. 12); no season or number given</td><td class="match match--yes">Yes</td><td class="match">N/A</td><td class="match match--no">No</td><td class="match match--no">No</td><td class="score">0.33</td></tr>
+    <tr><th scope="row">2</th><td>Winter: hoarseness</td><td>Missing</td><td class="match match--no">No</td><td class="match">N/A</td><td class="match">N/A</td><td class="match">N/A</td><td class="score">0.00</td></tr>
+    <tr><th scope="row">3</th><td>Winter: colds in the head</td><td>Missing</td><td class="match match--no">No</td><td class="match">N/A</td><td class="match">N/A</td><td class="match">N/A</td><td class="score">0.00</td></tr>
+    <tr><th scope="row">4</th><td>Winter: coughs</td><td>“Coughs attended the fevers” (ch. 7) that began in autumn and ran on into winter (ch. 5, 8)</td><td class="match match--yes">Yes</td><td class="match">N/A</td><td class="match match--yes">Yes</td><td class="match match--yes">Yes</td><td class="score">1.00</td></tr>
+    <tr><th scope="row">5</th><td>Winter: consumptions</td><td>“likely” and “in some cases”</td><td>Those who had all the year's symptoms, from early spring to autumn, “were consumptives” (ch. 5)</td><td class="match match--yes">Yes</td><td class="match">N/A</td><td class="match match--no">No</td><td class="match match--yes">Yes</td><td class="score">0.67</td></tr>
+  </tbody>
+</table>
+</div>
+
+The average score for C2, over the three claims that were found, is **0.67**. Counting the two
+missing claims as 0.00, it is 0.40. Hoarseness and colds in the head are not mentioned at all, and
+the head pains of ch. 12 are given no season or number. Only the coughs fall where AWP puts them,
+in winter, as part of the fevers that ran on from autumn. Consumption appears, but as the
+condition of those who had the illnesses of early spring to autumn, not as a disease of winter.
+The winter at the start of the year, which followed the opening autumn rains, was healthy.
+
+Most of the observations in C2 are not predicted by AWP 10 Condition E. These include the eye
+inflammations and gummy sores of early spring; the dysenteries, tenesmus, lientery and bilious
+diarrhoea of summer and autumn; the many kinds of fever (ch. 5–8); and the strangury that saved
+very many patients, mostly children (ch. 10). Eye inflammations and dysenteries are predicted by
+other Seasons conditions (B and C), whose weather C2 only partly shares.
+
 ## Commentary
 
 [PLACEHOLDER: commentary on Constitution 2.]
-
-### Bearing on *Airs, Waters, Places*
-
-[PLACEHOLDER: which AWP claims this constitution matches, contradicts, or has nothing to say about, with quoted phrases.]

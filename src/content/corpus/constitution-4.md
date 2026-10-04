@@ -191,7 +191,7 @@ passages:
     text: |
       The power, too, to study correctly what has been written I consider to be an important part of the art of medicine. The man who has learnt these things and uses them will not, I think, make great mistakes in the art. And it is necessary to learn accurately each constitution of the seasons as well as the disease; what common element in the constitution or in the disease is good, and what common element in the constitution or in the disease is bad; what malady is protracted and fatal, what is protracted and likely to end in recovery; what acute illness is fatal, what acute illness is likely to end in recovery. With this knowledge it is easy to examine the order of the critical days, and to prognosticate therefrom. One who has knowledge of these matters can know whom he ought to treat, as well as the time and method of treatment.
 synopsis: |
-  Epidemics III 2-16 describes the fourth Constitution. The specific weather pattern is that of rainy, southerly autumn; southerly, humid, mild winter, with a brief northerly, snowy spell near the equinox; rainy, southerly, windless spring; and clear, hot summer with stifling heat and faint Etesian winds, followed by heavy rain with northerly winds near the rising of Arcturus. The text sums it up as a year "southerly, wet and mild". No single case from Seasons (AWP 10-11) fits: the mild, southerly, rainy winter matches the condition of Case C, but the spring was rainy and southerly rather than dry and northerly, which is closer to the spring of Case B. I have highlighted the specific health observations during each season of the year with this weather pattern, and divided them into various categories based on the specific affected region or aspect of the body. Chapter 16 is a remark on method rather than an observation of this constitution, so it is not highlighted.
+  Epidemics III 2-16 describes the fourth Constitution. The specific weather pattern is that of rainy, southerly autumn; southerly, humid, mild winter, with a brief northerly, snowy spell near the equinox; rainy, southerly, windless spring; and clear, hot summer with stifling heat and faint Etesian winds, followed by heavy rain with northerly winds near the rising of Arcturus. The text sums it up as a year "southerly, wet and mild". This comes closest to Case E from Seasons (AWP 10-11): the year opens with drought followed by heavy southerly rains and a rainy autumn, though the drought was windless rather than northerly. The rainy, southerly spring followed by a suddenly hot summer is also close to Case B, but B's winter is dry and northerly. I have highlighted the specific health observations during each season of the year with this weather pattern, and divided them into various categories based on the specific affected region or aspect of the body. Chapter 16 is a remark on method rather than an observation of this constitution, so it is not highlighted.
 highlightKey:
   - { id: season, label: "Season", style: bold }
   - { id: general, label: "General Health Characteristics" }
@@ -205,10 +205,64 @@ citation: "Hippocrates, Epidemics III 2–16, trans. W. H. S. Jones, in Hippocra
 sourceUrl: "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0251%3Atext%3DEpid.%3Abook%3D3%3Achapter%3D2"
 ---
 
+## Comparison with AWP
+
+[PLACEHOLDER: Claude's draft, made by applying the author's method from Constitution 1 (see [Findings](/findings#constitutions)). Not yet reviewed by the author.]
+
+The first chapter of C4 (ch. 2) describes the weather that year. It names no place. “The year was
+southerly and rainy, with no winds throughout.” About the rising of Arcturus, after a period of
+droughts, “there were now heavy rains, with southerly winds.” Autumn was “dark and cloudy, with
+abundance of rain.” Winter was “southerly, humid, and mild after the solstice,” with a short return
+of wintry weather near the equinox (“northerly winds with snow, but not for long”). Spring was
+“southerly again, with no winds; many rains throughout until the Dog Star.” Summer was “clear and
+warm, with waves of stifling heat,” the Etesian winds “faint and intermittent,” and near Arcturus
+there were “heavy rains with northerly winds.” Ch. 2 sums the year up as “southerly, wet and mild.”
+
+The weather pattern in C4 is therefore that of dry late summer, followed by rainy, southerly
+autumn; mild, humid, southerly winter; rainy, southerly, windless spring; and hot, clear summer
+with weak Etesian winds. The closest condition from Seasons (AWP 10-11) is **Condition E**: the year
+opens with drought followed by heavy southerly rains and a rainy autumn. But the drought cannot be
+called northerly, since the year had “no winds throughout.” Condition B is the next closest: its
+rainy, southerly spring is C4's spring, and C4 says the summer that followed was “suddenly hot,
+southerly, and calm” (ch. 15), which is the sequence behind AWP's explanation of B (“whenever the
+great heat comes on suddenly while the earth is soaked by reason of the spring rains and the south
+wind”). But B also requires a dry, northerly winter, and C4's winter was southerly, humid and mild.
+
+E predicts the diseases of the winter that follows the autumn rains. In C4 that is the winter of
+ch. 2, when “the general health was good except for the consumptives.”
+
+Here is the comparison table for C4 and AWP 10 Condition E:
+
+<div class="table-scroll">
+<table class="claims-table comparison-table">
+  <caption>Constitution 4 compared with <a href="/sources/hippocratic-corpus/airs-waters-places/seasons#ch-10">AWP 10</a>, Condition E</caption>
+  <thead>
+    <tr><th scope="col">Claim</th><th scope="col">AWP Prediction</th><th scope="col">Confidence</th><th scope="col">Constitution</th><th scope="col">Disease Match</th><th scope="col">Patient Match</th><th scope="col">Season Match</th><th scope="col">Severity Match</th><th scope="col">Score</th></tr>
+  </thead>
+  <tbody>
+    <tr><th scope="row">1</th><td>Winter: headaches and mortifications of the brain</td><td rowspan="4">“likely”</td><td>Missing</td><td class="match match--no">No</td><td class="match">N/A</td><td class="match">N/A</td><td class="match">N/A</td><td class="score">0.00</td></tr>
+    <tr><th scope="row">2</th><td>Winter: hoarseness</td><td>“Voices impaired” in early spring (ch. 3); “many” had impaired voice “at the beginning of the cases of consumption” (ch. 5)</td><td class="match match--yes">Yes</td><td class="match">N/A</td><td class="match match--no">No</td><td class="match match--yes">Yes</td><td class="score">0.67</td></tr>
+    <tr><th scope="row">3</th><td>Winter: colds in the head</td><td>Consumptives growing worse: fluxes “which came from the head, were abundant” (ch. 13); season not stated</td><td class="match match--yes">Yes</td><td class="match">N/A</td><td class="match match--no">No</td><td class="match match--yes">Yes</td><td class="score">0.67</td></tr>
+    <tr><th scope="row">4</th><td>Winter: coughs</td><td>Consumptives' coughs “throughout were frequent”; many cases “began in the winter” (ch. 13)</td><td class="match match--yes">Yes</td><td class="match">N/A</td><td class="match match--yes">Yes</td><td class="match match--yes">Yes</td><td class="score">1.00</td></tr>
+    <tr><th scope="row">5</th><td>Winter: consumptions</td><td>“likely” and “in some cases”</td><td>“Many cases began in the winter”; “the most fatal” disease (ch. 13)</td><td class="match match--yes">Yes</td><td class="match">N/A</td><td class="match match--yes">Yes</td><td class="match match--no">No</td><td class="score">0.67</td></tr>
+  </tbody>
+</table>
+</div>
+
+The average score for C4, over the four claims that were found, is **0.75**. Counting the missing
+claim as 0.00, it is 0.60. This is the highest of the four constitutions. The claims that match are
+the ones tied to consumption: many cases began in winter, as AWP predicts, and they brought coughs,
+impaired voices and fluxes from the head. As with C1, the severity does not match: AWP expects
+consumption only “in some cases,” but in C4 it was “the most fatal” disease (ch. 13). Headaches and
+mortifications of the brain are not mentioned.
+
+Most of the observations in C4 are not predicted by AWP 10 Condition E. These include the
+malignant erysipelas of early spring (ch. 3–4); the ardent fevers and phrenitis (ch. 6); the
+sores in the mouth, fluxes about the genitals, eye inflammations, growths on the eyelids and
+carbuncles (ch. 7); and the bowel complaints from which “all patients ... died chiefly” (ch. 8).
+C4 also states a rule about seasonal change that AWP 10 does not: “the coming on of winter resolves
+the diseases of summer, and the coming on of summer removes those of winter” (ch. 15).
+
 ## Commentary
 
 [PLACEHOLDER: commentary on Constitution 4.]
-
-### Bearing on *Airs, Waters, Places*
-
-[PLACEHOLDER: which AWP claims this constitution matches, contradicts, or has nothing to say about, with quoted phrases.]

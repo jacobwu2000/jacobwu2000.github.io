@@ -164,10 +164,61 @@ citation: "Hippocrates, Epidemics I 13–26, trans. W. H. S. Jones, in Hippocrat
 sourceUrl: "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.01.0251%3Atext%3DEpid.%3Abook%3D1%3Achapter%3D3"
 ---
 
+## Comparison with AWP
+
+[PLACEHOLDER: Claude's draft, made by applying the author's method from Constitution 1 (see [Findings](/findings#constitutions)). Not yet reviewed by the author.]
+
+The first chapter of C3 (ch. 13) describes the weather that year in Thasos. Around Arcturus there
+were “many violent rains with northerly winds,” then from the equinox to the setting of the
+Pleiades “slight, southerly rains.” Winter was “northerly, droughts, cold periods, violent winds,
+snow.” Spring was “northerly, droughts, slight rains, periods of cold.” The summer had “periods of
+great cold until near the Dog Star,” then a “hot summer. Great heat, not intermittent but
+continuous and severe. No rain fell. The Etesian winds blew.” Finally, “About Arcturus southerly
+rains until the equinox.”
+
+The weather pattern in C3 is therefore that of rainy autumn, northerly at first and then lightly
+southerly; dry, cold, northerly winter; dry, cold, northerly spring; and summer that was cold at
+first, then hot and rainless with Etesian winds, followed by southerly rains. The end of the year
+matches **Condition E** from Seasons (AWP 10-11) closely: a dry, northerly summer (“No rain fell.
+The Etesian winds blew”) followed by a rainy, southerly autumn (“southerly rains until the
+equinox”). Of the four constitutions, C3 fits Condition E best. The dry, northerly winter and
+spring also resemble Condition F, but F requires that there be no rain at Arcturus.
+
+E predicts the diseases of the winter that follows the autumn rains. C3 describes that winter in
+ch. 18 (“About the equinox up to the setting of the Pleiades, and during winter”) and ch. 22
+(“During winter, near the time of the winter solstice, and continuing until the equinox”).
+
+Here is the comparison table for C3 and AWP 10 Condition E:
+
+<div class="table-scroll">
+<table class="claims-table comparison-table">
+  <caption>Constitution 3 compared with <a href="/sources/hippocratic-corpus/airs-waters-places/seasons#ch-10">AWP 10</a>, Condition E</caption>
+  <thead>
+    <tr><th scope="col">Claim</th><th scope="col">AWP Prediction</th><th scope="col">Confidence</th><th scope="col">Constitution</th><th scope="col">Disease Match</th><th scope="col">Patient Match</th><th scope="col">Season Match</th><th scope="col">Severity Match</th><th scope="col">Score</th></tr>
+  </thead>
+  <tbody>
+    <tr><th scope="row">1</th><td>Winter: headaches and mortifications of the brain</td><td rowspan="4">“likely”</td><td>Missing</td><td class="match match--no">No</td><td class="match">N/A</td><td class="match">N/A</td><td class="match">N/A</td><td class="score">0.00</td></tr>
+    <tr><th scope="row">2</th><td>Winter: hoarseness</td><td>Missing</td><td class="match match--no">No</td><td class="match">N/A</td><td class="match">N/A</td><td class="match">N/A</td><td class="score">0.00</td></tr>
+    <tr><th scope="row">3</th><td>Winter: colds in the head</td><td>Missing</td><td class="match match--no">No</td><td class="match">N/A</td><td class="match">N/A</td><td class="match">N/A</td><td class="score">0.00</td></tr>
+    <tr><th scope="row">4</th><td>Winter: coughs</td><td>Missing</td><td class="match match--no">No</td><td class="match">N/A</td><td class="match">N/A</td><td class="match">N/A</td><td class="score">0.00</td></tr>
+    <tr><th scope="row">5</th><td>Winter: consumptions</td><td>“likely” and “in some cases”</td><td>Missing</td><td class="match match--no">No</td><td class="match">N/A</td><td class="match">N/A</td><td class="match">N/A</td><td class="score">0.00</td></tr>
+  </tbody>
+</table>
+</div>
+
+None of the five claims was found, so there is no average over found claims; counting the
+missing claims as 0.00, the average score for C3 is **0.00**. The winter after the Arcturus rains
+brought ardent fevers and phrenitis, and “most of them were fatal” (ch. 18); they “still caused
+many deaths” (ch. 22). The phrenitis cases had “much delirium” (ch. 18), but the text does not
+name headaches or mortifications of the brain, so claim 1 is scored as missing. No hoarseness,
+colds in the head, coughs or consumption are reported in ch. 13–22.
+
+So the constitution whose weather fits Condition E best has the lowest score. Most of the
+observations in C3 are not what one would expect after reading AWP 10: the paralyses of the first
+winter (ch. 14); the ardent fevers from early spring onward, with nosebleeds as the sign of
+recovery (ch. 14–16, 19); jaundice and dysentery (ch. 15, 17); difficult childbirth and abortions
+(ch. 16); and the list of physical types among those who died (ch. 19).
+
 ## Commentary
 
 [PLACEHOLDER: commentary on Constitution 3.]
-
-### Bearing on *Airs, Waters, Places*
-
-[PLACEHOLDER: which AWP claims this constitution matches, contradicts, or has nothing to say about, with quoted phrases.]

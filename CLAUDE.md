@@ -36,8 +36,8 @@ epigraphic record of dream healing.
   … `constitution-4.md`). Jones's translation is filled in (extracted by
   script, not yet checked against the printed Loeb). **All four
   constitutions are annotated** (see "Author's annotations"): highlighting,
-  key, synopsis, no title, and a Commentary placeholder ending "Bearing on
-  *Airs, Waters, Places*". Constitution 1 was annotated by the author.
+  key, synopsis, no title, then a "Comparison with AWP" section and a
+  Commentary placeholder. Constitution 1 was annotated by the author.
   Constitutions 2–4 were annotated by Claude at the author's request
   (2026-09-30), following Constitution 1 and Airs; their marks and
   synopses are **not yet reviewed by the author**.
@@ -93,6 +93,13 @@ epigraphic record of dream healing.
     that get better"); C2–C7 ("The others" = everyone but the pregnant
     women, then phlegmatics and women / bilious / old men); new Cc (rainy
     summer); D1 "the winter must be unhealthy".
+  - **Constitutions** (first subsection of Discussion and Analysis) opens
+    with the author's method text, word for word ("Argument (3).pdf",
+    2026-10-04, typos kept): find the closest Seasons condition, then score
+    each of its claims on Disease / Patient / Season / Severity (Yes, No,
+    N/A), Score = Yes ÷ (Yes + No). Each constitution's h4 gives the
+    condition and average and links to the table on its page. See
+    "Constitution vs. AWP comparison" below.
   - **Discussion and Analysis** subsections are the author's: Constitutions
     (one h4 per constitution), Time and Causality, Normal and Abnormal
     Seasons, Patient Types, Disease Surplus, Crisis (which also takes
@@ -188,10 +195,10 @@ epigraphic record of dream healing.
   them.
 - **Page structure:** chapters go in the `passages` field and render with
   `#ch-N` anchors. All four constitutions use the annotated layout (see
-  "Author's annotations"). The author chose the body for annotated
-  constitutions (Constitution 1 is the model): no fixed Synopsis headings,
-  just "## Commentary" (a placeholder) with its "### Bearing on *Airs,
-  Waters, Places*" subsection. (The old fixed Synopsis headings were Place;
+  "Author's annotations"). The body, below the annotated text, is
+  "## Comparison with AWP" (see "Constitution vs. AWP comparison") and then
+  "## Commentary" (a placeholder). The comparison replaced the old "Bearing
+  on *Airs, Waters, Places*" placeholder. (The old fixed Synopsis headings were Place;
   Seasons and weather; Diseases that followed; Who was affected; Causal and
   generalizing language; Surprises and exceptions. They are worth covering
   in the commentary.)
@@ -300,8 +307,8 @@ Constitution 1 are by body system, Seasons by weather "case".
   just the `label` (e.g. "Airs", no period). `title` is optional in the
   schema.
 - **Body.** Delete the other placeholder sections and keep only the one
-  that feeds the comparison: "Candidate claims" on AWP pages, "Commentary"
-  with "Bearing on *Airs, Waters, Places*" on constitution pages.
+  that feeds the comparison: "Candidate claims" on AWP pages; on
+  constitution pages, "Comparison with AWP" then "Commentary".
 - **Perseus links.** The layout adds a "Read on Perseus" link above each
   translation and, on AWP pages, a per-chapter Perseus link. All Perseus
   links open in a new tab. `sourceUrl` uses the URL-encoded form
@@ -351,6 +358,45 @@ text, in the layout of the author's PDFs) was made from the page files for
 the author: "Constitutions 1-4 (annotated).docx" in their Downloads. It
 isn't kept in the repo. If the marks change, regenerate it from the
 frontmatter rather than editing it by hand.
+
+## Constitution vs. AWP comparison
+
+Each constitution page ends (before Commentary) with "## Comparison with
+AWP": the weather quoted from the first chapter, the closest Seasons
+condition, a table, the average, and what the constitution reports that
+AWP 10 doesn't predict. The method is the author's (Findings →
+Constitutions).
+
+- **Constitution 1 is the author's** ("Argument (2).pdf", 2026-10-04):
+  prose and table word for word, typos kept ("as the referring to",
+  "observed in Constitutions as"). Edit only on request.
+- **Constitutions 2–4 are Claude's drafts** (2026-10-04), at the author's
+  request, applying the same method. Each starts with a
+  `[PLACEHOLDER: Claude's draft …]` line and is written impersonally (no
+  "I"). Not yet reviewed by the author. All three chose Condition E
+  (C2 loosely, runner-up C; C3 closely; C4 on its opening drought and
+  southerly rains, runner-up B). The C2 and C4 synopses were updated to
+  name E.
+- **Table markup:** HTML in the `.md` body, classes `claims-table
+  comparison-table`; Yes/No cells are `td.match.match--yes/--no` (#b6d7a8 /
+  #ea9999, the PDF's fills). Columns as in the author's PDF: Claim, AWP
+  Prediction, Confidence (rowspan for shared "likely"), Constitution, four
+  Match columns, Score. No average row (the PDF has none); the average is
+  in the prose. The tables were generated by a scratch script; edit the
+  HTML directly or regenerate, but recompute scores if a cell changes.
+- **Averaging:** the author's C1 figure (0.50) is the mean over the claims
+  that were found (0.33, 0.50, 0.67); counting the two "Missing" rows as
+  0.00 it would be 0.30. Kept as written; the author was told. C2–C4 give
+  the found-claims average in bold and the all-claims figure after it.
+- **Rules applied in the drafts** (from C1 where it shows them): "Missing"
+  → Disease No, the rest N/A, score 0.00. Patient is N/A throughout (E names
+  no demographic). Season/Severity: No when the constitution places the
+  disease in another season or its quantity conflicts with AWP's hedge
+  ("few" vs "likely"; "most fatal" vs "in some cases"), and also No when the
+  constitution gives no season or quantity (the method allows N/A only when
+  AWP doesn't specify). Diseases are matched by name, not identified
+  (phrenitis is not counted as "mortifications of the brain"). Quotes in
+  the drafts were checked by script against the page text.
 
 ## Research project: history and chosen direction
 
