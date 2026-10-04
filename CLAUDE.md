@@ -79,6 +79,12 @@ epigraphic record of dream healing.
     Ca, Cb) shaded. Its labels A–F match the Seasons page's cases. If the
     author changes the table, transcribe it exactly; don't correct it
     against AWP on your own (tell the author about differences instead).
+    On 2026-10-04, at the author's request, Claude fixed typos in this
+    prose and corrected the table against AWP 10: B4–B5 added; Bb3–Bb5
+    ("least of all among the old men"; quartans and dropsies in "those
+    that get better"); C2–C7 ("The others" = everyone but the pregnant
+    women, then phlegmatics and women / bilious / old men); new Cc (rainy
+    summer); D1 "the winter must be unhealthy".
   - **Discussion and Analysis** subsections are the author's: Constitutions
     (one h4 per constitution), Time and Causality, Normal and Abnormal
     Seasons, Patient Types, Disease Surplus, Crisis (which also takes
