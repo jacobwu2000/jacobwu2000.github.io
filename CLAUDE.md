@@ -67,6 +67,14 @@ epigraphic record of dream healing.
   places, the "fieldwork is context, not evidence" note) was drafted by
   Claude from this file and has not yet been reviewed by the author. The
   itinerary excerpts are pulled automatically from the journal entries.
+  On 2026-10-04 the author set the home h1 to "Ancient Greek Medicine",
+  gave the hero's second paragraph in their own words ("This is a working
+  research notebook that is the result of a single non-expert's
+  research…"; keep as written), and pointed Strand 1's links at Findings
+  and Sources.
+- **Fieldwork strand is [WIP]:** the Strand 2 eyebrow and the h1s of the
+  Field Journal, Epigraphy and Map index pages carry "[WIP]". Remove them
+  when the author says that strand is done.
 - **Findings** (`src/pages/findings.mdx`, formerly "The Argument" at
   `/the-argument`, which now redirects). Structure follows the author's
   outline ("Argument.pdf", 2026-10-04): Summary; 1. Background; 2. Sources
