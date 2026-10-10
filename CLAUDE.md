@@ -25,7 +25,7 @@ epigraphic record of dream healing.
   The site has to show (1) real proof of fieldwork and (2) research that is
   small but real and defensible.
 
-## Current state (as of 2026-10-04)
+## Current state (as of 2026-10-09)
 
 - The scaffold, routing, schema and map all work.
 - **Field Journal** (fieldwork strand): 8 entries, one per site, laid out
@@ -80,51 +80,61 @@ epigraphic record of dream healing.
   Field Journal, Epigraphy and Map index pages carry "[WIP]". Remove them
   when the author says that strand is done.
 - **Findings** (`src/pages/findings.mdx`, formerly "The Argument" at
-  `/the-argument`, which now redirects). Structure follows the author's
-  outline ("Argument.pdf", 2026-10-04): Summary; 1. Background; 2. Sources
-  and Method; 3. Discussion and Analysis; 4. Conclusion.
-  - **Author's own text** (word for word from the PDF, typos included;
-    edit only on request): in Sources and Method, "Comparability of AWP
-    and Epidemics" and "Claims List from AWP", including the claims
-    table. The table is HTML with rowspans (`.claims-table` in
+  `/the-argument`, which now redirects). Rebuilt on 2026-10-09 from the
+  author's "Findings.docx.pdf", which is now the source of truth for its
+  structure: Summary; 1. Background (1.1 Texts, 1.2 Problem, 1.3
+  Scholarship); 2. Sources and Method (2.1 Text and Translation, 2.2
+  Comparability of AWP and the Epidemics, 2.3 "Evidence" vs.
+  "Illustration" Hypotheses, 2.4 Methodology, 2.5 Claims List from AWP,
+  2.6 Scoring the Constitutions); 3. Discussion and Analysis (3.1
+  Comparison of Predictions against Observations, with one h4 per
+  constitution giving condition, average and table links; 3.2 Observation
+  Surplus; 3.3 Vocabulary and Organization: 3.3.1 Patient
+  Characteristics, 3.3.2 Seasons and Weather, 3.3.3 Diseases and
+  Symptoms, 3.3.4 Causality, 3.3.5 Crises; 3.4 Case Histories [WIP]; 3.5
+  Dating and Authorship); 4. Conclusion (4.1 Evidence or illustration?,
+  4.2 Limitations). "Where the fieldwork fits" and "What this study does
+  not do" were dropped because the author's document leaves them out.
+  - **The analysis is now the author's own**, in their voice (3.1, 3.2,
+    3.3.1, 3.3.2, the hypotheses and criteria in 2.3). At the author's
+    request Claude moved Comparability from after the Methodology to 2.2,
+    tightened its prose, moved the per-constitution results from 2.6 into
+    3.1, and lightly smoothed and hedged the author's prose.
+  - **Claude's drafts** (2026-10-09, at the author's request, where the
+    PDF said "[CLAUDE: …]"): Summary; 3.1's caveat that a poor match also
+    counts against "evidence"; the 3.2 surplus table and paragraphs; the AWP
+    quotes in 3.3.1; 3.3.3 (shared-disease table); 3.3.4; 3.3.5; the
+    Philiscus/Silenus/Clazomenae links in 3.4; the possibilities in 3.5;
+    4.1; the "Scoring" limitation. Each ends with `[PLACEHOLDER: review …]`
+    until the author revises it. Things Claude couldn't do without sources
+    (scholarship summaries, range of positions, dating, Jones's
+    *Prognostic* remark) stay as placeholders.
+  - Facts added from the Perseus TEI (verify in the printed Loeb): Epid. I
+    has 14 cases; Epid. III has 12 before the constitution and 16 after,
+    and the case openings give their settings. Jones's notes quoted on the
+    page: Epid. III opening ("really one work"), III 16 ("does not fit in
+    with the context", recurs in *On Crises*, bracketed by Ermerins), and
+    the change of diction in the second Epid. III series.
+  - Flagged for the author: the 2.6 example (and C1 table row 2) reads
+    Epid. I 1's "Few women were attacked" as applying to the hoarseness; in
+    the text it follows the ear swellings.
+  - **Claims table** (2.5): HTML with rowspans (`.claims-table` in
     `styles.css`), one `<tbody>` per condition, sub-conditions (Ba, Bb,
-    Ca, Cb) shaded. Its labels A–F match the Seasons page's key
+    Ca, Cb, Cc) shaded. Labels A–F match the Seasons page's key
     ("Condition A"–"Condition F"). The same table is copied word for word
     into the Seasons page's "Candidate claims" section (`seasons.md` body,
-    with a link back to `/findings#claims-list-from-awp`); keep the two
-    copies identical. If the
-    author changes the table, transcribe it exactly; don't correct it
-    against AWP on your own (tell the author about differences instead).
-    On 2026-10-04, at the author's request, Claude fixed typos in this
-    prose and corrected the table against AWP 10: B4–B5 added; Bb3–Bb5
-    ("least of all among the old men"; quartans and dropsies in "those
-    that get better"); C2–C7 ("The others" = everyone but the pregnant
-    women, then phlegmatics and women / bilious / old men); new Cc (rainy
-    summer); D1 "the winter must be unhealthy".
-  - **Constitutions** (first subsection of Discussion and Analysis) opens
-    with the author's method text, word for word ("Argument (3).pdf",
-    2026-10-04, typos kept): find the closest Seasons condition, then score
-    each of its claims on Disease / Patient / Season / Severity (Yes, No,
-    N/A), Score = Yes ÷ (Yes + No). Each constitution's h4 gives the
-    condition and average and links to the table on its page. See
-    "Constitution vs. AWP comparison" below.
-  - **Discussion and Analysis** subsections are the author's: Constitutions
-    (one h4 per constitution), Time and Causality, Normal and Abnormal
-    Seasons, Patient Types, Disease Surplus, Crisis (which also takes
-    *Prognostic*), Case Histories [WIP], Dating and Authorship. Claude
-    wrote a short factual lead-in for each (the question it asks, plus
-    passages quoted from the site's extracted text with chapter
-    references) followed by a `[PLACEHOLDER: analysis…]`. The lead-ins
-    make no analytic claims.
-  - **Conclusion** holds "Evidence or illustration?" (placeholder),
-    Limitations and Where the fieldwork fits.
-  - Claude also wrote, on 2026-10-04, the non-analytic parts: Background
-    (the texts, the problem, a Scholarship list) and the rest of Sources
-    and Method (text, what was read, reading procedure, draft
-    evidence/illustration criteria for the author to confirm, exclusions).
-    Facts from general knowledge carry `[PLACEHOLDER: verify …]`. The
-    Summary, all analysis, the judgment and every summary of a scholar's
-    argument are placeholders for the author's own reading.
+    linking back to `/findings#25-claims-list-from-awp`); keep the two
+    copies identical. If the author changes the table, transcribe it
+    exactly; don't correct it against AWP on your own (tell the author
+    about differences instead). On 2026-10-04, at the author's request,
+    Claude corrected the table against AWP 10 (B4–B5, Bb3–Bb5, C2–C7, Cc,
+    D1).
+  - Heading numbers are part of the slugs (`#25-claims-list-from-awp`,
+    `#31-comparison-of-predictions-against-observations`); update inbound
+    links if headings are renumbered.
+  - A Word copy ("Findings (revised).docx" in the author's Downloads) was
+    made from the built page with LibreOffice (HTML to docx). It isn't kept
+    in the repo; regenerate it rather than editing it by hand.
 - Almost everything else is `[PLACEHOLDER: ...]`: inscriptions,
   bibliography, About, the Sources framing paragraph, section intros on the
   Epigraphy index page, the site sections on each Field Journal entry
@@ -376,8 +386,8 @@ frontmatter rather than editing it by hand.
 
 Each constitution page ends with "## Comparison with AWP": the weather quoted from the first chapter, the closest Seasons
 condition, a table, the average, and what the constitution reports that
-AWP 10 doesn't predict. The method is the author's (Findings →
-Constitutions).
+AWP 10 doesn't predict. The method is the author's (Findings → 2.6
+Scoring the Constitutions; results in 3.1).
 
 - **Constitution 1 is the author's** ("Argument (2).pdf", 2026-10-04):
   prose and table word for word, typos kept ("as the referring to",
@@ -525,7 +535,7 @@ component change, so discuss it before doing it.
   on (so far Introduction 1–2, Airs 3–6, Waters 7–9, Seasons 10–11), each annotated by the
   author (see "Author's annotations"). Each page's "Candidate claims"
   section collects claims for the list. The claim list itself is the AWP
-  10 claims table in Findings (Sources and Method), copied onto Seasons.
+  10 claims table in Findings (2.5), copied onto Seasons.
 - **Field Journal:** one page per site, combining the scholarly site
   sections with real photos and personal observations that keep the
   fieldwork visible. **Epigraphy** sits beside it in the fieldwork strand.

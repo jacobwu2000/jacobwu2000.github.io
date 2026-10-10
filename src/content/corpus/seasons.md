@@ -82,7 +82,7 @@ sourceUrl: "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.
 
 ## Candidate claims
 
-The claims from AWP 10, as listed in [Findings](/findings#claims-list-from-awp).
+The claims from AWP 10, as listed in [Findings](/findings#25-claims-list-from-awp).
 
 <div class="table-scroll">
 <table class="claims-table">
