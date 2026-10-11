@@ -100,9 +100,9 @@ epigraphic record of dream healing.
     "Findings (revised).docx.pdf"). Claude had drafted the Summary, parts
     of 3.1–3.5, 4.1 and the "Scoring" limitation on 2026-10-09; the author
     revised them in their own wording and dropped the `[PLACEHOLDER:
-    review …]` notes. The page now matches that PDF word for word,
-    including the author's slips ("mechanisms that explains",
-    "*Prognostics*"). Edit only on request. The author also cut the
+    review …]` notes. The page matches that PDF word for word, except
+    two slips corrected at the author's request ("mechanisms that
+    explain", "*Prognostic*"). Edit only on request. The author also cut the
     *Prognostic* paragraph from 1.1, the per-work placeholders under
     Nutton, Wee and Jones in 1.3, and the Greek spot-check, Silenus /
     Hermippus verification and Jones-on-*Prognostic* placeholders.
@@ -115,9 +115,11 @@ epigraphic record of dream healing.
     10 mechanism quote), 3.4 (case analysis), 3.5 (dating). Leave them
     until the author fills them in.
   - **AI Usage Disclosure** (h2 at the end, in the TOC; 2026-10-11, at the
-    author's request): AI was used to edit and revise the findings,
-    annotate the texts and extract quotations, and all of it was reviewed
-    by the author.
+    author's request, wording theirs): AI's primary use was building the
+    site and transferring the findings to it; it was also used to edit
+    and revise the findings, annotate the texts and extract quotations;
+    the author reviewed all of it and "guarantees the accuracy of the
+    content to the best of their own ability".
   - Facts added from the Perseus TEI (verify in the printed Loeb): Epid. I
     has 14 cases; Epid. III has 12 before the constitution and 16 after,
     and the case openings give their settings. Jones's notes quoted on the
