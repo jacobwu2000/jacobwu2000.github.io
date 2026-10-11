@@ -1,0 +1,256 @@
+---
+// Strand 2's synthesis page: the iamata (patients travel to the god) read
+// against the Epidemics and AWP (the physician travels to the patients), on
+// the map. Counts and lists are computed from iamata.json,
+// epidemics-cases.json and sites.json, so they stay right as the data
+// changes; the prose is placeholder or marked Claude draft.
+import ScholarlyLayout from '../layouts/ScholarlyLayout.astro';
+import SiteMap from '../components/SiteMap.jsx';
+import sites from '../data/sites.json';
+import iamata from '../data/iamata.json';
+import cases from '../data/epidemics-cases.json';
+import photos from '../data/photos.json';
+import { originOf, taleUrl } from '../utils/iamata.js';
+
+// Landmarks are typed by hand into epidemics-cases.json; like the corpus
+// `marks`, each must be copied exactly from Jones's opening sentence.
+for (const c of cases) {
+  if (c.landmark && !c.opening.includes(c.landmark)) {
+    throw new Error(`epidemics-cases.json: landmark "${c.landmark}" not found in ${c.ref}`);
+  }
+}
+
+// Origins of the iamata petitioners, most tales first.
+const origins = Object.values(
+  iamata.reduce((acc, t) => {
+    const place = originOf(t);
+    if (!place) return acc;
+    (acc[place.id] ??= { place, tales: [] }).tales.push(t);
+    return acc;
+  }, {})
+).sort((a, b) => b.tales.length - a.tales.length || a.place.name.localeCompare(b.place.name));
+const noOrigin = iamata.filter((t) => !t.origin);
+const placedOrigins = origins.filter((o) => o.place.lat != null);
+const unplacedOrigins = origins.filter((o) => o.place.lat == null);
+const away = iamata.filter((t) => t.away);
+const visitedOrigins = origins.filter((o) => o.place.visited && o.place.id !== 'epidauros');
+
+// Epidemics case settings.
+const cities = Object.entries(
+  cases.reduce((acc, c) => {
+    if (c.city) (acc[c.city] ??= []).push(c);
+    return acc;
+  }, {})
+).sort((a, b) => b[1].length - a[1].length);
+const named = cases.filter((c) => c.city);
+const withLandmark = cases.filter((c) => c.landmark);
+const caseBooks = [
+  { label: 'Epid. I (after Constitution 3)', items: cases.filter((c) => c.book === 1) },
+  { label: 'Epid. III, first series (before the constitution)', items: cases.filter((c) => c.series === 'first series') },
+  { label: 'Epid. III, second series (after the constitution)', items: cases.filter((c) => c.series === 'second series') },
+];
+const read = iamata.filter((t) => t.closeReading);
+---
+<ScholarlyLayout title="Two Geographies of Healing">
+  <p class="eyebrow">Fieldwork · Strand 2</p>
+  <h1>Two Geographies of Healing [WIP]</h1>
+
+  <div class="question-box">
+    <p class="question-box__label">Question</p>
+    <p>
+      The Epidaurian iamata record patients who travelled to the god. The
+      <em>Epidemics</em> record a physician who travelled to his patients, and
+      <em>Airs, Waters, Places</em> is written for a physician arriving in a town he
+      does not know. Mapped side by side, do the two kinds of text imply two different
+      geographies of healing?
+    </p>
+  </div>
+  <p>[PLACEHOLDER: review — the question above was drafted by Claude from the Strand 2 plan.]</p>
+
+  <nav class="page-toc" aria-label="On this page">
+    <p class="page-toc__label">On this page</p>
+    <ol>
+      <li><a href="#summary">Summary</a></li>
+      <li><a href="#map">The map</a></li>
+      <li><a href="#iamata">The iamata: who came to Epidauros</a></li>
+      <li><a href="#epidemics">The Epidemics: where the physician went</a></li>
+      <li><a href="#awp">AWP: the physician arriving in a town</a></li>
+      <li><a href="#comparison">Comparison</a></li>
+      <li><a href="#fieldwork">The fieldwork</a></li>
+      <li><a href="#close-readings">Close readings</a></li>
+      <li><a href="#discussion">Discussion</a></li>
+      <li><a href="#limitations">Limitations</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="summary">Summary</h2>
+  <p>[PLACEHOLDER: a one-paragraph summary of the finding, hedged and sized to the sample, written once the comparison is done.]</p>
+
+  <h2 id="map">The map</h2>
+  <p>
+    Purple lines join each petitioner’s home town to Epidauros; their thickness is the
+    number of tales from that town. Teal rings are the towns where the
+    <em>Epidemics</em> are set. Solid markers are the sites visited in 2026; hollow ones
+    are known only from the texts. Click a marker for the tales or cases set there.
+  </p>
+  <SiteMap
+    client:only="react"
+    sites={sites}
+    iamata={iamata}
+    cases={cases}
+    photos={photos}
+    layers={['iamata', 'hippocratic', 'cult-healing']}
+  />
+  <p class="translation-source">
+    Places and coordinates from the <a href="https://pleiades.stoa.org" target="_blank" rel="noopener">Pleiades</a>
+    gazetteer (each popup links to its entry). Uncertain identifications are noted in
+    the popups.
+  </p>
+
+  <h2 id="iamata">The iamata: who came to Epidauros</h2>
+  <p>
+    The two best-preserved stelai (IG IV²,1 121–122) hold {iamata.length} tales:
+    see the <a href="/epigraphy#iamata">catalogue</a>. {iamata.length - noOrigin.length} of
+    them name where the petitioner came from, giving {origins.length} places
+    ({placedOrigins.length} on the map, {unplacedOrigins.length} that cannot be placed);
+    in the other {noOrigin.length} no place is named or it is lost.
+  </p>
+  <div class="table-scroll">
+    <table class="claims-table">
+      <thead>
+        <tr><th scope="col">From</th><th scope="col">Tales</th></tr>
+      </thead>
+      <tbody>
+        {origins.map((o) => (
+          <tr>
+            <td>{o.place.name}{o.place.lat == null && ' (not on the map)'}{o.place.region && ' (region)'}</td>
+            <td>
+              {o.tales.map((t, i) => <>{i > 0 && ', '}<a href={taleUrl(t)}>{t.n}. {t.petitioner}</a></>)}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <p>
+    {away.length} tales tell a story that reaches beyond Epidauros:
+    {away.map((t, i) => <>{i > 0 && ', '}<a href={taleUrl(t)}>{t.n}</a></>)}.
+  </p>
+  <p>[PLACEHOLDER: what the catalogue shows about distance and reach, and what it cannot show: these are tales selected for display at the sanctuary, not a register of visitors.]</p>
+
+  <h2 id="epidemics">The <em>Epidemics</em>: where the physician went</h2>
+  <p>
+    <a href="/sources/hippocratic-corpus/epidemics/constitution-1">Constitutions 1</a>–<a href="/sources/hippocratic-corpus/epidemics/constitution-3">3</a>
+    each open “In Thasos”; <a href="/sources/hippocratic-corpus/epidemics/constitution-4">Constitution 4</a>
+    names no place. Of the {cases.length} case histories in <em>Epidemics</em> I and III,
+    {named.length} name a town in their opening sentence:
+    {cities.map(([city, cs], i) => <>{i > 0 && ', '}{city} ({cs.length})</>)}. The others name
+    at most a street, a building or a household. In all, {withLandmark.length} cases place
+    the patient by such a landmark.
+  </p>
+  {caseBooks.map((b) => (
+    <>
+      <h3>{b.label}</h3>
+      <div class="table-scroll">
+        <table class="claims-table case-settings-table">
+          <thead>
+            <tr><th scope="col">Case</th><th scope="col">Town</th><th scope="col">Where in town (Jones)</th></tr>
+          </thead>
+          <tbody>
+            {b.items.map((c) => (
+              <tr>
+                <td>{c.ref.replace(/^.*Case /, 'Case ')}</td>
+                <td>{c.city ?? '—'}</td>
+                <td>{c.landmark ? `“${c.landmark}”` : '—'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
+  ))}
+  <p class="translation-source">
+    From the opening sentence of each case in Jones’s translation (Perseus TEI, via
+    <code>scripts/case-settings.py</code>). [PLACEHOLDER: verify against the printed Loeb.]
+  </p>
+  <p>[PLACEHOLDER: what the settings show — a physician moving between households and streets of one town, and between towns of the northern Aegean — and how far the unplaced Epid. I cases can be assumed to be in Thasos (see Findings 3.4).]</p>
+
+  <h2 id="awp"><em>Airs, Waters, Places</em>: the physician arriving in a town</h2>
+  <p>
+    AWP opens with a physician who travels: “on arrival at a town with which he is
+    unfamiliar, a physician should examine its position with respect to the winds and to
+    the risings of the sun” (AWP 1); if he knows these things, he “will not, on arrival at
+    a town with which he is unfamiliar, be ignorant of the local diseases” (AWP 2).
+  </p>
+  <p>[PLACEHOLDER: discussion of AWP 1–2 once the Introduction page is annotated — the itinerant physician as the reader the treatise assumes.]</p>
+
+  <h2 id="comparison">Comparison</h2>
+  <p>[PLACEHOLDER: introduce the comparison; the rows follow the questions the Strand 2 plan asks of both kinds of text, with geography first.]</p>
+  <div class="table-scroll">
+    <table class="claims-table">
+      <thead>
+        <tr><th scope="col"></th><th scope="col">Iamata (Epidauros)</th><th scope="col"><em>Epidemics</em> I and III</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">Who travels</th><td>[PLACEHOLDER]</td><td>[PLACEHOLDER]</td></tr>
+        <tr><th scope="row">Cause of illness</th><td>[PLACEHOLDER]</td><td>[PLACEHOLDER]</td></tr>
+        <tr><th scope="row">Time scale</th><td>[PLACEHOLDER]</td><td>[PLACEHOLDER]</td></tr>
+        <tr><th scope="row">Who is recorded</th><td>[PLACEHOLDER]</td><td>[PLACEHOLDER]</td></tr>
+        <tr><th scope="row">What counts as proof</th><td>[PLACEHOLDER]</td><td>[PLACEHOLDER]</td></tr>
+        <tr><th scope="row">Failure</th><td>[PLACEHOLDER]</td><td>[PLACEHOLDER]</td></tr>
+        <tr><th scope="row">Purpose of the record</th><td>[PLACEHOLDER]</td><td>[PLACEHOLDER]</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="fieldwork">The fieldwork</h2>
+  <p>
+    The fieldwork gives the setting of the iamata, not evidence about them. Besides
+    Epidauros itself, {visitedOrigins.length} of the places visited are named as
+    petitioners’ homes:
+    {visitedOrigins.map((o, i) => (
+      <>{i > 0 && (i === visitedOrigins.length - 1 ? ' and ' : ', ')}<a href={o.place.journal}>{o.place.name}</a> ({o.tales.map((t) => `${t.n}. ${t.petitioner}`).join(', ')})</>
+    ))}.
+  </p>
+  <ul>
+    <li><a href="/field-journal/2026-07-25-epidaurus">Epidauros</a>: the abaton, where the stelai were displayed. [PLACEHOLDER: retrospective observation and photos.]</li>
+    <li><a href="/field-journal/2026-07-26-corinth">Corinth</a>: terracotta body-part votives in the site museum, the kind of dedication the iamata describe. [PLACEHOLDER: retrospective observation and photos.]</li>
+    <li><a href="/field-journal/2026-08-02-athens">Athens</a>: the Epidaurus room of the National Archaeological Museum. [PLACEHOLDER: retrospective observation and photos.]</li>
+    <li><a href="/field-journal/2026-07-29-kos">Kos</a>: an Asklepieion on the island the tradition gives to Hippocrates, where both models of healing met. [PLACEHOLDER: retrospective observation and photos.]</li>
+  </ul>
+  <p>
+    {photos.length > 0
+      ? `${photos.length} geotagged photographs are on the map (layer “My route, 2026”).`
+      : '[PLACEHOLDER: geotagged photographs, added with scripts/photo-locations.py, will appear on the map’s route layer.]'}
+  </p>
+
+  <h2 id="close-readings">Close readings</h2>
+  {read.length > 0 ? (
+    <ul>{read.map((t) => <li><a href={taleUrl(t)}>{t.n}. {t.petitioner}</a>: {t.complaint}</li>)}</ul>
+  ) : (
+    <p>[PLACEHOLDER: 5–6 tales read closely, 2–3 in the author’s own translation; see the <a href="/epigraphy#iamata">catalogue</a>.]</p>
+  )}
+
+  <h2 id="discussion">Discussion</h2>
+  <p>Leads to test (not conclusions):</p>
+  <ul>
+    <li>
+      <a href={taleUrl(iamata[21])}>Hermon of Thasos (22)</a> came to Epidauros from the town
+      where the physician of Constitutions 1–3 worked.
+    </li>
+    <li>
+      In <a href={taleUrl(iamata[32])}>33</a> the cure follows Thersandros home to Halieis, and
+      Halieis founds a precinct of Asklepios: the cult travels, not the patient. In
+      <a href={taleUrl(iamata[22])}>23</a> Aristagora incubates at Troizen while the god is
+      away at Epidauros.
+    </li>
+    <li>
+      Tales <a href={taleUrl(iamata[20])}>21</a> and <a href={taleUrl(iamata[23])}>24</a> have a
+      parent incubate on a child’s behalf, so the patient does not travel at all.
+    </li>
+  </ul>
+  <p>[PLACEHOLDER: review — the leads above were drafted by Claude from the catalogue. Then the discussion itself.]</p>
+
+  <h2 id="limitations">Limitations</h2>
+  <p>[PLACEHOLDER: limitations — e.g. the catalogue covers two of the four stelai; origins are as the stones state them; several places are uncertain or only regions; the tales were chosen for display by the sanctuary; the Epidemics settings come from one translation.]</p>
+</ScholarlyLayout>

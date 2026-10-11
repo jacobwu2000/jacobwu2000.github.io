@@ -1,16 +1,96 @@
 ---
 import ScholarlyLayout from '../../layouts/ScholarlyLayout.astro';
 import inscriptions from '../../data/inscriptions.json';
+import iamata from '../../data/iamata.json';
 import sites from '../../data/sites.json';
+import { originOf, phiUrl, taleUrl } from '../../utils/iamata.js';
+
+const withOrigin = iamata.filter((t) => t.origin);
+const away = iamata.filter((t) => t.away);
+const read = iamata.filter((t) => t.closeReading);
 ---
 <ScholarlyLayout title="Epigraphy">
   <p class="eyebrow">Fieldwork</p>
   <h1>Epigraphy [WIP]</h1>
   <p>
-    [PLACEHOLDER: introduction to the epigraphic corpus — the Epidaurian iamata and
+    [PLACEHOLDER: introduction to the epigraphic material — the Epidaurian iamata and
     related dream-healing inscriptions — and the editorial conventions used
     (edition, transcription style, translation policy).]
   </p>
+
+  <h2 id="iamata">The Epidaurian iamata: a catalogue</h2>
+  <p>
+    The <em>iamata</em> (“cures”) of Epidauros survive on four stelai,
+    IG IV²,1 121–124. This catalogue covers the two best preserved, 121 (stele A) and
+    122 (stele B): {iamata.length} tales. For each tale it records the petitioner,
+    where the stone says they came from, and the complaint. {withOrigin.length} of the
+    {iamata.length} tales name a home town or region, and {away.length} tell a story that
+    reaches beyond Epidauros. The map shows these origins on the
+    <a href="/geographies">Two Geographies of Healing</a> page.
+  </p>
+  <p class="bib-note">
+    Numbering: tales 1–43 follow the stones (stele A, I–XX; stele B, XXI–XLIII), as in
+    PHI’s text of IG IV²,1. LiDonnici’s numbers (A1–A20, B1–B23) are given alongside.
+    [PLACEHOLDER: verify LiDonnici’s numbering against her edition.] The Greek words
+    quoted are the tales’ opening words as printed in IG IV²,1 (via PHI), with the
+    editor’s brackets. The complaints are short descriptions, not translations.
+    [PLACEHOLDER: check the catalogue against LiDonnici (1995): names, origins and
+    complaints were drafted by Claude from the Greek and a working translation and are
+    not yet checked by the author.]
+  </p>
+
+  <div class="table-scroll">
+    <table class="claims-table iamata-table">
+      <thead>
+        <tr>
+          <th scope="col">No.</th>
+          <th scope="col">LiDonnici</th>
+          <th scope="col">Petitioner</th>
+          <th scope="col">From</th>
+          <th scope="col">Complaint</th>
+          <th scope="col">Lines</th>
+        </tr>
+      </thead>
+      <tbody>
+        {iamata.map((t) => {
+          const place = originOf(t);
+          return (
+            <tr class={t.closeReading ? 'iamata-table__read' : undefined}>
+              <th scope="row"><a href={taleUrl(t)}>{t.n}</a></th>
+              <td>{t.lidonnici}</td>
+              <td><a href={taleUrl(t)}>{t.petitioner}</a></td>
+              <td>
+                {place ? place.name : t.originGreek ? '(lost)' : '—'}
+                {t.originGreek && <> <span lang="grc">{t.originGreek}</span></>}
+              </td>
+              <td>{t.complaint}{t.away && <span class="iamata-table__away" title="The story reaches beyond Epidauros"> ↗</span>}</td>
+              <td><a href={phiUrl(t)} target="_blank" rel="noopener">{t.ig.replace('IG IV²,1 ', '')}, {t.lines}</a></td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  </div>
+  <p class="translation-source">
+    ↗ = the story reaches beyond Epidauros (a cure at home or on the road, someone
+    incubating for someone else). Lines link to the Greek text on PHI Greek Inscriptions.
+  </p>
+
+  <h3>Close readings</h3>
+  {read.length > 0 ? (
+    <ul class="epigraphy-list">
+      {read.map((t) => <li><a href={taleUrl(t)}>{t.n}. {t.petitioner}</a></li>)}
+    </ul>
+  ) : (
+    <p>
+      [PLACEHOLDER: choose 5–6 tales for close reading (2–3 translated from the Greek by
+      the author, all annotated): e.g. far-travellers (Mytilene, Lampsakos, Epirus), a
+      skeptic (Ambrosia of Athens, 4), and stories that reach beyond Epidauros (21, 23,
+      25, 33). Set <code>closeReading: true</code> on each in <code>iamata.json</code>.]
+    </p>
+  )}
+
+  <h2 id="other">Other inscriptions</h2>
   <ul class="epigraphy-list">
     {inscriptions.map((i) => {
       const site = sites.find((s) => s.id === i.siteId);

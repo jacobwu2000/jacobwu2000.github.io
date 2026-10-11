@@ -25,7 +25,7 @@ epigraphic record of dream healing.
   The site has to show (1) real proof of fieldwork and (2) research that is
   small but real and defensible.
 
-## Current state (as of 2026-10-09)
+## Current state (as of 2026-10-11)
 
 - The scaffold, routing, schema and map all work.
 - **Field Journal** (fieldwork strand): 8 entries, one per site, laid out
@@ -77,8 +77,14 @@ epigraphic record of dream healing.
   research…"; keep as written), and pointed Strand 1's links at Findings
   and Sources.
 - **Fieldwork strand is [WIP]:** the Strand 2 eyebrow and the h1s of the
-  Field Journal, Epigraphy and Map index pages carry "[WIP]". Remove them
-  when the author says that strand is done.
+  Geographies, Field Journal, Epigraphy and Map pages carry "[WIP]". Remove
+  them when the author says that strand is done.
+- **Strand 2 skeleton** (2026-10-11): Strand 2 is now "Two geographies of
+  healing" (see "Strand 2: Two geographies of healing" below). Claude built
+  the skeleton at the author's request: the iamata catalogue, the tale
+  pages, the `/geographies` synthesis page, the restructured map, and
+  placeholders in the journal entries. All prose there is placeholder or
+  marked Claude draft; none of it has been reviewed by the author yet.
 - **Findings** (`src/pages/findings.mdx`, formerly "The Argument" at
   `/the-argument`, which now redirects). Rebuilt on 2026-10-09 from the
   author's "Findings.docx.pdf"; since 2026-10-11 the author's "Findings
@@ -148,8 +154,8 @@ epigraphic record of dream healing.
   - A Word copy ("Findings (revised).docx" in the author's Downloads) was
     made from the built page with LibreOffice (HTML to docx). It isn't kept
     in the repo; regenerate it rather than editing it by hand.
-- Almost everything else is `[PLACEHOLDER: ...]`: inscriptions,
-  bibliography, About, the Sources framing paragraph, section intros on the
+- Almost everything else is `[PLACEHOLDER: ...]`: the Kos and Trikka
+  inscriptions, the iamata Greek texts and translations, bibliography, About, the Sources framing paragraph, section intros on the
   Epigraphy index page, the site sections on each Field Journal entry
   (Excavation History etc.), and the bibliography's epigraphic edition and
   secondary literature.
@@ -157,14 +163,17 @@ epigraphic record of dream healing.
   used: Jones's Loeb volume (LCL 147, 1923; imprint from the TEI's
   `sourceDesc`), the Perseus reader text (`1999.01.0251`), and the
   GitHub TEI files (CC BY-SA 4.0). Secondary Literature has Nutton (2020)
-  and Wee (2016), not yet read (see "Key sources"). The iamata edition and
-  the rest of the secondary literature are still placeholders. Citations in `bibliography.json` are
+  and Wee (2016), not yet read (see "Key sources"). For the iamata it
+  lists IG IV²,1 (1929), PHI, LiDonnici (1995) and Herzog (1931), each
+  with a `[PLACEHOLDER: verify…]` where the details came from general
+  knowledge; and, under Reference Works, Pleiades. The rest of the
+  secondary literature is still placeholders. Citations in `bibliography.json` are
   plain text, and `*italics*` and bare URLs render as italics and links.
 - **Field Journal and Epigraphy** (2026-09-30). The author first dropped
   the Site Archaeology dossiers, then had them merged into the Field
   Journal (the same places), with Epigraphy moved into the fieldwork
-  strand ("Strand 2" on the home page; nav group Field Journal, Epigraphy,
-  Map):
+  strand ("Strand 2" on the home page; nav group Geographies, Field
+  Journal, Epigraphy, Map):
   - Each journal entry (`src/content/journal/*.mdx`) has the dossier
     layout: the dossier's placeholder sections (Excavation History; Key
     Finds & Inscriptions; Ancient Testimonia), then the journal prose
@@ -172,22 +181,30 @@ epigraphic record of dream healing.
     Observation"). The page template (`field-journal/[...slug].astro`,
     scholarly teal mode like the dossiers) adds the coordinates with a map
     link and a Related Inscriptions panel, from the `sites.json` entry
-    whose `journal` points at it. Crete isn't in `sites.json`, so it has
-    generic placeholder sections and no coordinates. The prose came from
+    whose `journal` points at it. Crete has generic placeholder sections;
+    since 2026-10-11 its `sites.json` entry (`knossos`, Knossos's
+    coordinates from Pleiades, no layers) exists only so the route layer
+    includes it. The panel also lists iamata petitioners who came from the
+    site (Athens, Argos, Messene) and, on Epidauros, the iamata catalogue. The prose came from
     the journal entries, not the old dossiers: the dossier copy had an
     error the journal had fixed (Epidauros "4th century AD" → BC).
   - The former "Arrival: Living Greek in Greece" entry is now the
     introduction on `/field-journal` (`field-journal/_intro.mdx`), and the
     entries are listed under it chronologically. Its old URL redirects.
   - Epigraphy is at `/epigraphy` (old `/sources/epigraphy/*` URLs
-    redirect). Findspots link to the site's journal entry.
+    redirect). Findspots link to the site's journal entry. It now opens with
+    the iamata catalogue (`#iamata`); the Kos and Trikka placeholders
+    follow under "Other inscriptions". The two placeholder records
+    `iamata-001/002` were removed and their URLs redirect to `#iamata`.
   - Old `/sources/site-archaeology/*` URLs redirect to the journal entries.
   - Excerpts on the home and journal index come from the first paragraph
     of each entry's `<PersonalObservations>` (`utils/journal.js`).
-- Map: no site links to a Hippocratic passage (`relatedHippocraticPassages`
-  is empty everywhere). The old Kos → `epidemics-1` and Epidauros → `awp-1`
-  links pointed at scaffold placeholders and were removed, because neither
-  text is about those sites.
+- Map: only Thasos links to Hippocratic passages
+  (`relatedHippocraticPassages`: Constitutions 1–3, which open "In
+  Thasos"). The old Kos → `epidemics-1` and Epidauros → `awp-1` links
+  pointed at scaffold placeholders and were removed, because neither text
+  is about those sites. For the map's layers and markers see "The map"
+  under Strand 2.
 
 ## Epidemics constitution pages
 
@@ -507,13 +524,105 @@ Seasons page). Where the two frameworks do and don't meet is itself a finding.
   *katastasis*, the wind and season terms) via Perseus/LSJ. All extraction
   is done from English translations.
 
-### Optional secondary thread: cult healing
-If time allows, contrast one constitution/case with 2–3 Epidauros iamata
-(IG IV² 1, 121–124; LiDonnici's edition) on what each treats as the cause of
-illness and what counts as proof: environment and regimen vs. the god. This
-ties the textual core to the site's "Word and Ritual" framing and to the
-`cult-healing` map layer. It stays short and must not grow into a second
-project.
+### Strand 2: Two geographies of healing
+Chosen 2026-10-11 to replace the optional "cult healing" thread and to give
+the fieldwork strand its own question. The author's four goals for it: (1)
+relevant to the Hippocratic work, (2) uses the actual fieldwork, (3) shows
+real, worthwhile work, (4) makes the map a useful digital tool.
+
+**Question (working, Claude draft, on `/geographies`):** the Epidaurian
+iamata record patients who travelled to the god; the *Epidemics* record a
+physician who travelled to his patients, and AWP 1–2 is written for a
+physician "on arrival at a town with which he is unfamiliar". Mapped side
+by side, do the two kinds of text imply two different geographies of
+healing? As in Strand 1, the answer is a hedged lead, not a verdict. Leads
+already on the page (marked for review): Hermon of Thasos (22) came from the
+town of Constitutions 1–3; in 33 the cure follows Thersandros home and
+Halieis founds a precinct (the cult travels); in 21 and 24 a parent
+incubates for a child.
+
+**Planned pieces** (minimum first): the iamata catalogue (done as data);
+5–6 tales read closely, 2–3 in the author's own translation, annotated
+like the corpus pages (petitioner, complaint, incubation/dream, divine
+action, proof, payment/dedication, skepticism; the key and colours come
+from the author's PDF, as for the corpus pages, so none are defined yet);
+the comparison table on `/geographies` (rows: who travels, cause of
+illness, time scale, who is recorded, proof, failure, purpose); AWP 1–2
+annotated (the Introduction page) for the itinerant-physician point;
+retrospective notes and photos for Epidauros, Corinth (votives), Athens
+(NAM Epidaurus room) and Kos. Wee's "minority report" article belongs in
+the discussion, from the author's own reading.
+
+**The iamata catalogue** (`src/data/iamata.json`, 43 tales, IG IV²,1
+121–122 = stele A, tales I–XX, and stele B, XXI–XLIII; stelai 123–124 not
+covered). Per tale: `n`, `numeral`, `stele`, `lidonnici` (A1–A20,
+B1–B23: **unverified**), `ig`, `phi` (PH number), `lines` (from PHI's line
+numbering; a tale ends on the line where the next begins), `petitioner`,
+`heading` (opening words exactly as PHI prints them, brackets included),
+`origin` (a `sites.json` id), `originGreek`, `complaint` (a short English
+description, not a translation), `away` (a note when the story reaches
+beyond Epidauros: 7, 21, 23, 24, 25, 33), `tags` (empty, for the author),
+`closeReading` (false everywhere; the author picks), and `greekText`,
+`translation`, `commentary` (null). How it was made:
+- Names, origins and complaints were drafted by Claude from PHI's Greek
+  (read for personal study, see below) and the attalus.org SIG³ 1168 page
+  as a working crib (its English is largely LiDonnici's, so it is **not**
+  quoted anywhere on the site). The catalogue page says so in a
+  placeholder. The author should check it against LiDonnici.
+- Flagged for the author: tale 7, l. 58, where PHI's text restores a place
+  name (ἐ[ξ Εὐ]θηνᾶν) that the crib doesn't read as a place; tale 34's
+  origin is lost (`[— — —]νία`); the identifications listed under "The
+  map" below.
+- Counts on the pages are computed from the data (27 tales name a place,
+  24 places, 21 placed on the map, 6 "away" stories), so edit the JSON,
+  not the prose.
+
+**Copyright and terms** (checked 2026-10-11):
+- **PHI Greek Inscriptions** blocks scraping, and its terms (on its page
+  for AI assistants, https://epigraphy-mcp.packhum.org) allow use "only for
+  personal study" and no copies beyond fair use. So **don't put PHI's
+  Greek on the site** beyond the short opening words in `heading` and
+  `originGreek`. Tale pages link to PHI instead. The Greek for the
+  close-reading tales must be transcribed by the author from the printed
+  IG IV²,1 (1929, public domain by age), into `greekText`.
+- **LiDonnici's translation** is under copyright: quote it, don't
+  reproduce it. Translations on the site are the author's own.
+
+**Epidemics settings** (`src/data/epidemics-cases.json`, 42 cases: Epid. I
+14, Epid. III 12 + 16), from `scripts/case-settings.py`: `ref`, `city`
+(Thasos, Abdera, Larisa, Cyzicus or Meliboea when the opening sentence names
+one), `opening` (Jones's first sentence, from the TEI), and `landmark`, a
+phrase typed by hand that must occur exactly in `opening`
+(`/geographies` fails the build if it doesn't). The counts agree with
+Findings 1.1 (Thasos 8, Abdera 6, Larisa 2, Cyzicus 1, Meliboea 1). Case
+numbers are "Case I…" within each series, as in Findings.
+
+**The map** (`SiteMap.jsx`; used on Home, `/map` and `/geographies`):
+- Layers: `cult-healing` (Asklepieia visited), `iamata` (petitioners' home
+  towns, each joined to Epidauros by a line whose weight is the number of
+  tales), `hippocratic` (Kos and the *Epidemics* towns), and `route` (not
+  a tag: every `visited` site in `date` order, plus photos). `/geographies`
+  opens with the first three on.
+- Markers: solid = visited (`visited: true`, with `journal` and `date`);
+  hollow = known only from the texts; dashed = region or island
+  (`region: true`: Thessaly, Epirus, Keos). Places that can't be located
+  (Pherai, Herakleia, Kyrnos (?), Meliboea) have `lat: null` and an
+  `unplaced` reason, listed under the map.
+- A tale filter shows only the "away" stories; a zoom button shows the
+  Epidauros sanctuary with the four Pleiades features there (sanctuary,
+  tholos, stadium, theater). Pleiades has no abaton; add it from photo
+  GPS, not by guessing.
+- **Coordinates come from Pleiades** (each place has `pleiades`, and the
+  popups link to it). Identifications Claude chose and flagged in `note`:
+  Pellene = Achaean Pellene, Torone = Chalkidike, Thebes = Boeotian,
+  Larisa = Thessalian, Lakedaimon at Sparta, Knidos at Tekir (Pleiades
+  also has Burgaz), Messene for "Μεσσανία" (Messenian, city not stated).
+  The places visited that are also petitioners' homes: Athens (4), Argos
+  (37), Messene (42).
+- Photos: `scripts/photo-locations.py` reads EXIF GPS from
+  `public/photos/*.jpg` into `src/data/photos.json` (empty for now; the
+  author hasn't said whether the photos are geotagged). Tested on a
+  synthetic image.
 
 ### Where fieldwork fits
 The fieldwork provides **context and setting**. It is not data for the
@@ -531,10 +640,9 @@ overclaim. Its roles:
   `<PersonalObservations>` boxes) count as proof of fieldwork.
   Observations written up after the trip should be labeled as retrospective.
 
-The places the constitutions describe (Thasos etc.) were not visited. They
-could still go on the map as `hippocratic`-layer, text-only sites, if the
-map gets a clear "not visited" marker. That needs a small schema and
-component change, so discuss it before doing it.
+The places the constitutions describe (Thasos etc.) were not visited. Since
+2026-10-11 they are on the map as text-only `hippocratic` places with
+hollow "not visited" markers (see Strand 2).
 
 ### What the finished project looks like on the site
 - **Findings:** the question, method (sample and reading rules), findings
@@ -549,9 +657,13 @@ component change, so discuss it before doing it.
   author (see "Author's annotations"). Each page's "Candidate claims"
   section collects claims for the list. The claim list itself is the AWP
   10 claims table in Findings (2.5), copied onto Seasons.
+- **Two Geographies of Healing** (`/geographies`): Strand 2's synthesis,
+  with the map, the iamata origins, the *Epidemics* settings, the
+  comparison and the fieldwork.
 - **Field Journal:** one page per site, combining the scholarly site
   sections with real photos and personal observations that keep the
-  fieldwork visible. **Epigraphy** sits beside it in the fieldwork strand.
+  fieldwork visible. **Epigraphy** sits beside it in the fieldwork strand,
+  with the iamata catalogue and one page per tale.
 - **Bibliography:** real citations (the editions are done).
 - A side-by-side comparison page (constitution vs. AWP claims) is a likely
   addition.
@@ -576,8 +688,14 @@ component change, so discuss it before doing it.
   strictly deterministic.
 - M. Grmek, *Diseases in the Ancient Greek World* (1989): caution on
   retrospective diagnosis.
-- For the optional iamata thread: L. R. LiDonnici, *The Epidaurian Miracle
-  Inscriptions* (1995); E. J. and L. Edelstein, *Asclepius* (1945).
+- For Strand 2: L. R. LiDonnici, *The Epidaurian Miracle Inscriptions*
+  (1995), the reference edition and numbering; IG IV²,1 121–124 (1929);
+  R. Herzog, *Die Wunderheilungen von Epidauros* (1931); E. J. and L.
+  Edelstein, *Asclepius* (1945); Pausanias 2.27.3 on the stelai (check).
+  M. Dillon, "The didactic nature of the Epidaurian iamata," *ZPE* 101
+  (1994), from p. 239, and P. Martzavou, "Dream, narrative and the
+  construction of hope in the 'healing miracles' of Epidauros" (2012) are
+  linked from the attalus.org page; neither is read or in the bibliography.
 
 ## Rules for Claude when working on this repo
 
@@ -600,7 +718,10 @@ component change, so discuss it before doing it.
   `relatedSources`, and Sources pages never link back in. Epigraphy is in
   the fieldwork strand, not Sources, so it and the journal entries link to
   each other (findspot ↔ Related Inscriptions). Site geo/cross-reference
-  data lives only in `src/data/sites.json`.
+  data lives only in `src/data/sites.json`, for visited and text-only
+  places alike; `iamata.json` points at it by `origin` id.
+- Coordinates for the map come from Pleiades, never from memory. Note any
+  identification that is a choice between places of the same name.
 - Only link a map site to a Hippocratic passage (`relatedHippocraticPassages`)
   if the text actually concerns that place. Don't add links just to
   connect the fieldwork to the texts.

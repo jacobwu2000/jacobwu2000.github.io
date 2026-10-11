@@ -36,10 +36,19 @@ src/
                                 (8), each laid out like a site dossier
 
   data/                      ← structured data (edit here, not in components)
-    sites.json                 canonical site geo/identity for the map,
-                                incl. each site's Field Journal entry (`journal`)
-    inscriptions.json          epigraphy catalogue — powers BOTH the
-                                Epigraphy pages and the map popups
+    sites.json                 every place on the map: the sites visited
+                                (`visited: true`, with their Field Journal
+                                entry and trip `date`) and places known only
+                                from the texts (iamata origins, Epidemics
+                                towns), with Pleiades IDs; places that can't
+                                be located have `lat: null` and `unplaced`
+    iamata.json                catalogue of the 43 Epidaurian iamata on
+                                IG IV²,1 121–122 (Epigraphy, tale pages, map)
+    epidemics-cases.json       opening sentence, town and landmark of each
+                                Epidemics I/III case (from case-settings.py)
+    photos.json                geotagged fieldwork photos (from
+                                photo-locations.py); empty until photos exist
+    inscriptions.json          other inscriptions (Kos, Trikka placeholders)
     bibliography.json          primary/secondary source list
 
   components/
@@ -62,7 +71,10 @@ src/
   pages/                     ← routing + thin data-fetching glue (avoid
                                 touching unless you're changing behavior)
     index.astro                Home
-    findings.mdx               Findings (long-form MDX)
+    findings.mdx               Findings (long-form MDX): Strand 1
+    geographies.astro          Two Geographies of Healing: Strand 2's
+                                synthesis page (map, iamata origins,
+                                Epidemics settings, comparison)
     map.astro                  Interactive Map
     sources/
       index.astro                 Sources landing: lists every Hippocratic
@@ -71,7 +83,9 @@ src/
                                     to /sources via astro.config.mjs)
         airs-waters-places/[slug].astro
         epidemics/[slug].astro
-    epigraphy/{index,[id]}.astro    Epigraphy (fieldwork strand, not Sources)
+    epigraphy/{index,[id]}.astro    Epigraphy (fieldwork strand, not Sources):
+                                     the iamata catalogue + other inscriptions
+    epigraphy/iamata/[n].astro      one page per iamata tale (1–43)
     field-journal/{index,[...slug]}.astro
     field-journal/_intro.mdx     introduction at the top of the journal
                                   index (formerly the Arrival entry)
@@ -80,6 +94,7 @@ src/
 
   utils/journal.js           date formatting + auto-excerpts for the
                                 journal itinerary cards (home, journal index)
+  utils/iamata.js            URLs and lookups for the iamata catalogue
 
   styles.css                 ← the whole design system (palette, type, layout)
 ```
@@ -119,6 +134,15 @@ src/
 content/data and hand it to a layout; the schema files above are the actual
 editing surface.
 
+## Scripts
+
+- `scripts/extract-jones.py`: Jones's translation as YAML `passages:`.
+- `scripts/case-settings.py`: the opening sentence and town of every
+  *Epidemics* I/III case history, as JSON (the base of
+  `epidemics-cases.json`; its `landmark` fields are added by hand).
+- `scripts/photo-locations.py`: reads EXIF GPS and dates from the photos in
+  `public/photos/` and writes `src/data/photos.json` (needs Pillow).
+
 ## How to add a new site to the map
 
 1. Add an entry to `src/data/sites.json`:
@@ -135,9 +159,14 @@ editing surface.
      "journal": "/field-journal/YYYY-MM-DD-newsite"
    }
    ```
-   `layers` accepts `"hippocratic"`, `"cult-healing"`, or both — this is what
-   the map's layer toggle filters on.
+   `layers` accepts `"cult-healing"`, `"iamata"` and `"hippocratic"` (any
+   combination) — this is what the map's layer toggle filters on. The fourth
+   toggle, "My route", draws every `visited` site in `date` order.
    `journal` is the site's Field Journal entry; the map popup links to it.
+   A visited site also needs `"visited": true` and `"date"`; a place known
+   only from the texts has `"visited": false` (hollow marker), and
+   `"region": true` if the point is only approximate (dashed marker).
+   Give the Pleiades ID (`"pleiades"`) and take coordinates from Pleiades.
 2. Add any new inscription records to `src/data/inscriptions.json`
    (`siteId: "newsite"`).
 
@@ -154,10 +183,11 @@ directly.
   `BaseLayout`/`ScholarlyLayout`/`JournalLayout`. The accent shows as a
   stripe on top of the header and on the current nav item.
 - The nav is grouped by the project's two strands: research (Findings,
-  Sources, Bibliography) and fieldwork (Field Journal, Epigraphy, Map).
-  On desktop the nav sits on the same row as the site title, which only
-  just fits the 980px container. Adding a nav item will push the nav
-  onto its own row unless the nav spacing in `styles.css` is tightened.
+  Sources, Bibliography) and fieldwork (Geographies, Field Journal,
+  Epigraphy, Map). On desktop the nav sits on the same row as the site
+  title, which only just fits the 980px container (the link padding and
+  font size were tightened when Geographies was added). Adding another nav
+  item will push the nav onto its own row.
 - The home page explains the project as two strands (texts / places) and
   lists the journal entries as an itinerary; excerpts are pulled
   automatically from the first paragraph of each entry's

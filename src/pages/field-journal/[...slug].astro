@@ -4,12 +4,15 @@
 // author's first-person notes in <PersonalObservations>, and the site's
 // related inscriptions. The site is matched through its `journal` link in
 // sites.json; entries for places not on the map (Crete) simply have no
-// quick facts or inscriptions.
+// quick facts or inscriptions. The panel at the end also lists iamata
+// petitioners who came from the site, and (Epidauros) the iamata catalogue.
 import { getCollection } from 'astro:content';
 import ScholarlyLayout from '../../layouts/ScholarlyLayout.astro';
 import RelatedSources from '../../components/RelatedSources.astro';
 import sites from '../../data/sites.json';
 import inscriptions from '../../data/inscriptions.json';
+import iamata from '../../data/iamata.json';
+import { taleUrl } from '../../utils/iamata.js';
 import { formatDate } from '../../utils/journal.js';
 
 export async function getStaticPaths() {
@@ -23,6 +26,8 @@ const site = sites.find((s) => s.journal === `/field-journal/${entry.slug}`);
 const relatedInscriptions = site
   ? inscriptions.filter((i) => site.relatedInscriptions.includes(i.id))
   : [];
+const petitioners = site ? iamata.filter((t) => t.origin === site.id) : [];
+const isEpidauros = site?.id === 'epidauros';
 ---
 <ScholarlyLayout title={entry.data.title}>
   <p class="eyebrow">Field Journal</p>
@@ -39,12 +44,18 @@ const relatedInscriptions = site
 
   <Content />
 
-  {relatedInscriptions.length > 0 && (
+  {(relatedInscriptions.length > 0 || petitioners.length > 0 || isEpidauros) && (
     <aside class="related-panel">
       <h2>Related Inscriptions</h2>
       <ul>
+        {isEpidauros && (
+          <li><a href="/epigraphy#iamata">The Epidaurian iamata</a>: catalogue of {iamata.length} tales (IG IV²,1 121–122)</li>
+        )}
         {relatedInscriptions.map((i) => (
           <li><a href={`/epigraphy/${i.id}`}>{i.title}</a></li>
+        ))}
+        {petitioners.map((t) => (
+          <li>Iama {t.n}: <a href={taleUrl(t)}>{t.petitioner}</a>{isEpidauros ? ', of Epidauros' : `, who came to Epidauros from ${site.name}`} ({t.complaint})</li>
         ))}
       </ul>
     </aside>

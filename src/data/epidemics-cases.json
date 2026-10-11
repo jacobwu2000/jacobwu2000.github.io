@@ -1,0 +1,380 @@
+[
+  {
+    "book": 1,
+    "series": null,
+    "case": 1,
+    "ref": "Epid. I, Case I",
+    "city": null,
+    "landmark": "lived by the wall",
+    "opening": "Philiscus lived by the wall."
+  },
+  {
+    "book": 1,
+    "series": null,
+    "case": 2,
+    "ref": "Epid. I, Case II",
+    "city": null,
+    "landmark": "lived on Broadway near the place of Eualcidas",
+    "opening": "Silenus lived on Broadway near the place of Eualcidas."
+  },
+  {
+    "book": 1,
+    "series": null,
+    "case": 3,
+    "ref": "Epid. I, Case III",
+    "city": null,
+    "landmark": null,
+    "opening": "Herophon had acute fever; scanty stools with tenesmus at the beginning, afterwards becoming thin, bilious and fairly frequent."
+  },
+  {
+    "book": 1,
+    "series": null,
+    "case": 4,
+    "ref": "Epid. I, Case IV",
+    "city": "Thasos",
+    "landmark": null,
+    "opening": "In Thasos the wife of Philinus gave birth to a daughter."
+  },
+  {
+    "book": 1,
+    "series": null,
+    "case": 5,
+    "ref": "Epid. I, Case V",
+    "city": null,
+    "landmark": "lay sick near the founder",
+    "opening": "The wife of Epicrates, who lay sick near the founder, when near her delivery was seized with severe rigor without, it was said, becoming warm, and the same symptoms occurred on the following day."
+  },
+  {
+    "book": 1,
+    "series": null,
+    "case": 6,
+    "ref": "Epid. I, Case VI",
+    "city": null,
+    "landmark": "lay sick above the temple of Heracles",
+    "opening": "Cleanactides, who lay sick above the temple of Heracles, was seized by an irregular fever."
+  },
+  {
+    "book": 1,
+    "series": null,
+    "case": 7,
+    "ref": "Epid. I, Case VII",
+    "city": null,
+    "landmark": null,
+    "opening": "Meton was seized with fever, and painful heaviness in the loins."
+  },
+  {
+    "book": 1,
+    "series": null,
+    "case": 8,
+    "ref": "Epid. I, Case VIII",
+    "city": null,
+    "landmark": "lived by the gully of Boétes",
+    "opening": "Erasinus lived by the gully of Boétes."
+  },
+  {
+    "book": 1,
+    "series": null,
+    "case": 9,
+    "ref": "Epid. I, Case IX",
+    "city": "Thasos",
+    "landmark": null,
+    "opening": "Crito, in Thasos, while walking about, was seized with a violent pain in the great toe."
+  },
+  {
+    "book": 1,
+    "series": null,
+    "case": 10,
+    "ref": "Epid. I, Case X",
+    "city": null,
+    "landmark": "lay sick by the well of Phrynichides",
+    "opening": "The man of Clazomenae, who lay sick by the well of Phrynichides, was seized with fever."
+  },
+  {
+    "book": 1,
+    "series": null,
+    "case": 11,
+    "ref": "Epid. I, Case XI",
+    "city": null,
+    "landmark": null,
+    "opening": "The wife of Dromeades, after giving birth to a daughter, when everything had gone normally, on the second day was seized with rigor; acute fever."
+  },
+  {
+    "book": 1,
+    "series": null,
+    "case": 12,
+    "ref": "Epid. I, Case XII",
+    "city": null,
+    "landmark": null,
+    "opening": "A man dined when hot and drank too much."
+  },
+  {
+    "book": 1,
+    "series": null,
+    "case": 13,
+    "ref": "Epid. I, Case XIII",
+    "city": null,
+    "landmark": "lying sick by the shore",
+    "opening": "A woman lying sick by the shore, who was three months gone with child, was seized with fever, and immediately began to feel pains in the loins."
+  },
+  {
+    "book": 1,
+    "series": null,
+    "case": 14,
+    "ref": "Epid. I, Case XIV",
+    "city": null,
+    "landmark": "lay sick by the temple of Hera",
+    "opening": "Melidia, who lay sick by the temple of Hera, began to suffer violent pain in the head, neck and chest."
+  },
+  {
+    "book": 3,
+    "series": "first series",
+    "case": 1,
+    "ref": "Epid. III, first series, Case I",
+    "city": null,
+    "landmark": "lived by the temple of Earth",
+    "opening": "Pythion, who lived by the temple of Earth, was seized with trembling which began in the hands."
+  },
+  {
+    "book": 3,
+    "series": "first series",
+    "case": 2,
+    "ref": "Epid. III, first series, Case II",
+    "city": null,
+    "landmark": "lay sick by the new wall",
+    "opening": "Hermocrates, who lay sick by the new wall, was seized with fever."
+  },
+  {
+    "book": 3,
+    "series": "first series",
+    "case": 3,
+    "ref": "Epid. III, first series, Case III",
+    "city": null,
+    "landmark": "lying sick in the garden of Delearces",
+    "opening": "The man lying sick in the garden of Delearces had for a long time heaviness in the head and pain in the right temple."
+  },
+  {
+    "book": 3,
+    "series": "first series",
+    "case": 4,
+    "ref": "Epid. III, first series, Case IV",
+    "city": "Thasos",
+    "landmark": null,
+    "opening": "Philistes in Thasos had for a long time pain in the head, and at last fell into a state of stupor and took to his bed."
+  },
+  {
+    "book": 3,
+    "series": "first series",
+    "case": 5,
+    "ref": "Epid. III, first series, Case V",
+    "city": null,
+    "landmark": "lay sick in the house of Demaenetus",
+    "opening": "Chaerion, who lay sick in the house of Demaenetus, was seized with fever after drinking."
+  },
+  {
+    "book": 3,
+    "series": "first series",
+    "case": 6,
+    "ref": "Epid. III, first series, Case VI",
+    "city": null,
+    "landmark": null,
+    "opening": "The maiden daughter of Euryanax was seized with fever."
+  },
+  {
+    "book": 3,
+    "series": "first series",
+    "case": 7,
+    "ref": "Epid. III, first series, Case VII",
+    "city": null,
+    "landmark": "lay sick in the house of Aristion",
+    "opening": "The woman suffering from angina who lay sick in the house of Aristion began her complaint with indistinctness of speech."
+  },
+  {
+    "book": 3,
+    "series": "first series",
+    "case": 8,
+    "ref": "Epid. III, first series, Case VIII",
+    "city": null,
+    "landmark": "lay sick by the Liars’ Market",
+    "opening": "The youth who lay sick by the Liars’ Market was seized with fever after unaccustomed fatigue, toil and running."
+  },
+  {
+    "book": 3,
+    "series": "first series",
+    "case": 9,
+    "ref": "Epid. III, first series, Case IX",
+    "city": null,
+    "landmark": "lodged with Tisamenus",
+    "opening": "The woman who lodged with Tisamenus was in bed with a troublesome attack of inflammation of the upper bowel."
+  },
+  {
+    "book": 3,
+    "series": "first series",
+    "case": 10,
+    "ref": "Epid. III, first series, Case X",
+    "city": null,
+    "landmark": "one of the house of Pantimides",
+    "opening": "A woman who was one of the house of Pantimides after a miscarriage was seized with fever on the first day."
+  },
+  {
+    "book": 3,
+    "series": "first series",
+    "case": 11,
+    "ref": "Epid. III, first series, Case XI",
+    "city": null,
+    "landmark": null,
+    "opening": "Another woman, after a miscarriage about the fifth month, the wife of Hicetas, was seized with fever."
+  },
+  {
+    "book": 3,
+    "series": "first series",
+    "case": 12,
+    "ref": "Epid. III, first series, Case XII",
+    "city": null,
+    "landmark": "lay sick by the Liars’ Market",
+    "opening": "A woman who lay sick by the Liars’ Market, after giving birth in a first and painful delivery to a male child, was seized with fever."
+  },
+  {
+    "book": 3,
+    "series": "second series",
+    "case": 1,
+    "ref": "Epid. III, second series, Case I",
+    "city": "Thasos",
+    "landmark": "lay sick beyond the temple of Artemis",
+    "opening": "In Thasos the Parian who lay sick beyond the temple of Artemis was seized with acute fever, which at the beginning was continuous and ardent."
+  },
+  {
+    "book": 3,
+    "series": "second series",
+    "case": 2,
+    "ref": "Epid. III, second series, Case II",
+    "city": "Thasos",
+    "landmark": "lay sick by the Cold Water",
+    "opening": "In Thasos the woman who lay sick by the Cold Water, on the third day after giving birth to a daughter without lochial discharge, was seized with acute fever accompanied by shivering."
+  },
+  {
+    "book": 3,
+    "series": "second series",
+    "case": 3,
+    "ref": "Epid. III, second series, Case III",
+    "city": "Thasos",
+    "landmark": "lay sick above the shrine of Heracles",
+    "opening": "In Thasos Pythion, who lay sick above the shrine of Heracles, after labour, fatigue and careless living, was seized by violent rigor and acute fever."
+  },
+  {
+    "book": 3,
+    "series": "second series",
+    "case": 4,
+    "ref": "Epid. III, second series, Case IV",
+    "city": null,
+    "landmark": null,
+    "opening": "The patient suffering from phrenitis on the first day that he took to bed vomited copiously thin vomits of the colour of verdigris; much fever with shivering; continuous sweating all over; painful heaviness of head and neck; urine thin, with small, scattered substances floating in it, which did not settle."
+  },
+  {
+    "book": 3,
+    "series": "second series",
+    "case": 5,
+    "ref": "Epid. III, second series, Case V",
+    "city": "Larisa",
+    "landmark": null,
+    "opening": "In Larisa a bald man suddenly experienced pain in the right thigh."
+  },
+  {
+    "book": 3,
+    "series": "second series",
+    "case": 6,
+    "ref": "Epid. III, second series, Case VI",
+    "city": "Abdera",
+    "landmark": null,
+    "opening": "In Abdera Pericles was seized with acute fever, continuous and painful; much thirst; nausea; could not retain what he drank."
+  },
+  {
+    "book": 3,
+    "series": "second series",
+    "case": 7,
+    "ref": "Epid. III, second series, Case VII",
+    "city": "Abdera",
+    "landmark": "lay sick by the Sacred Way",
+    "opening": "In Abdera the maiden who lay sick by the Sacred Way was seized with a fever of the ardent type."
+  },
+  {
+    "book": 3,
+    "series": "second series",
+    "case": 8,
+    "ref": "Epid. III, second series, Case VIII",
+    "city": "Abdera",
+    "landmark": "lay sick by the Thracian gate",
+    "opening": "In Abdera Anaxion, who lay sick by the Thracian gate, was seized with acute fever."
+  },
+  {
+    "book": 3,
+    "series": "second series",
+    "case": 9,
+    "ref": "Epid. III, second series, Case IX",
+    "city": "Abdera",
+    "landmark": null,
+    "opening": "In Abdera Heropythus had pain in the head without taking to bed, but shortly afterwards was compelled to do so."
+  },
+  {
+    "book": 3,
+    "series": "second series",
+    "case": 10,
+    "ref": "Epid. III, second series, Case X",
+    "city": "Abdera",
+    "landmark": null,
+    "opening": "In Abdera Nicodemus after venery and drunkenness was seized with fever."
+  },
+  {
+    "book": 3,
+    "series": "second series",
+    "case": 11,
+    "ref": "Epid. III, second series, Case XI",
+    "city": "Thasos",
+    "landmark": null,
+    "opening": "In Thasos a woman of gloomy temperament, after a grief with a reason for it, without taking to bed lost sleep and appetite, and suffered thirst and nausea."
+  },
+  {
+    "book": 3,
+    "series": "second series",
+    "case": 12,
+    "ref": "Epid. III, second series, Case XII",
+    "city": "Larisa",
+    "landmark": null,
+    "opening": "In Larisa a maiden was seized with an acute fever of the ardent type."
+  },
+  {
+    "book": 3,
+    "series": "second series",
+    "case": 13,
+    "ref": "Epid. III, second series, Case XIII",
+    "city": "Abdera",
+    "landmark": null,
+    "opening": "Apollonius in Abdera was ailing for a long time without being confined to bed."
+  },
+  {
+    "book": 3,
+    "series": "second series",
+    "case": 14,
+    "ref": "Epid. III, second series, Case XIV",
+    "city": "Cyzicus",
+    "landmark": null,
+    "opening": "In Cyzicus a woman gave birth with difficult labour to twin daughters, and the lochial discharge was far from good."
+  },
+  {
+    "book": 3,
+    "series": "second series",
+    "case": 15,
+    "ref": "Epid. III, second series, Case XV",
+    "city": "Thasos",
+    "landmark": "lay sick on the plain",
+    "opening": "In Thasos the wife of Delearces, who lay sick on the plain, was seized after a grief with an acute fever with shivering."
+  },
+  {
+    "book": 3,
+    "series": "second series",
+    "case": 16,
+    "ref": "Epid. III, second series, Case XVI",
+    "city": "Meliboea",
+    "landmark": null,
+    "opening": "In Meliboea a youth took to his bed after being for a long time heated by drunkenness and sexual indulgence."
+  }
+]

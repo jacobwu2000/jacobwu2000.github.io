@@ -15,9 +15,29 @@
     "citation": "Hippocrates. *Airs Waters Places* (tlg0627.tlg002.perseus-eng4) and *Epidemics I and III* (tlg0627.tlg006.perseus-eng4). Translated by W. H. S. Jones. TEI XML. Perseus Digital Library, canonical-greekLit repository. CC BY-SA 4.0. https://github.com/PerseusDL/canonical-greekLit"
   },
   {
-    "id": "primary-2",
+    "id": "ig-iv2-1",
     "category": "Primary Editions",
-    "citation": "[PLACEHOLDER: full citation for the epigraphic edition of the Epidaurian iamata (cf. LiDonnici) and/or the relevant IG volume]"
+    "citation": "*Inscriptiones Graecae* IV², fasc. 1: *Inscriptiones Epidauri*. Edited by F. Hiller von Gaertringen. Berlin: de Gruyter, 1929. Nos. 121–124: the iamata. [PLACEHOLDER: verify the imprint against the volume.]"
+  },
+  {
+    "id": "phi-iamata",
+    "category": "Primary Editions",
+    "citation": "PHI Greek Inscriptions. The Packard Humanities Institute. IG IV²,1 121 (PH28551) and 122 (PH28552). https://epigraphy.packhum.org/text/28551"
+  },
+  {
+    "id": "lidonnici-1995",
+    "category": "Primary Editions",
+    "citation": "LiDonnici, Lynn R. *The Epidaurian Miracle Inscriptions: Text, Translation and Commentary.* Atlanta: Scholars Press, 1995. [PLACEHOLDER: add the series details from the volume.]"
+  },
+  {
+    "id": "herzog-1931",
+    "category": "Primary Editions",
+    "citation": "Herzog, Rudolf. *Die Wunderheilungen von Epidauros: Ein Beitrag zur Geschichte der Medizin und der Religion.* Philologus Supplementband 22.3. Leipzig: Dieterich, 1931. [PLACEHOLDER: verify; not yet consulted.]"
+  },
+  {
+    "id": "pleiades",
+    "category": "Reference Works",
+    "citation": "*Pleiades: A Gazetteer of Past Places.* https://pleiades.stoa.org. Coordinates of the places on the map; each map popup links to its entry. [PLACEHOLDER: check Pleiades’s preferred citation and license.]"
   },
   {
     "id": "nutton-2020",

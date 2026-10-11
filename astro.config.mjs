@@ -8,10 +8,16 @@ export default defineConfig({
   // Old URLs: the Hippocratic Corpus index pages were folded into /sources,
   // The Argument became Findings, the Site Archaeology dossiers were merged
   // into the Field Journal entries, Epigraphy moved out of Sources, and the
-  // Arrival entry became the Field Journal's introduction.
+  // Arrival entry became the Field Journal's introduction. The two placeholder
+  // iamata records gave way to the iamata catalogue.
   redirects: {
     '/sources/epigraphy': '/epigraphy',
     '/sources/epigraphy/[id]': '/epigraphy/[id]',
+    '/epigraphy/iamata': '/epigraphy#iamata',
+    '/epigraphy/iamata-001': '/epigraphy#iamata',
+    '/epigraphy/iamata-002': '/epigraphy#iamata',
+    '/sources/epigraphy/iamata-001': '/epigraphy#iamata',
+    '/sources/epigraphy/iamata-002': '/epigraphy#iamata',
     '/field-journal/2026-07-12-arrival': '/field-journal',
     '/the-argument': '/findings',
     '/sources/site-archaeology': '/field-journal',

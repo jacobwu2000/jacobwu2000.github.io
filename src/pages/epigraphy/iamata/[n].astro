@@ -1,0 +1,88 @@
+---
+// One tale of the Epidaurian iamata (src/data/iamata.json). The Greek is not
+// reproduced from PHI (its terms forbid copying); `greekText` is for the
+// author's own transcription from IG IV²,1, and `translation` for the author's
+// own translation. Until then the page shows the catalogue facts and links
+// to PHI.
+import ScholarlyLayout from '../../../layouts/ScholarlyLayout.astro';
+import iamata from '../../../data/iamata.json';
+import { originOf, phiUrl, taleUrl } from '../../../utils/iamata.js';
+
+export function getStaticPaths() {
+  return iamata.map((t) => ({ params: { n: String(t.n) }, props: { tale: t } }));
+}
+
+const { tale } = Astro.props;
+const place = originOf(tale);
+const prev = iamata.find((t) => t.n === tale.n - 1);
+const next = iamata.find((t) => t.n === tale.n + 1);
+const paras = (s) => s.split(/\n\s*\n/);
+---
+<ScholarlyLayout title={`Iama ${tale.n}: ${tale.petitioner}`}>
+  <article class="inscription-entry">
+    <p class="eyebrow">Fieldwork — Epigraphy — <a href="/epigraphy#iamata">Iamata</a></p>
+    <h1>{tale.n}. {tale.petitioner}</h1>
+    <p class="corpus-reference">
+      {tale.ig}, ll. {tale.lines} (stele {tale.stele}, {tale.numeral}) · LiDonnici {tale.lidonnici} ·
+      <a href={phiUrl(tale)} target="_blank" rel="noopener">Greek text on PHI</a>
+    </p>
+    <p class="inscription-site">
+      Findspot: <a href="/field-journal/2026-07-25-epidaurus">Epidauros</a>
+      {' · '}From: {place ? <a href="/geographies#map">{place.name}</a> : tale.originGreek ? '(name lost)' : 'not stated'}
+      {tale.originGreek && <> (<span lang="grc">{tale.originGreek}</span>)</>}
+    </p>
+
+    <dl class="tale-facts">
+      <dt>Opening words</dt>
+      <dd lang="grc">{tale.heading}</dd>
+      <dt>Complaint</dt>
+      <dd>{tale.complaint}</dd>
+      {tale.away && (<><dt>Beyond Epidauros</dt><dd>{tale.away}</dd></>)}
+      {place?.note && (<><dt>Place</dt><dd>{place.note}</dd></>)}
+      {place?.unplaced && (<><dt>Place</dt><dd>{place.unplaced}</dd></>)}
+    </dl>
+
+    <div class="corpus-grid">
+      <section class="text-block text-block--greek">
+        <h2>Greek Text</h2>
+        {tale.greekText ? (
+          paras(tale.greekText).map((p) => <p lang="grc">{p}</p>)
+        ) : (
+          <p>
+            [PLACEHOLDER: Greek text of {tale.ig}, ll. {tale.lines}, transcribed from the printed
+            IG IV²,1 (1929). Read it meanwhile on <a href={phiUrl(tale)} target="_blank" rel="noopener">PHI</a>;
+            PHI’s terms do not allow its text to be copied onto this site.]
+          </p>
+        )}
+      </section>
+      <section class="text-block text-block--translation">
+        <h2>Translation</h2>
+        {tale.translation ? (
+          paras(tale.translation).map((p) => <p>{p}</p>)
+        ) : (
+          <p>
+            [PLACEHOLDER: the author’s translation{tale.closeReading ? '' : ', if this tale is chosen for close reading'}.
+            LiDonnici’s translation is under copyright and may only be quoted.]
+          </p>
+        )}
+      </section>
+    </div>
+
+    <section class="text-block text-block--commentary">
+      <h2>Commentary</h2>
+      <p>{tale.commentary ?? '[PLACEHOLDER: notes on the tale — petitioner, complaint, incubation or waking cure, divine action, proof of cure, payment or dedication, skepticism — and on where it sits in the geography of the catalogue.]'}</p>
+    </section>
+
+    <p class="citation">
+      {tale.ig} (ed. F. Hiller von Gaertringen, 1929), ll. {tale.lines}; L. R. LiDonnici,
+      <em>The Epidaurian Miracle Inscriptions</em> (1995), {tale.lidonnici}. Text consulted on
+      PHI Greek Inscriptions, PH{tale.phi}.
+    </p>
+
+    <nav class="tale-nav" aria-label="Other tales">
+      {prev ? <a href={taleUrl(prev)}>&larr; {prev.n}. {prev.petitioner}</a> : <span></span>}
+      <a href="/epigraphy#iamata">Catalogue</a>
+      {next ? <a href={taleUrl(next)}>{next.n}. {next.petitioner} &rarr;</a> : <span></span>}
+    </nav>
+  </article>
+</ScholarlyLayout>

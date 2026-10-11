@@ -155,7 +155,7 @@ code {
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
-  padding: 0 0.4rem;
+  padding: 0 0.3rem;
 }
 .site-nav__group + .site-nav__group { border-left: 1px solid var(--color-border); }
 .site-nav__group:first-child { padding-left: 0; }
@@ -163,11 +163,11 @@ code {
 .site-nav a {
   display: block;
   font-family: var(--font-sans);
-  font-size: 0.86rem;
+  font-size: 0.84rem;
   font-weight: 500;
   color: var(--color-ink);
   text-decoration: none;
-  padding: 0.35rem 0.45rem;
+  padding: 0.35rem 0.3rem;
   border-radius: var(--radius);
 }
 .site-nav a:hover { color: var(--color-accent); background: var(--color-accent-tint); }
@@ -584,10 +584,36 @@ code {
   overflow: hidden;
 }
 
+/* Iamata filter and the Whole map / Epidauros sanctuary zoom. */
+.map-options {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  margin: 0 0 0.6rem;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  color: var(--color-ink-muted);
+}
+.map-options select { font: inherit; padding: 0.2em 0.3em; }
+.map-options__focus { display: inline-flex; }
+.map-options__focus button {
+  font: inherit;
+  padding: 0.3em 0.8em;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-panel);
+  color: var(--color-ink);
+  cursor: pointer;
+}
+.map-options__focus button + button { border-left: 0; }
+.map-options__focus button[aria-pressed='true'] { background: var(--color-accent-tint); font-weight: 600; }
+
 .map-legend-list {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.5rem;
   padding: 0.6rem 0 0;
   margin: 0;
   font-family: var(--font-sans);
@@ -602,9 +628,33 @@ code {
   margin-right: 0.4em;
   vertical-align: middle;
 }
+.legend-swatch--solid { background: var(--color-ink-muted); }
+.legend-swatch--hollow,
+.legend-swatch--dashed { border: 2px solid var(--color-ink-muted); }
+.legend-swatch--dashed { border-style: dashed; }
+
+.map-unplaced {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: var(--color-ink-muted);
+  max-width: 46rem;
+  margin-top: 0.5rem;
+}
 
 .site-popup h3 { margin: 0 0 0.3em; font-size: 1rem; }
 .site-popup p { margin: 0 0 0.5em; font-size: 0.9rem; }
+.site-popup__note { font-style: italic; }
+.site-popup__label {
+  font-family: var(--font-sans);
+  font-size: 0.72rem !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-ink-muted);
+  margin: 0.6em 0 0.2em !important;
+}
+.site-popup__list { margin: 0 0 0.5em; padding-left: 1.1em; font-size: 0.85rem; max-height: 10rem; overflow-y: auto; }
+.site-popup__photo { display: block; max-width: 220px; height: auto; margin-bottom: 0.4em; }
 .site-popup__meta {
   display: flex;
   gap: 0.75em;
@@ -751,6 +801,41 @@ code {
   font-family: var(--font-sans);
   font-size: 0.85rem;
   color: var(--color-ink-muted);
+}
+
+/* Iamata catalogue (Epigraphy index) and tale pages. */
+.iamata-table { min-width: 40rem; }
+.iamata-table tbody th { text-align: right; }
+.iamata-table td:last-child { white-space: nowrap; }
+.iamata-table__read th,
+.iamata-table__read td { background: var(--color-journal-tint); }
+.iamata-table__away { color: var(--color-journal); font-weight: 700; }
+
+.tale-facts {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 0.35rem 1rem;
+  margin: 1.25rem 0;
+  font-size: 0.98rem;
+}
+.tale-facts dt {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-ink-muted);
+  padding-top: 0.2rem;
+}
+.tale-facts dd { margin: 0; }
+
+.tale-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
 }
 
 /* ---------------------------------------------------------------------

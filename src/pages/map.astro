@@ -2,16 +2,21 @@
 import ScholarlyLayout from '../layouts/ScholarlyLayout.astro';
 import SiteMap from '../components/SiteMap.jsx';
 import sites from '../data/sites.json';
+import iamata from '../data/iamata.json';
+import cases from '../data/epidemics-cases.json';
+import photos from '../data/photos.json';
 ---
 <ScholarlyLayout title="Interactive Map">
   <p class="eyebrow">Fieldwork · Map</p>
   <h1>Interactive Map [WIP]</h1>
   <p>
-    [PLACEHOLDER: short intro to the map's purpose.] Use the toggle below to switch
-    between two lenses on the same geography — the Hippocratic Corpus's environmental
-    medical geography, and the epigraphically attested sites of cult healing. A site
-    relevant to both lenses appears as a two-toned marker. Click any marker for a
-    summary and a link to its Field Journal entry.
+    [PLACEHOLDER: short intro to the map's purpose.] The map shows two kinds of place:
+    the sites visited in July–August 2026 (solid markers, each linked to its Field
+    Journal entry), and places known only from the texts (hollow markers): the home
+    towns of the petitioners in the Epidaurian iamata, and the towns where the
+    Hippocratic <em>Epidemics</em> are set. Use the buttons to switch each layer on or
+    off, and click a marker for what is recorded there. The argument the map supports is
+    on <a href="/geographies">Two Geographies of Healing</a>.
   </p>
-  <SiteMap client:only="react" sites={sites} />
+  <SiteMap client:only="react" sites={sites} iamata={iamata} cases={cases} photos={photos} />
 </ScholarlyLayout>

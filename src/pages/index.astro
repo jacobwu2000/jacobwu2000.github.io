@@ -2,6 +2,9 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SiteMap from '../components/SiteMap.jsx';
 import sites from '../data/sites.json';
+import iamata from '../data/iamata.json';
+import cases from '../data/epidemics-cases.json';
+import photos from '../data/photos.json';
 import { getCollection } from 'astro:content';
 import { excerpt, formatDate, stopNumber } from '../utils/journal.js';
 
@@ -53,22 +56,22 @@ const stops = (await getCollection('journal')).sort(
 
     <article class="strand strand--field">
       <p class="eyebrow">Strand 2 · The places [WIP]</p>
-      <h2>Fieldwork at Greek healing sanctuaries</h2>
-      <p>
-        Visits to the Asklepieia at Epidauros, Kos, Trikka, Messene, Corinth,
-        Argos and Athens: the setting of temple healing, the “other” model of
-        medicine. At Kos, the traditional home of the Hippocratic tradition, the
-        two shared one place.
+      <h2>Two geographies of healing</h2>
+      <p class="strand__question">
+        The Epidaurian iamata record patients who travelled to the god; the
+        <em>Epidemics</em> record a physician who travelled to his patients. What
+        does mapping the two show?
       </p>
       <ul class="strand__facts">
-        <li><strong>Dates:</strong> 12 July – 2 August 2026</li>
-        <li><strong>Stops:</strong> {stops.length} journal entries, from the Peloponnese to Crete, Kos and Thessaly</li>
-        <li><strong>Record:</strong> field journal, inscriptions, photographs</li>
+        <li><strong>Catalogue:</strong> the {iamata.length} tales of the two best-preserved iamata stelai (IG IV²,1 121–122), with where each petitioner came from</li>
+        <li><strong>Mapped against:</strong> the towns and streets where the <em>Epidemics</em> are set</li>
+        <li><strong>Fieldwork:</strong> 12 July – 2 August 2026; {stops.length} journal entries, from Messene and Epidauros to Kos and Athens</li>
       </ul>
       <p class="strand__links">
+        <a href="/geographies">Two Geographies &rarr;</a>
+        <a href="/epigraphy#iamata">Iamata &rarr;</a>
         <a href="/field-journal">Field Journal &rarr;</a>
-        <a href="/epigraphy">Epigraphy &rarr;</a>
-        <a href="/map">Map of sites &rarr;</a>
+        <a href="/map">Map &rarr;</a>
       </p>
     </article>
   </div>
@@ -99,9 +102,10 @@ const stops = (await getCollection('journal')).sort(
   <section class="home-section">
     <h2>The sites on the map</h2>
     <p class="home-section__intro">
-      Every site is shown through two lenses: Hippocratic medical geography and
-      cult healing. Toggle either one, or click a marker to open that site’s journal entry.
+      The sites visited, the home towns of the iamata petitioners, and the towns
+      where the <em>Epidemics</em> are set. Toggle any layer, or click a marker for
+      what is recorded there and a link to the journal entry.
     </p>
-    <SiteMap client:only="react" sites={sites} />
+    <SiteMap client:only="react" sites={sites} iamata={iamata} cases={cases} photos={photos} />
   </section>
 </BaseLayout>
