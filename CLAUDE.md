@@ -114,7 +114,7 @@ epigraphic record of dream healing.
     (which cases), 2.6 ("few women" reading), 3.3.4 ([cite] for the AWP
     10 mechanism quote), 3.4 (case analysis), 3.5 (dating). Leave them
     until the author fills them in.
-  - **AI Usage Disclosure** (h2 at the end, in the TOC; 2026-10-11, at the
+  - **AI Usage Disclosure** (h2 at the end, not in the "On this page" list; 2026-10-11, at the
     author's request, wording theirs): AI's primary use was building the
     site and transferring the findings to it; it was also used to edit
     and revise the findings, annotate the texts and extract quotations;
