@@ -81,7 +81,8 @@ epigraphic record of dream healing.
   when the author says that strand is done.
 - **Findings** (`src/pages/findings.mdx`, formerly "The Argument" at
   `/the-argument`, which now redirects). Rebuilt on 2026-10-09 from the
-  author's "Findings.docx.pdf", which is now the source of truth for its
+  author's "Findings.docx.pdf"; since 2026-10-11 the author's "Findings
+  (revised).docx.pdf" is the source of truth for its text and
   structure: Summary; 1. Background (1.1 Texts, 1.2 Problem, 1.3
   Scholarship); 2. Sources and Method (2.1 Text and Translation, 2.2
   Comparability of AWP and the Epidemics, 2.3 "Evidence" vs.
@@ -92,23 +93,31 @@ epigraphic record of dream healing.
   Surplus; 3.3 Vocabulary and Organization: 3.3.1 Patient
   Characteristics, 3.3.2 Seasons and Weather, 3.3.3 Diseases and
   Symptoms, 3.3.4 Causality, 3.3.5 Crises; 3.4 Case Histories [WIP]; 3.5
-  Dating and Authorship); 4. Conclusion (4.1 Evidence or illustration?,
+  Dating and Authorship); 4. Conclusion (4.1 Evidence or Illustration?,
   4.2 Limitations). "Where the fieldwork fits" and "What this study does
   not do" were dropped because the author's document leaves them out.
-  - **The analysis is now the author's own**, in their voice (3.1, 3.2,
-    3.3.1, 3.3.2, the hypotheses and criteria in 2.3). At the author's
-    request Claude moved Comparability from after the Methodology to 2.2,
-    tightened its prose, moved the per-constitution results from 2.6 into
-    3.1, and lightly smoothed and hedged the author's prose.
-  - **Claude's drafts** (2026-10-09, at the author's request, where the
-    PDF said "[CLAUDE: …]"): Summary; 3.1's caveat that a poor match also
-    counts against "evidence"; the 3.2 surplus table and paragraphs; the AWP
-    quotes in 3.3.1; 3.3.3 (shared-disease table); 3.3.4; 3.3.5; the
-    Philiscus/Silenus/Clazomenae links in 3.4; the possibilities in 3.5;
-    4.1; the "Scoring" limitation. Each ends with `[PLACEHOLDER: review …]`
-    until the author revises it. Things Claude couldn't do without sources
-    (scholarship summaries, range of positions, dating, Jones's
-    *Prognostic* remark) stay as placeholders.
+  - **The whole page is now reviewed by the author** (2026-10-11, from
+    "Findings (revised).docx.pdf"). Claude had drafted the Summary, parts
+    of 3.1–3.5, 4.1 and the "Scoring" limitation on 2026-10-09; the author
+    revised them in their own wording and dropped the `[PLACEHOLDER:
+    review …]` notes. The page now matches that PDF word for word,
+    including the author's slips ("mechanisms that explains",
+    "*Prognostics*"). Edit only on request. The author also cut the
+    *Prognostic* paragraph from 1.1, the per-work placeholders under
+    Nutton, Wee and Jones in 1.3, and the Greek spot-check, Silenus /
+    Hermippus verification and Jones-on-*Prognostic* placeholders.
+  - **Remaining `[PLACEHOLDER: …]`s are the author's own to-dos** (yellow
+    highlights in their PDF, bracketed without the prefix there; the
+    prefix is kept on the site so they stay greppable): 1.1 (Jones note
+    page and dating source; case counts), 1.2 (Coan attribution; range of
+    positions), 1.3 (heading "[WIP]", intro, other works), 2.1 table
+    (which cases), 2.6 ("few women" reading), 3.3.4 ([cite] for the AWP
+    10 mechanism quote), 3.4 (case analysis), 3.5 (dating). Leave them
+    until the author fills them in.
+  - **AI Usage Disclosure** (h2 at the end, in the TOC; 2026-10-11, at the
+    author's request): AI was used to edit and revise the findings,
+    annotate the texts and extract quotations, and all of it was reviewed
+    by the author.
   - Facts added from the Perseus TEI (verify in the printed Loeb): Epid. I
     has 14 cases; Epid. III has 12 before the constitution and 16 after,
     and the case openings give their settings. Jones's notes quoted on the
@@ -117,7 +126,8 @@ epigraphic record of dream healing.
     the change of diction in the second Epid. III series.
   - Flagged for the author: the 2.6 example (and C1 table row 2) reads
     Epid. I 1's "Few women were attacked" as applying to the hoarseness; in
-    the text it follows the ear swellings.
+    the text it follows the ear swellings. The author has a to-do for it in
+    2.6; the C1 table and its 0.30 average are unchanged until they decide.
   - **Claims table** (2.5): HTML with rowspans (`.claims-table` in
     `styles.css`), one `<tbody>` per condition, sub-conditions (Ba, Bb,
     Ca, Cb, Cc) shaded. Labels A–F match the Seasons page's key
@@ -131,7 +141,8 @@ epigraphic record of dream healing.
     D1).
   - Heading numbers are part of the slugs (`#25-claims-list-from-awp`,
     `#31-comparison-of-predictions-against-observations`); update inbound
-    links if headings are renumbered.
+    links if headings are renumbered. "[WIP]" in a heading is in its slug
+    too (`#13-scholarship-wip`).
   - A Word copy ("Findings (revised).docx" in the author's Downloads) was
     made from the built page with LibreOffice (HTML to docx). It isn't kept
     in the repo; regenerate it rather than editing it by hand.
