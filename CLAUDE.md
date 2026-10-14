@@ -156,7 +156,8 @@ epigraphic record of dream healing.
       "raw" is relative).
     - 2.6: the worked example now uses the consumption row (C1 row 5)
       instead of the "few women" misreading; a note that scores are rough.
-    - 3.1: C1 average 0.33; "What the scores show" adds the forced-fit and
+    - 3.1: C1 average 0.33; "What the scores show" (now "Analysis of the
+      Alignment Scores") adds the forced-fit and
       alignment problems (E's summer lies before the record in C1 and C4);
       the last sentence no longer claims "closer to raw observation".
     - 3.2: Greek check of κρίσις/ὑποστροφή; a caveat that part of the
@@ -173,8 +174,22 @@ epigraphic record of dream healing.
     - 4.2: Scoring and Translation limitations extended; new
       "Scholarship" limitation.
     Greek was checked against the Perseus Greek TEI
-    (`tlg0627.tlg002/006.perseus-grc2.xml`, Jones's Loeb Greek). The
-    author has not yet reviewed these changes.
+    (`tlg0627.tlg002/006.perseus-grc2.xml`, Jones's Loeb Greek).
+  - **Author's review of that revision** (2026-10-13, "Findings
+    (2026-10-13).docx.pdf" in Downloads, edited from the Word copy below).
+    This PDF is now the source of truth for the page's text. Applied word
+    for word: the Summary's dashes, "alignment is loose", the cut
+    parenthetical after "course of an illness", "sex, and", "the
+    constitutions are the raw observational material", "This judgment
+    rests"; the 2.2 endemic/epidemic passage in the author's wording (the
+    "visits" placeholder dropped; placeholder now "verify this against LSJ
+    and Jouanna"); the 3.1 h4 renamed "Analysis of the Alignment Scores";
+    "Interestingly, the closer fit…", "merely an observation"; "The word
+    *crisis* appears". Two corrections, told to the author: the PDF's
+    "The actual ἐπιδημ- word is used for other situations in AWP 1–11 like
+    referring to…" implied several uses, but there is one, so the page reads
+    "is used only once in AWP 1–11, referring to…"; and a comma was added
+    in "With four constitutions, however,".
   - **Remaining `[PLACEHOLDER: …]`s are the author's own to-dos** (yellow
     highlights in their PDF, bracketed without the prefix there; the
     prefix is kept on the site so they stay greppable): 1.1 (Jones note
@@ -221,7 +236,23 @@ epigraphic record of dream healing.
   - A Word copy ("Findings (revised).docx" in the author's Downloads) was
     made from the built page with LibreOffice (HTML to docx). It isn't kept
     in the repo; regenerate it rather than editing it by hand. It predates
-    the 2026-10-13 revision.
+    the 2026-10-13 revision. "Findings (2026-10-13).docx" (same folder) is
+    the revised page, made the same way from the article only (no "On this
+    page" list, links made absolute, placeholders highlighted yellow as in
+    the author's PDFs). The author edited it and returned it as "Findings
+    (2026-10-13).docx.pdf" (applied above).
+  - **PDF for readers outside the site** (2026-10-13, for the author's
+    mentor): `python scripts/findings-pdf.py OUT.pdf` after `npm run
+    build`. It prints, with headless Chrome, a title page (title, lede,
+    "Jacob Wu", date, site link, contents, a note that yellow highlights
+    and [WIP] mark unfinished work), the Findings article, then an
+    appendix (A–D) of each constitution page's "Comparison with AWP"
+    section, alternatives included, with links between Findings and the
+    tables pointing inside the PDF. Placeholders keep their yellow
+    highlight. The author's full name for bylines is Jacob Wu. Copy made:
+    "Theory or Observation - Jacob Wu (draft, 2026-10-13).pdf" in
+    Downloads. Regenerate it after any change to Findings or the
+    comparison tables; don't edit the PDF.
 - Almost everything else is `[PLACEHOLDER: ...]`: the Kos and Trikka
   inscriptions, the iamata Greek texts and translations, bibliography, About (now unrouted), the Sources framing paragraph, section intros on the
   Epigraphy index page, the site sections on each Field Journal entry

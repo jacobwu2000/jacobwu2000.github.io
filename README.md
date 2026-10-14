@@ -142,6 +142,9 @@ editing surface.
 - `scripts/case-settings.py`: the opening sentence and town of every
   *Epidemics* I/III case history, as JSON (the base of
   `epidemics-cases.json`; its `landmark` fields are added by hand).
+- `scripts/findings-pdf.py`: prints Findings, with the constitution
+  comparison tables as an appendix, to a PDF for readers outside the site
+  (run `npm run build` first; needs Google Chrome).
 - `scripts/photo-locations.py`: reads EXIF GPS and dates from the photos in
   `public/photos/` and writes `src/data/photos.json` (needs Pillow).
 
