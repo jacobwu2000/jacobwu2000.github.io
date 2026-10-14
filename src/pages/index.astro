@@ -1,10 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import SiteMap from '../components/SiteMap.jsx';
-import sites from '../data/sites.json';
 import iamata from '../data/iamata.json';
-import cases from '../data/epidemics-cases.json';
-import photos from '../data/photos.json';
 import { getCollection } from 'astro:content';
 import { excerpt, formatDate, stopNumber } from '../utils/journal.js';
 
@@ -35,7 +31,7 @@ const stops = (await getCollection('journal')).sort(
 
   <div class="strands">
     <article class="strand">
-      <p class="eyebrow">Strand 1 · The texts</p>
+      <p class="eyebrow">The Hippocratic texts</p>
       <h2>Hippocratic medicine: weather, place, and disease</h2>
       <p class="strand__question">
         Do the “constitutions” of <em>Epidemics</em> I and III look like the
@@ -55,7 +51,7 @@ const stops = (await getCollection('journal')).sort(
     </article>
 
     <article class="strand strand--field">
-      <p class="eyebrow">Strand 2 · The places [WIP]</p>
+      <p class="eyebrow">Epigraphy and fieldwork · Work in progress</p>
       <h2>Two geographies of healing</h2>
       <p class="strand__question">
         The Epidaurian iamata record patients who travelled to the god; the
@@ -67,11 +63,15 @@ const stops = (await getCollection('journal')).sort(
         <li><strong>Mapped against:</strong> the towns and streets where the <em>Epidemics</em> are set</li>
         <li><strong>Fieldwork:</strong> 12 July – 2 August 2026; {stops.length} journal entries, from Messene and Epidauros to Kos and Athens</li>
       </ul>
+      <p class="strand__wip">
+        This project is still under way: the catalogue and journal entries are
+        drafts, and the Two Geographies page and the map are not yet open.
+      </p>
       <p class="strand__links">
-        <a href="/geographies">Two Geographies &rarr;</a>
-        <a href="/epigraphy#iamata">Iamata &rarr;</a>
         <a href="/field-journal">Field Journal &rarr;</a>
-        <a href="/map">Map &rarr;</a>
+        <a href="/epigraphy">Epigraphy &rarr;</a>
+        <span class="link-disabled" aria-disabled="true" title="Not yet available">Two Geographies</span>
+        <span class="link-disabled" aria-disabled="true" title="Not yet available">Map</span>
       </p>
     </article>
   </div>
@@ -82,10 +82,7 @@ const stops = (await getCollection('journal')).sort(
   </p>
 
   <section class="home-section">
-    <h2>The itinerary</h2>
-    <p class="home-section__intro">
-      {stops.length} field-journal entries, in the order the sites were visited.
-    </p>
+    <h2>Field Journal</h2>
     <ol class="itinerary">
       {stops.map((e, i) => (
         <li class="itinerary__stop">
@@ -99,13 +96,4 @@ const stops = (await getCollection('journal')).sort(
     </ol>
   </section>
 
-  <section class="home-section">
-    <h2>The sites on the map</h2>
-    <p class="home-section__intro">
-      The sites visited, the home towns of the iamata petitioners, and the towns
-      where the <em>Epidemics</em> are set. Toggle any layer, or click a marker for
-      what is recorded there and a link to the journal entry.
-    </p>
-    <SiteMap client:only="react" sites={sites} iamata={iamata} cases={cases} photos={photos} />
-  </section>
 </BaseLayout>

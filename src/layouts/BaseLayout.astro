@@ -7,8 +7,9 @@ const {
   mode = 'scholarly', // 'scholarly' | 'journal' — controls the accent color
 } = Astro.props;
 
-// Nav is grouped by the site's two strands: the textual research and the
-// fieldwork. Groups render with a divider between them.
+// Nav is grouped by the site's two projects: the Hippocratic texts and the
+// epigraphy/fieldwork. Groups render with a divider between them. Items with
+// `disabled` are not open yet: they render grayed out, without a link.
 const navGroups = [
   [{ href: '/', label: 'Home' }],
   [
@@ -17,12 +18,11 @@ const navGroups = [
     { href: '/bibliography', label: 'Bibliography' },
   ],
   [
-    { href: '/geographies', label: 'Geographies' },
+    { href: '/geographies', label: 'Geographies', disabled: true },
     { href: '/field-journal', label: 'Field Journal' },
     { href: '/epigraphy', label: 'Epigraphy' },
-    { href: '/map', label: 'Map' },
+    { href: '/map', label: 'Map', disabled: true },
   ],
-  [{ href: '/about', label: 'About' }],
 ];
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
 const isCurrent = (href) => (href === '/' ? path === '/' : path === href || path.startsWith(`${href}/`));
@@ -55,7 +55,11 @@ const isCurrent = (href) => (href === '/' ? path === '/' : path === href || path
             <ul class="site-nav__group">
               {group.map((item) => (
                 <li>
-                  <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a>
+                  {item.disabled ? (
+                    <span class="link-disabled" aria-disabled="true" title="Not yet available">{item.label}</span>
+                  ) : (
+                    <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.label}</a>
+                  )}
                 </li>
               ))}
             </ul>

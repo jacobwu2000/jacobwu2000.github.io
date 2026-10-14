@@ -67,18 +67,39 @@ epigraphic record of dream healing.
   Seasons page). The comparison is done for Constitution 1 by the author,
   and drafted by Claude for Constitutions 2–4 (see "Constitution vs. AWP
   comparison").
-- Home page: framing text (hero, the two "strands" cards for texts and
-  places, the "fieldwork is context, not evidence" note) was drafted by
-  Claude from this file and has not yet been reviewed by the author. The
-  itinerary excerpts are pulled automatically from the journal entries.
+- Home page: framing text (hero, the two project cards, the "fieldwork is
+  context, not evidence" note) was drafted by Claude from this file and has
+  not yet been reviewed by the author. The Field Journal excerpts are
+  pulled automatically from the journal entries.
   On 2026-10-04 the author set the home h1 to "Ancient Greek Medicine",
   gave the hero's second paragraph in their own words ("This is a working
   research notebook that is the result of a single non-expert's
-  research…"; keep as written), and pointed Strand 1's links at Findings
-  and Sources.
-- **Fieldwork strand is [WIP]:** the Strand 2 eyebrow and the h1s of the
-  Geographies, Field Journal, Epigraphy and Map pages carry "[WIP]". Remove
-  them when the author says that strand is done.
+  research…"; keep as written), and pointed the texts card's links at
+  Findings and Sources.
+- **Home page and nav cleanup** (2026-10-13, at the author's request):
+  - **No "Strand 1"/"Strand 2" on the site.** The author dropped that
+    terminology: the home page has one card for the Hippocratic medicine
+    project (eyebrow "The Hippocratic texts", links Findings, Sources)
+    and one for the epigraphy project (eyebrow "Epigraphy and fieldwork ·
+    Work in progress", with a note that it is under way). "Strand 2"
+    below in this file is internal shorthand for the epigraphy project
+    only; don't use it in visible text.
+  - **Disabled pages:** Geographies (`/geographies`) and Map (`/map`)
+    are grayed out and not links, in the nav and on the home page
+    (`disabled: true` in `navGroups` in `BaseLayout.astro`; a
+    `span.link-disabled` on the home page). The pages still build, and
+    some body links still reach them (journal entries, the Epigraphy
+    index, the tale pages, the journal page's "view on the interactive
+    map"). Re-enable them when the author says so.
+  - **About is gone:** removed from the nav, and the file renamed to
+    `src/pages/_about.astro` so Astro builds no route for it (kept for
+    later; rename it back to restore `/about`).
+  - The home page has no map any more, and the itinerary section is now
+    headed "Field Journal" with no intro line.
+- **Fieldwork strand is [WIP]:** the epigraphy card's eyebrow ("Work in
+  progress") and the h1s of the Geographies, Field Journal, Epigraphy and
+  Map pages carry "[WIP]". Remove them when the author says that project
+  is done.
 - **Strand 2 skeleton** (2026-10-11): Strand 2 is now "Two geographies of
   healing" (see "Strand 2: Two geographies of healing" below). Claude built
   the skeleton at the author's request: the iamata catalogue, the tale
@@ -202,7 +223,7 @@ epigraphic record of dream healing.
     in the repo; regenerate it rather than editing it by hand. It predates
     the 2026-10-13 revision.
 - Almost everything else is `[PLACEHOLDER: ...]`: the Kos and Trikka
-  inscriptions, the iamata Greek texts and translations, bibliography, About, the Sources framing paragraph, section intros on the
+  inscriptions, the iamata Greek texts and translations, bibliography, About (now unrouted), the Sources framing paragraph, section intros on the
   Epigraphy index page, the site sections on each Field Journal entry
   (Excavation History etc.), and the bibliography's epigraphic edition and
   secondary literature.
@@ -224,13 +245,14 @@ epigraphic record of dream healing.
   built around the 4th century BC" (the cult is older) are the author's
   to correct.
 - **Mentor review** (2026-10-13): the author plans to send the site to
-  their mentor, a specialist in Hippocratic medicine. Strand 1 (Findings
-  and the corpus pages) is what is ready to show; Strand 2 is unstarted.
+  their mentor, a specialist in Hippocratic medicine. The Hippocratic
+  project (Findings and the corpus pages) is what is ready to show; the
+  epigraphy project ("Strand 2") is unstarted.
 - **Field Journal and Epigraphy** (2026-09-30). The author first dropped
   the Site Archaeology dossiers, then had them merged into the Field
   Journal (the same places), with Epigraphy moved into the fieldwork
-  strand ("Strand 2" on the home page; nav group Geographies, Field
-  Journal, Epigraphy, Map):
+  strand (the epigraphy card on the home page; nav group Geographies,
+  Field Journal, Epigraphy, Map, with Geographies and Map disabled):
   - Each journal entry (`src/content/journal/*.mdx`) has the dossier
     layout: the dossier's placeholder sections (Excavation History; Key
     Finds & Inscriptions; Ancient Testimonia), then the journal prose

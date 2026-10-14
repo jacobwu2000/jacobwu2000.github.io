@@ -170,6 +170,13 @@ code {
   padding: 0.35rem 0.3rem;
   border-radius: var(--radius);
 }
+.site-nav .link-disabled {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.84rem;
+  font-weight: 500;
+  padding: 0.35rem 0.3rem;
+}
 .site-nav a:hover { color: var(--color-accent); background: var(--color-accent-tint); }
 .site-nav a[aria-current='page'] {
   color: var(--color-accent);
@@ -180,7 +187,7 @@ code {
 @media (max-width: 640px) {
   .site-nav__group { padding: 0; }
   .site-nav__group + .site-nav__group { border-left: 0; }
-  .site-nav a { padding: 0.35rem 0.45rem; }
+  .site-nav a, .site-nav .link-disabled { padding: 0.35rem 0.45rem; }
 }
 
 /* `.site-main` rather than `main`: `.container` would otherwise override
@@ -493,6 +500,15 @@ code {
 }
 .strand__links a { color: var(--strand-color); text-decoration: none; }
 .strand__links a:hover { text-decoration: underline; }
+.strand__wip {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-ink-muted);
+  font-style: italic;
+}
+
+/* Pages not open yet (nav and home page): grayed out, not links. */
+.link-disabled { color: var(--color-ink-muted); opacity: 0.55; cursor: not-allowed; }
 
 .strands-note {
   font-family: var(--font-sans);

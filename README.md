@@ -92,7 +92,7 @@ src/
     field-journal/_intro.mdx     introduction at the top of the journal
                                   index (formerly the Arrival entry)
     bibliography.astro
-    about.astro
+    _about.astro
 
   utils/journal.js           date formatting + auto-excerpts for the
                                 journal itinerary cards (home, journal index)
@@ -126,7 +126,7 @@ src/
 - `src/pages/field-journal/_intro.mdx` — the journal's introduction.
 - `src/data/sites.json`, `src/data/inscriptions.json`,
   `src/data/bibliography.json` — structured records.
-- `findings.mdx`, `about.astro`, `bibliography.astro` — page-level prose.
+- `findings.mdx`, `_about.astro` (unrouted: the underscore keeps Astro from building `/about`), `bibliography.astro` — page-level prose.
   Bibliography citations are plain text; `*italics*` and bare URLs are
   rendered as italics and links.
 
@@ -184,14 +184,17 @@ directly.
   `body[data-mode]` in `styles.css`, driven by the `mode` prop on
   `BaseLayout`/`ScholarlyLayout`/`JournalLayout`. The accent shows as a
   stripe on top of the header and on the current nav item.
-- The nav is grouped by the project's two strands: research (Findings,
-  Sources, Bibliography) and fieldwork (Geographies, Field Journal,
-  Epigraphy, Map). On desktop the nav sits on the same row as the site
+- The nav is grouped by the site's two projects: research (Findings,
+  Sources, Bibliography) and epigraphy/fieldwork (Geographies, Field
+  Journal, Epigraphy, Map). Items with `disabled: true` in `navGroups`
+  (currently Geographies and Map) render grayed out, without a link.
+  There is no About item. On desktop the nav sits on the same row as the site
   title, which only just fits the 980px container (the link padding and
   font size were tightened when Geographies was added). Adding another nav
   item will push the nav onto its own row.
-- The home page explains the project as two strands (texts / places) and
-  lists the journal entries as an itinerary; excerpts are pulled
+- The home page has one card per project (Hippocratic texts / epigraphy
+  and fieldwork, the latter marked work in progress) and lists the
+  journal entries under "Field Journal"; excerpts are pulled
   automatically from the first paragraph of each entry's
   `<PersonalObservations>`.
 - The map's layer toggle is a custom control bar above the map (not
