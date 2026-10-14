@@ -1,14 +1,16 @@
-# Ancient Medicine & Healing — project scaffold
+# Ancient Medicine & Healing
 
-Scholarly digital humanities site documenting summer fieldwork in Greece
-(Epidauros, Kos, Trikka) on ancient medicine and healing, combined with
-textual research on the Hippocratic Corpus (*Airs, Waters, Places*,
-*Epidemics*) and epigraphic research on the Epidaurian iamata.
+Scholarly digital humanities site documenting summer 2026 fieldwork at
+healing sites in Greece (Messene, Epidauros, Argos, Corinth, Crete, Kos,
+Trikka, Athens), combined with textual research on the Hippocratic Corpus
+(*Airs, Waters, Places*, *Epidemics*) and epigraphic research on the
+Epidaurian iamata.
 
-This is a **skeleton**: routing, navigation, data schema, content templates,
-and a working interactive map prototype. All scholarly content — Greek text,
-translations, commentary, citations — is `[PLACEHOLDER: ...]` text, to be
-replaced with real research.
+The site is a working research notebook. The Findings page, Jones's
+translations and the annotated corpus pages are real content; unfinished
+content (photos, the Strand 2 analysis, most of the epigraphy, parts of the
+bibliography) is still marked `[PLACEHOLDER: ...]` so it can be grepped
+for. See [CLAUDE.md](CLAUDE.md) for the current state of each part.
 
 ## Stack
 
@@ -108,7 +110,7 @@ src/
   (the Greek column disappears without it). The Epidemics constitutions
   (`constitution-1.md`…`constitution-4.md`, Jones's translation) use
   `passages` instead: one item per Jones chapter, rendered with `#ch-N`
-  anchors, and so do the AWP chapter groups (`airs.md`, `waters.md`,
+  anchors, and so do the AWP chapter groups (`introduction.md`, `airs.md`, `waters.md`,
   `seasons.md`). The labeling schemes are explained on the Sources page,
   which lists every corpus page. `scripts/extract-jones.py` prints Jones's chapters as
   ready-to-paste YAML from the Perseus TEI (needs Python 3.7+ and internet).

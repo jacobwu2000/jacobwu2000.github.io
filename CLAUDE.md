@@ -25,7 +25,7 @@ epigraphic record of dream healing.
   The site has to show (1) real proof of fieldwork and (2) research that is
   small but real and defensible.
 
-## Current state (as of 2026-10-11)
+## Current state (as of 2026-10-13)
 
 - The scaffold, routing, schema and map all work.
 - **Field Journal** (fieldwork strand): 8 entries, one per site, laid out
@@ -112,14 +112,58 @@ epigraphic record of dream healing.
     *Prognostic* paragraph from 1.1, the per-work placeholders under
     Nutton, Wee and Jones in 1.3, and the Greek spot-check, Silenus /
     Hermippus verification and Jones-on-*Prognostic* placeholders.
+  - **Claude revision for the author's mentor** (2026-10-13, at the
+    author's request: "revise the research findings to the best of your
+    ability" before sending the site to their mentor, a specialist in
+    Hippocratic medicine). The page no longer matches the PDF word for
+    word. Changes, keeping the author's voice and structure:
+    - Summary: Condition E is the *nearest* of AWP 10's six (loose for two
+      constitutions); scores are "rough"; the evidence tells against
+      "illustration" but doesn't show the constitutions are AWP's raw
+      material; English with a few Greek terms checked.
+    - 1.1: Epid. I and III as the most composed of the seven books (with a
+      cite placeholder; general knowledge, author to verify).
+    - 1.3: a placeholder listing unread core works: Deichgräber (1933),
+      Langholf (1990), Jouanna's Budé AWP (1996). Not in the bibliography
+      until read and cited.
+    - 2.2: "stayed in one place" corrected (the cases are set in several
+      towns); Waters ch. 7 added to the passing mentions of epidemics; the
+      Greek behind "endemic/epidemic" (ἐπιχώρια vs πάγκοινα; the only
+      ἐπιδημ- word in AWP 1–11 is ἐπιδημεῖ in ch. 4, of local diseases),
+      with a placeholder on the title *Epidemiai* as "visits".
+    - 2.3: a paragraph on two cautions (the criteria are asymmetrical;
+      "raw" is relative).
+    - 2.6: the worked example now uses the consumption row (C1 row 5)
+      instead of the "few women" misreading; a note that scores are rough.
+    - 3.1: C1 average 0.33; "What the scores show" adds the forced-fit and
+      alignment problems (E's summer lies before the record in C1 and C4);
+      the last sentence no longer claims "closer to raw observation".
+    - 3.2: Greek check of κρίσις/ὑποστροφή; a caveat that part of the
+      surplus is genre.
+    - 3.3.2: star dating is ordinary Greek practice; the shared term
+      κατάστασις (AWP 11, ἐς ἕτερον εἶδος καὶ ἑτέρην κατάστασιν, of a
+      disease's state), with a placeholder to check further uses.
+    - 3.3.4: the [cite] filled (AWP 10, explaining Condition B).
+    - 3.3.5: AWP's "coction" is ἕψω (ch. 8–9); the constitutions use
+      πεπασμός/ἄπεπτος.
+    - 4.1: the "three of four criteria" tally replaced by a hedged
+      reading (fairly strong against "illustration", weaker for
+      "evidence").
+    - 4.2: Scoring and Translation limitations extended; new
+      "Scholarship" limitation.
+    Greek was checked against the Perseus Greek TEI
+    (`tlg0627.tlg002/006.perseus-grc2.xml`, Jones's Loeb Greek). The
+    author has not yet reviewed these changes.
   - **Remaining `[PLACEHOLDER: …]`s are the author's own to-dos** (yellow
     highlights in their PDF, bracketed without the prefix there; the
     prefix is kept on the site so they stay greppable): 1.1 (Jones note
     page and dating source; case counts), 1.2 (Coan attribution; range of
     positions), 1.3 (heading "[WIP]", intro, other works), 2.1 table
-    (which cases), 2.6 ("few women" reading), 3.3.4 ([cite] for the AWP
-    10 mechanism quote), 3.4 (case analysis), 3.5 (dating). Leave them
-    until the author fills them in.
+    (which cases), 3.4 (case analysis), 3.5 (dating). Leave them until the
+    author fills them in. The 2026-10-13 revision resolved 2.6 and 3.3.4
+    and added placeholders in 1.1 (cite for the grouping of the books),
+    1.3 (unread core works), 2.2 (Greek and the title) and 3.3.2
+    (κατάστασις).
   - **AI Usage Disclosure** (h2 at the end, not in the "On this page" list; 2026-10-11, at the
     author's request, wording theirs): AI's primary use was building the
     site and transferring the findings to it; it was also used to edit
@@ -132,10 +176,12 @@ epigraphic record of dream healing.
     page: Epid. III opening ("really one work"), III 16 ("does not fit in
     with the context", recurs in *On Crises*, bracketed by Ermerins), and
     the change of diction in the second Epid. III series.
-  - Flagged for the author: the 2.6 example (and C1 table row 2) reads
+  - Resolved 2026-10-13: the 2.6 example and C1 table row 2 had read
     Epid. I 1's "Few women were attacked" as applying to the hoarseness; in
-    the text it follows the ear swellings. The author has a to-do for it in
-    2.6; the C1 table and its 0.30 average are unchanged until they decide.
+    the text it follows the ear swellings. Row 2 is now "Many had dry
+    coughs, with hoarse voices, in early spring", Severity N/A (as in row
+    4, where "likely" alone is not scored), score 0.50; the C1 average is
+    0.33.
   - **Claims table** (2.5): HTML with rowspans (`.claims-table` in
     `styles.css`), one `<tbody>` per condition, sub-conditions (Ba, Bb,
     Ca, Cb, Cc) shaded. Labels A–F match the Seasons page's key
@@ -153,7 +199,8 @@ epigraphic record of dream healing.
     too (`#13-scholarship-wip`).
   - A Word copy ("Findings (revised).docx" in the author's Downloads) was
     made from the built page with LibreOffice (HTML to docx). It isn't kept
-    in the repo; regenerate it rather than editing it by hand.
+    in the repo; regenerate it rather than editing it by hand. It predates
+    the 2026-10-13 revision.
 - Almost everything else is `[PLACEHOLDER: ...]`: the Kos and Trikka
   inscriptions, the iamata Greek texts and translations, bibliography, About, the Sources framing paragraph, section intros on the
   Epigraphy index page, the site sections on each Field Journal entry
@@ -169,6 +216,16 @@ epigraphic record of dream healing.
   knowledge; and, under Reference Works, Pleiades. The rest of the
   secondary literature is still placeholders. Citations in `bibliography.json` are
   plain text, and `*italics*` and bare URLs render as italics and links.
+- **Flagged for the author, not changed** (2026-10-12): the Loeb imprint
+  in `bibliography.json` follows the TEI ("Cambridge, MA: Harvard"), but
+  the 1923 printing probably reads "New York: G. P. Putnam's Sons"; check
+  the title page (archive.org `hippocrates01hippuoft`). In the Epidaurus
+  journal prose, "the tholos tomb" (the tholos is not a tomb) and "First
+  built around the 4th century BC" (the cult is older) are the author's
+  to correct.
+- **Mentor review** (2026-10-13): the author plans to send the site to
+  their mentor, a specialist in Hippocratic medicine. Strand 1 (Findings
+  and the corpus pages) is what is ready to show; Strand 2 is unstarted.
 - **Field Journal and Epigraphy** (2026-09-30). The author first dropped
   the Site Archaeology dossiers, then had them merged into the Field
   Journal (the same places), with Epigraphy moved into the fieldwork
@@ -423,7 +480,7 @@ Scoring the Constitutions; results in 3.1).
   prose and table word for word, typos kept ("as the referring to",
   "observed in Constitutions as"). Edit only on request. Two requested
   changes (2026-10-04): the average is 0.30 (the author's 0.50 left out
-  the Missing rows), and chapter citations "(ch. N)" were added in the
+  the Missing rows; 0.33 since the row 2 correction of 2026-10-13), and chapter citations "(ch. N)" were added in the
   drafts' format (prose and table cells).
 - **Constitutions 2–4 are Claude's drafts** (2026-10-04), at the author's
   request, applying the same method, written impersonally (no "I"). Not
@@ -433,7 +490,7 @@ Scoring the Constitutions; results in 3.1).
   southerly rains, runner-up B). The C2 and C4 synopses were updated to
   name E. At the author's request C2 also has an alternative comparison
   against Condition C (0.33 vs E's 0.40) and C4 against Condition B, Bb
-  branch (0.33 vs E's 0.60), so the author can choose. Averages: C1 0.30,
+  branch (0.33 vs E's 0.60), so the author can choose. Averages: C1 0.33,
   C2 0.40, C3 0.00, C4 0.60. C and B rows follow the Findings claims
   table, including its Confidence groupings; "stated as fact" is treated
   as an unhedged (strong) confidence for Severity.
@@ -705,7 +762,10 @@ hollow "not visited" markers (see Strand 2).
   in place or ask. Mark anything drawn from general knowledge that the author
   should check against a source.
 - Keep the `[PLACEHOLDER: ...]` convention for unfinished content so gaps
-  stay easy to grep for.
+  stay easy to grep for. In Markdown and MDX, `src/utils/rehype-placeholders.mjs`
+  (registered in `astro.config.mjs`) wraps each one in
+  `<span class="placeholder">` (a muted amber note) so it reads as
+  deliberate unfinished work; placeholders in `.astro` pages stay plain.
 - Keep the author's own voice in Field Journal prose (inside
   `<PersonalObservations>` and the journal intro): first person, informal.
   Edit lightly and don't rewrite it into academic register.

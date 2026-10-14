@@ -205,6 +205,21 @@ code {
   color: var(--color-ink-muted);
 }
 
+/* Unfinished work, left visible on purpose ("[PLACEHOLDER: …]" in Markdown
+   and MDX, wrapped by src/utils/rehype-placeholders.mjs). */
+.placeholder {
+  font-family: var(--font-sans);
+  font-size: 0.82em;
+  line-height: 1.5;
+  color: #6b5a2e;
+  background: #f6edd2;
+  border: 1px dashed #d8c48e;
+  border-radius: var(--radius);
+  padding: 0.05em 0.35em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
 /* ---------------------------------------------------------------------
    Photo placeholders (reserved space for images to be added later)
    --------------------------------------------------------------------- */

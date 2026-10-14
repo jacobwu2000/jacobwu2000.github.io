@@ -1,10 +1,13 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import mdx from '@astrojs/mdx';
+import rehypePlaceholders from './src/utils/rehype-placeholders.mjs';
 
 export default defineConfig({
   site: 'https://jacobwu2000.github.io',
   integrations: [react(), mdx()],
+  // Unfinished work stays visible, styled as .placeholder (Markdown and MDX).
+  markdown: { rehypePlugins: [rehypePlaceholders] },
   // Old URLs: the Hippocratic Corpus index pages were folded into /sources,
   // The Argument became Findings, the Site Archaeology dossiers were merged
   // into the Field Journal entries, Epigraphy moved out of Sources, and the

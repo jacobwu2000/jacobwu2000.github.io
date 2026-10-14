@@ -109,7 +109,7 @@ Here is the comparison table for C1 and AWP 10 Condition E:
   </thead>
   <tbody>
     <tr><th scope="row">1</th><td>Winter: headaches and mortifications of the brain</td><td rowspan="4">“likely”</td><td>Missing</td><td class="match match--no">No</td><td class="match">N/A</td><td class="match">N/A</td><td class="match">N/A</td><td class="score">0.00</td></tr>
-    <tr><th scope="row">2</th><td>Winter: hoarseness</td><td>Few women's voices were hoarse in early spring (ch. 1)</td><td class="match match--yes">Yes</td><td class="match">N/A</td><td class="match match--no">No</td><td class="match match--no">No</td><td class="score">0.33</td></tr>
+    <tr><th scope="row">2</th><td>Winter: hoarseness</td><td>Many had dry coughs, with hoarse voices, in early spring (ch. 1)</td><td class="match match--yes">Yes</td><td class="match">N/A</td><td class="match match--no">No</td><td class="match">N/A</td><td class="score">0.50</td></tr>
     <tr><th scope="row">3</th><td>Winter: colds in the head</td><td>Missing</td><td class="match match--no">No</td><td class="match">N/A</td><td class="match">N/A</td><td class="match">N/A</td><td class="score">0.00</td></tr>
     <tr><th scope="row">4</th><td>Winter: coughs</td><td>Dry coughs in early spring; slight coughs in summer and autumn (ch. 1, 3)</td><td class="match match--yes">Yes</td><td class="match">N/A</td><td class="match match--no">No</td><td class="match">N/A</td><td class="score">0.50</td></tr>
     <tr><th scope="row">5</th><td>Winter: consumptions</td><td>“likely” and “in some cases”</td><td>Many showed consumption throughout winter and summer (ch. 2)</td><td class="match match--yes">Yes</td><td class="match">N/A</td><td class="match match--yes">Yes</td><td class="match match--no">No</td><td class="score">0.67</td></tr>
@@ -117,7 +117,7 @@ Here is the comparison table for C1 and AWP 10 Condition E:
 </table>
 </div>
 
-The average score for C1 is **0.30**. Overall, the types of diseases line up relatively well with the
+The average score for C1 is **0.33**. Overall, the types of diseases line up relatively well with the
 closest AWP seasonal case Condition E. However, the timing and severity do not. Particularly,
 most diseases which AWP predicts should occur in the winter are observed in Constitutions as
 occurring during other seasons like early spring.

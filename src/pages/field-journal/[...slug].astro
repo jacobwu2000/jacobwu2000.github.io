@@ -55,7 +55,7 @@ const isEpidauros = site?.id === 'epidauros';
           <li><a href={`/epigraphy/${i.id}`}>{i.title}</a></li>
         ))}
         {petitioners.map((t) => (
-          <li>Iama {t.n}: <a href={taleUrl(t)}>{t.petitioner}</a>{isEpidauros ? ', of Epidauros' : `, who came to Epidauros from ${site.name}`} ({t.complaint})</li>
+          <li>Iama {t.n}: <a href={taleUrl(t)}>{t.petitioner}</a>{isEpidauros ? ', a local petitioner' : `, who came to Epidauros from ${site.name}`}: {t.complaint}</li>
         ))}
       </ul>
     </aside>
