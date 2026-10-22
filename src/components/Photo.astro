@@ -1,0 +1,11 @@
+---
+// A fieldwork photograph from public/photos/. Shares the "Fig. N" counter
+// with PhotoPlaceholder (see styles.css); the image links to the full file.
+const { src, alt, caption } = Astro.props;
+---
+<figure class="photo">
+  <a href={src} target="_blank" rel="noopener">
+    <img src={src} alt={alt ?? caption} loading="lazy" decoding="async" />
+  </a>
+  <figcaption>{caption}</figcaption>
+</figure>

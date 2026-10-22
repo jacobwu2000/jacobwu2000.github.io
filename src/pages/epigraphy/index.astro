@@ -1,5 +1,6 @@
 ---
 import ScholarlyLayout from '../../layouts/ScholarlyLayout.astro';
+import Photo from '../../components/Photo.astro';
 import inscriptions from '../../data/inscriptions.json';
 import iamata from '../../data/iamata.json';
 import sites from '../../data/sites.json';
@@ -28,6 +29,10 @@ const read = iamata.filter((t) => t.closeReading);
     reaches beyond Epidauros. The map shows these origins on the
     <a href="/geographies">Two Geographies of Healing</a> page.
   </p>
+  <Photo
+    src="/photos/epidaurus-iamata-label.jpg"
+    caption="A stele in the Epidauros site museum, labelled “IG IV², I, 121” (see the Epidaurus field journal entry)"
+  />
   <p class="bib-note">
     Numbering: tales 1–43 follow the stones (stele A, I–XX; stele B, XXI–XLIII), as in
     PHI’s text of IG IV²,1. LiDonnici’s numbers (A1–A20, B1–B23) are given alongside.

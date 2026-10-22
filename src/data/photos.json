@@ -1,1 +1,130 @@
-[]
+[
+  {
+    "src": "/photos/athens-asclepieion.jpg",
+    "lat": 37.970653,
+    "lng": 23.726603,
+    "taken": "2026-08-02 09:51:12",
+    "site": "athens",
+    "caption": "Inscribed blocks at the Asclepieion on the south slope of the Acropolis"
+  },
+  {
+    "src": "/photos/athens-nam-votive-relief.jpg",
+    "lat": 37.988725,
+    "lng": 23.732294,
+    "taken": "2026-08-03 12:59:01",
+    "site": "athens",
+    "caption": "A votive relief (B02) in Room 26, “The Cult of Asclepius,” National Archaeological Museum"
+  },
+  {
+    "src": "/photos/athens-theater-of-dionysus.jpg",
+    "lat": 37.9702,
+    "lng": 23.727681,
+    "taken": "2026-08-02 09:43:38",
+    "site": "athens",
+    "caption": "The Theater of Dionysus, below the Acropolis"
+  },
+  {
+    "src": "/photos/corinth-votives.jpg",
+    "lat": 37.905347,
+    "lng": 22.876786,
+    "taken": "2026-07-26 11:54:33",
+    "site": "corinth",
+    "caption": "Terracotta votive body parts in the Asclepieion section of the site museum"
+  },
+  {
+    "src": "/photos/crete-kannia-goddesses.jpg",
+    "lat": 35.339042,
+    "lng": 25.137231,
+    "taken": "2026-07-27 15:44:15",
+    "site": null,
+    "caption": "Figurines of the goddess with upraised arms and cult vessels from the sanctuary at Kannia, Gortyn (museum label), Heraklion Archaeological Museum"
+  },
+  {
+    "src": "/photos/epidaurus-abaton.jpg",
+    "lat": 37.5976,
+    "lng": 23.074908,
+    "taken": "2026-07-25 15:52:52",
+    "site": "epidauros",
+    "caption": "The restored columns of the Abaton"
+  },
+  {
+    "src": "/photos/epidaurus-iamata-label.jpg",
+    "lat": 37.596725,
+    "lng": 23.078122,
+    "taken": "2026-07-25 15:06:47",
+    "site": "epidauros",
+    "caption": "The museum label for one of the stelai: “Text narrating Asklepios’ miraculous cures. Second half of 4th century BC. In all probability this inscription is from the row of stelae set up at the east end of the Abaton stoa. IG IV², I, 121 [Inv. no. 1].”"
+  },
+  {
+    "src": "/photos/epidaurus-iamata-stele.jpg",
+    "lat": 37.596711,
+    "lng": 23.078194,
+    "taken": "2026-07-25 15:12:32",
+    "site": "epidauros",
+    "caption": "One of the iamata stelai in the site museum"
+  },
+  {
+    "src": "/photos/epidaurus-medical-instruments.jpg",
+    "lat": 37.596706,
+    "lng": 23.078183,
+    "taken": "2026-07-25 15:15:25",
+    "site": "epidauros",
+    "caption": "Medical instruments on display in the site museum"
+  },
+  {
+    "src": "/photos/epidaurus-theater.jpg",
+    "lat": 37.596139,
+    "lng": 23.07995,
+    "taken": "2026-07-25 17:03:25",
+    "site": "epidauros",
+    "caption": "The theater at Epidaurus"
+  },
+  {
+    "src": "/photos/kos-lower-terrace.jpg",
+    "lat": 36.875972,
+    "lng": 27.257114,
+    "taken": "2026-07-30 11:54:05",
+    "site": "kos",
+    "caption": "The retaining wall of the lower terrace, Asclepieion of Kos"
+  },
+  {
+    "src": "/photos/messene-arsinoe-panel.jpg",
+    "lat": 37.177831,
+    "lng": 21.919719,
+    "taken": "2026-07-24 12:08:31",
+    "site": "messene",
+    "caption": "The site panel for the Arsinoe fountain house, with a reconstruction drawing"
+  },
+  {
+    "src": "/photos/messene-artemision-panel.jpg",
+    "lat": 37.175769,
+    "lng": 21.920183,
+    "taken": "2026-07-24 12:31:36",
+    "site": "messene",
+    "caption": "The site panel for the Artemision"
+  },
+  {
+    "src": "/photos/messene-asclepieion-panel.jpg",
+    "lat": 37.175347,
+    "lng": 21.921161,
+    "taken": "2026-07-24 12:22:35",
+    "site": "messene",
+    "caption": "The site panel for the Sanctuary of Asclepios at Messene, with a view and plan of the complex"
+  },
+  {
+    "src": "/photos/trikala-site-sign.jpg",
+    "lat": 39.5563,
+    "lng": 21.764453,
+    "taken": "2026-08-01 11:28:37",
+    "site": "trikka",
+    "caption": "Outside the fence of the Archaeological Site of Ancient Trikki"
+  },
+  {
+    "src": "/photos/trikala-site.jpg",
+    "lat": 39.556286,
+    "lng": 21.764847,
+    "taken": "2026-08-01 11:30:22",
+    "site": "trikka",
+    "caption": "The closed-off site at Trikala, seen through the fence"
+  }
+]
